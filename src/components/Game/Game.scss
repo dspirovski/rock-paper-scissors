@@ -10,7 +10,7 @@
   .picked-text {
     display: flex;
     justify-content: space-between;
-    width: 35rem;  
+    width: 55rem;  
     margin-top: 4rem;
     font-weight: bold;
     font-size: 1.5rem;
@@ -21,7 +21,7 @@
   }
 
   .container {  
-    width: 35rem;
+    width: 55rem;
     height: 18rem;  
     display: flex;
     justify-content: space-between; 
@@ -52,5 +52,33 @@
       background: rgba(0, 0, 0, 0.1);
       color: white;    
     }   
+
+   
+      .result {
+        display: flex;
+        flex-direction: column;
+
+        .message {
+          font-family: Barlow Semi Condensed;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 56px;
+          line-height: 67px;
+          text-align: center;
+          color: #FFFFFF;
+          text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+          text-transform: uppercase;
+        }
+
+        .play-again-btn {
+          background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+          border-radius: 8px;
+          width: 220px;
+          height: 48px;
+        }
+
+      }
+    
   }
 }
