@@ -1,0 +1,78 @@
+@import "../../sass/abstracts/mixins.scss";
+@import "../../sass/abstracts/variables.scss";
+
+.main-container {
+
+.home {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  background-image: url("../../images/bg-triangle.svg");  
+  background-repeat: no-repeat;
+  background-position: center;  
+  margin: auto;
+  margin-top: 2rem;
+  position: relative;
+   
+    .flex-container  {
+    //Flex container
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    position: relative;   
+    
+      .top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 31rem;
+      height: 15rem;  
+
+        .top-left {          
+          @include option-primary ($red);                      
+        }     
+     
+        .top-right {
+          @include option-primary ($yellow);           
+        }
+      }
+
+      .bottom {
+        .bottom-center {
+          @include option-primary ($blue);           
+        }
+     } 
+    
+    .body {    
+      @include option-secondary;
+    }
+  }
+
+  .rules-image{ 
+    z-index: 10000;
+    position: absolute;
+    transform: scale(1.5, 1.5);
+  }
+ 
+  
+}
+.rulles-button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin-left: 85%;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  margin-bottom: 0.3rem;
+  width: 9.375rem;
+  line-height: 19px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.rulles-button:hover {
+  cursor: pointer;
+}
+}

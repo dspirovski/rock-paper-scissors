@@ -1,0 +1,11 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%) fixed center;
+}
+/*# sourceMappingURL=main.css.map */
