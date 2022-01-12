@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Game.scss';
-import rock from '../../images/icon-rock.svg';
-import paper from '../../images/icon-paper.svg';
-import scissors from '../../images/icon-scissors.svg';
 
 const Game = ({ humanChoise, score, setScore, playAgain }) => {
 
@@ -20,6 +17,14 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
   useEffect(() => {
     randomComputerChoise()
   });
+
+  const incrementScore = () => {
+    setScore(score = score + 1)
+  };
+
+  const decrementScore = () => {
+    setScore(score = score - 1)
+  }
 
   return (
 
@@ -41,7 +46,7 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
       </div>
 
       <div className="message">
-        <p className="message-text">{message}
+        <p className="message-text">
           {humanChoise === "paper" && computerChoise === "scissors" && "you lose!"}
           {humanChoise === "paper" && computerChoise === "rock" && 'you win!'}
           {humanChoise === "paper" && computerChoise === "paper" && "draw"}
@@ -55,6 +60,9 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
           {humanChoise === "scissors" && computerChoise === "scissors" && "draw"}
         </p>
         <button className="play-again-btn" onClick={playAgain}>play again</button>
+
+
+
 
       </div>
 
