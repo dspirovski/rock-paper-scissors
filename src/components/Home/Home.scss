@@ -1,6 +1,7 @@
 @import "../../sass/abstracts/mixins.scss";
 @import "../../sass/abstracts/variables.scss";
 
+
 .main-container {
 
 .home {
@@ -30,33 +31,32 @@
       width: 31rem;
       height: 15rem;  
 
-        .top-left {          
+        .top-left {   
+          .body {    
+            @include option-secondary;            
+          }       
           @include option-primary ($red);                      
         }     
      
         .top-right {
+          .body {    
+            @include option-secondary;            
+          }
           @include option-primary ($yellow);           
         }
       }
 
       .bottom {
         .bottom-center {
+          .body {    
+            @include option-secondary;            
+          }
           @include option-primary ($blue);           
         }
-     } 
-    
-    .body {    
-      @include option-secondary;
-    }
-  }
-
-  .rules-image{ 
-    z-index: 10000;
-    position: absolute;
-    transform: scale(1.5, 1.5);
-  }
+     }    
  
-  
+  }
+   
 }
 .rulles-button {
   display: flex;
@@ -74,5 +74,13 @@
 
 .rulles-button:hover {
   cursor: pointer;
+}
+
+.parent {
+  @include parent-mixin($red);
+  .child {
+    @include child-mixin($lignt-gray);
+    background-image: url('../../images/icon-rock.svg');
+  }
 }
 }

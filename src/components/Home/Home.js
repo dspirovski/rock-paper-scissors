@@ -44,10 +44,13 @@ const Home = ({ setHumanChoise }) => {
           </div>
         </main>
       </div >
+      <div className="parent">
+        <div className="child"></div>
+      </div>
     </div >
   )
 
 }
-export default Home
+export default Home;
 
 

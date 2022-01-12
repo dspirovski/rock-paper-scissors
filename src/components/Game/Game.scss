@@ -2,83 +2,71 @@
 @import "../../sass/abstracts/variables";
 
 .game {
+  width: 75rem;
+  margin:auto; 
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
+  justify-content: center;
+  margin-top: 3rem;
+  border: 1px solid white;
 
-  .picked-text {
+  .choise { 
     display: flex;
-    justify-content: space-between;
-    width: 55rem;  
-    margin-top: 4rem;
-    font-weight: bold;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    text-transform: uppercase;    
-    letter-spacing: 3px;    
-    color: #fff;
-  }
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid white;
 
-  .container {  
-    width: 55rem;
-    height: 18rem;  
-    display: flex;
-    justify-content: space-between; 
-    margin-top: 4rem;
-
-    .rock {
-      @include option-primary ($red);
-
+    .choise-text {
+      font-family: Barlow Semi Condensed;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;    
+      letter-spacing: 3px;
+      color: #FFFFFF;
+      text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+      text-transform: uppercase;
     }
 
-    .paper {
-      @include option-primary ($yellow);  
- 
-    }
-
-    .scissors {
-      @include option-primary (#fff);  
-  
-    }
-
-    .human-picked, .house-picked {     
+    .choise-picked {
+      width: 292.61px;
+      height: 300px;  
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 224.63px;
-      height: 224.63px;  
-      border-radius: 50%;      
-      background: rgba(0, 0, 0, 0.1);
-      color: white;    
-    }   
+    }
+  }
 
-   
-      .result {
-        display: flex;
-        flex-direction: column;
+  .message {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    width: 320px;
 
-        .message {
-          font-family: Barlow Semi Condensed;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 56px;
-          line-height: 67px;
-          text-align: center;
-          color: #FFFFFF;
-          text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
-          text-transform: uppercase;
-        }
+    .message-text {
+      font-family: Barlow Semi Condensed;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 56px;
+      line-height: 67px;
+      text-align: center;      
+      color: #FFFFFF;      
+      text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);  
+      width: 320px;
+    }
 
-        .play-again-btn {
-          background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
-          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
-          border-radius: 8px;
-          width: 220px;
-          height: 48px;
-        }
-
-      }
-    
+    .play-again-btn {
+      background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+      box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+      border-radius: 8px;
+      height: 48px;      
+      left: 0px;
+      top: 0px;
+      border-radius: 8px;      
+      width: 220px;
+    }
   }
 }
+

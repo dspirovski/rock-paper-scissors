@@ -4,9 +4,10 @@ import rock from '../../images/icon-rock.svg';
 import paper from '../../images/icon-paper.svg';
 import scissors from '../../images/icon-scissors.svg';
 
-const Game = ({ humanChoise, setScore }) => {
+const Game = ({ humanChoise, score, setScore, playAgain }) => {
 
   const [computerChoise, setComputerChoise] = useState('');
+
   const [message, setMessage] = useState('');
 
   //generate random computer choise
@@ -20,42 +21,35 @@ const Game = ({ humanChoise, setScore }) => {
     randomComputerChoise()
   });
 
-  const incrementScore = () => {
-    setScore(+1)
-  }
-
-  const decrementScore = () => {
-    setScore(-1)
-  }
   return (
 
     <div className="game">
-      <div className="picked-text">
-        <h4>You picked</h4>
-        <h4>House picked</h4>
+      <div className="choise">
+        <h4 className="choise-text">You picked</h4>
+        <div className="choise-picked">{humanChoise}</div>
       </div>
 
-      <div className="container">
-        <div className="human-picked">{humanChoise}</div>
-        <div className="result">
-          <div className="message">
+      <div className="message">
+        <p className="message-text">{message}
+          {humanChoise === "paper" && computerChoise === "scissors" && "you lose!"}
+          {humanChoise === "paper" && computerChoise === "rock" && 'you win!'}
+          {humanChoise === "paper" && computerChoise === "paper" && "draw"}
 
-            {humanChoise === "paper" && computerChoise === "scissors" && decrementScore() && "you lose!"}
-            {humanChoise === "paper" && computerChoise === "rock" && incrementScore() && "you win!"}
-            {humanChoise === "paper" && computerChoise === "paper" && "draw"}
+          {humanChoise === "rock" && computerChoise === "paper" && 'you lose!'}
+          {humanChoise === "rock" && computerChoise === "scissors" && 'you win!'}
+          {humanChoise === "rock" && computerChoise === "rock" && "draw"}
 
-            {humanChoise === "rock" && computerChoise === "paper" && decrementScore() && "you lose!"}
-            {humanChoise === "rock" && computerChoise === "scissors" && incrementScore() && "you win!"}
-            {humanChoise === "rock" && computerChoise === "rock" && "draw"}
+          {humanChoise === "scissors" && computerChoise === "rock" && 'you lose!'}
+          {humanChoise === "scissors" && computerChoise === "paper" && 'you win!'}
+          {humanChoise === "scissors" && computerChoise === "scissors" && "draw"}
+        </p>
+        <button className="play-again-btn" onClick={playAgain}>play again</button>
 
-            {humanChoise === "scissors" && computerChoise === "rock" && decrementScore() && "you lose!"}
-            {humanChoise === "scissors" && computerChoise === "paper" && incrementScore() && "you win!"}
-            {humanChoise === "scissors" && computerChoise === "scissors" && "draw"}
-          </div>
+      </div>
 
-          <button className="play-again-btn">play again</button>
-        </div>
-        <div className="house-picked">
+      <div className="choise">
+        <h4 className="choise-text">House picked</h4>
+        <div className="choise-picked">
           {computerChoise === "paper" &&
             <div className="body">
               <img className="paper" src={paper} alt="paper" />
