@@ -25,28 +25,25 @@ const Home = ({ setHumanChoise }) => {
         <main className="flex-container">
           <div className="top">
             <div className="top-left" onClick={rockChoise}>
-              <div className="body">
-                <img className="rock" src={rock} alt="rock" />
+              <div className="parent-rock">
+                <div className="child child-rock"></div>
               </div>
             </div>
             <div className="top-right" onClick={paperChoise}>
-              <div className="body">
-                <img className="paper" src={paper} alt="paper" />
+              <div className="parent-paper">
+                <div className="child child-paper"></div>
               </div>
             </div>
           </div>
           <div className="bottom">
             <div className="bottom-center" onClick={scissorsChoise}>
-              <div className="body">
-                <img className="scissors" src={scissors} alt="scissors" />
+              <div className="parent-scissors">
+                <div className="child child-scissors"></div>
               </div>
             </div>
           </div>
         </main>
       </div >
-      <div className="parent">
-        <div className="child"></div>
-      </div>
     </div >
   )
 

@@ -76,11 +76,32 @@
   cursor: pointer;
 }
 
-.parent {
+//rock icon
+.parent-rock {
   @include parent-mixin($red);
-  .child {
-    @include child-mixin($lignt-gray);
+  .child-rock {
+    @include child-mixin;
     background-image: url('../../images/icon-rock.svg');
   }
 }
+
+//paper icon
+.parent-paper {
+  @include parent-mixin($yellow);
+  .child-paper {
+    @include child-mixin;
+    background-image: url('../../images/icon-paper.svg');
+  }
+}
+
+//scissors icon
+.parent-scissors {
+  @include parent-mixin($blue);
+  .child-scissors {
+    @include child-mixin;
+    background-image: url('../../images/icon-scissors.svg');
+  }
+}
+
+
 }

@@ -29,11 +29,11 @@
 
 
 
-
+//mixin for rock, paper and scissors icon
 @mixin parent-mixin ($background-color)  {
   background-color: $background-color;
-  width: 293px;
-  height: 300px;   
+  width: 198px;
+  height: 203px;   
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -47,11 +47,11 @@
    }
 }
 
-@mixin child-mixin ($background-color)  {
-  background-color: $background-color;  
+@mixin child-mixin  {
+  background-color: $lignt-gray; 
   border-radius: 50%; 
-  width: 225px;
-  height: 225px;
+  width: 152px;
+  height: 152px;
   background-position: center;
   background-repeat: no-repeat;
 }

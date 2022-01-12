@@ -26,7 +26,18 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
     <div className="game">
       <div className="choise">
         <h4 className="choise-text">You picked</h4>
-        <div className="choise-picked">{humanChoise}</div>
+        <div className="choise-picked">
+          {humanChoise === 'paper' && <div className="parent-paper">
+            <div className="child child-paper"></div>
+          </div>}
+          {humanChoise === 'rock' && <div className="parent-rock">
+            <div className="child child-rock"></div>
+          </div>}
+          {humanChoise === 'scissors' && <div className="parent-scissors">
+            <div className="child child-scissors"></div>
+          </div>
+          }
+        </div>
       </div>
 
       <div className="message">
@@ -51,16 +62,16 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
         <h4 className="choise-text">House picked</h4>
         <div className="choise-picked">
           {computerChoise === "paper" &&
-            <div className="body">
-              <img className="paper" src={paper} alt="paper" />
+            <div className="parent-paper">
+              <div className="child child-paper"></div>
             </div>}
           {computerChoise === "rock" &&
-            <div className="body">
-              <img className="rock" src={rock} alt="rock" />
+            <div className="parent-rock">
+              <div className="child child-rock"></div>
             </div>}
           {computerChoise === "scissors" &&
-            <div className="body">
-              <img className="scissors" src={scissors} alt="scissors" />
+            <div className="parent-scissors">
+              <div className="child child-scissors"></div>
             </div>}
         </div>
       </div>
