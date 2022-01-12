@@ -30,10 +30,14 @@ const dropIn = {
 
 
 
-function Modal({ handleClose }) {
+const Modal = ({ setModal }) => {
+
+  const closeModal = () => {
+    setModal(false);
+  }
   return (
     <motion.div>
-      <Backdrop onClick={handleClose}>
+      <Backdrop onClick={closeModal}>
         <motion.div
           onClick={(e) => e.stopPropagation()}
           alt="rules-img"
@@ -45,7 +49,7 @@ function Modal({ handleClose }) {
           <div className="modal-container">
             <div className="header">
               <p className="top-text">Rules</p>
-              <img src={closeButton} alt="close-btn" className="close-btn" onClick={handleClose} />
+              <img src={closeButton} alt="close-btn" className="close-btn" onClick={closeModal} />
             </div>
             <img src={rulesImage} alt="rules-img" />
           </div>

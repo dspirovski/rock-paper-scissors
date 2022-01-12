@@ -7,6 +7,7 @@ import scissors from '../../images/icon-scissors.svg';
 const Game = ({ humanChoise, setScore }) => {
 
   const [computerChoise, setComputerChoise] = useState('');
+  const [message, setMessage] = useState('');
 
   //generate random computer choise
   const randomComputerChoise = () => {
@@ -38,6 +39,7 @@ const Game = ({ humanChoise, setScore }) => {
         <div className="human-picked">{humanChoise}</div>
         <div className="result">
           <div className="message">
+
             {humanChoise === "paper" && computerChoise === "scissors" && decrementScore() && "you lose!"}
             {humanChoise === "paper" && computerChoise === "rock" && incrementScore() && "you win!"}
             {humanChoise === "paper" && computerChoise === "paper" && "draw"}
