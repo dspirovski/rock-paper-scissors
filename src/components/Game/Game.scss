@@ -5,7 +5,7 @@
   width: 75rem;
   margin:auto; 
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 3rem;
 
   .choise { 
@@ -13,6 +13,8 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    width:293px;
+    height: 450px;  
 
     .choise-text {
       font-family: Barlow Semi Condensed;
@@ -35,28 +37,45 @@
 
       //rock icon
 .parent-rock {
-  @include parent-mixin($red);
+  @include parent-mixin($red);  
+  width: 292.61px;
+   height: 286.7px;
   .child-rock {
     @include child-mixin;
     background-image: url('../../images/icon-rock.svg');
+    background-size:  110px 110px;
+    width: 224.63px;
+    height: 224.63px;
   }
 }
 
 //paper icon
 .parent-paper {
-  @include parent-mixin($yellow);
+  @include parent-mixin($blue);
+  width: 292.61px;
+  height: 286.7px;
   .child-paper {
     @include child-mixin;
     background-image: url('../../images/icon-paper.svg');
-  }
+    background-size:  110px 110px;
+    width: 224.63px;
+    height: 224.63px;
+   }
 }
 
 //scissors icon
 .parent-scissors {
-  @include parent-mixin($blue);
+    @include parent-mixin($yellow);
+    width: 292.61px;
+    height: 286.7px;
   .child-scissors {
     @include child-mixin;
     background-image: url('../../images/icon-scissors.svg');
+    // background-image: url('../../images/icon-paper.svg');
+    background-size:  110px 110px;
+    transform: rotate(15deg);
+    width: 224.63px;
+    height: 224.63px;  
   }
 }
     }
@@ -68,7 +87,6 @@
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    width: 320px;
 
     .message-text {
       font-family: Barlow Semi Condensed;
@@ -87,10 +105,9 @@
       box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
       border-radius: 8px;
       height: 48px;      
-      left: 0px;
-      top: 0px;
-      border-radius: 8px;      
       width: 220px;
+      margin-top: 20px;
+      text-transform: uppercase;
     }
 
     .play-again-btn:hover {
@@ -98,4 +115,7 @@
     }
   }
 }
+
+
+
 

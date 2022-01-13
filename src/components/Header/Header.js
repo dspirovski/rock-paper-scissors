@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Header.scss";
 
-function Header({ score, setScore }) {
+function Header({ score }) {
   return (
     <div className="header">
       <div className="game-name">

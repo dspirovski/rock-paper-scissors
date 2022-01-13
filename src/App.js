@@ -10,11 +10,6 @@ function App() {
   const [modal, setModal] = useState(false);
   const [score, setScore] = useState(0);
   const [humanChoise, setHumanChoise] = useState('');
-  // const [anotherGame, setAnotherGame] = useState(false);
-
-  const openModal = () => {
-    setModal(true);
-  }
 
   const playAgain = () => {
     setHumanChoise('');
@@ -22,10 +17,10 @@ function App() {
 
   return (
 
-    <div className="App">
+    <div className="app">
       <Header score={score} setScore={setScore} />
       {humanChoise === "" ? <Home setHumanChoise={setHumanChoise} /> : <Game humanChoise={humanChoise} score={score} setScore={setScore} playAgain={playAgain} />}
-      <button className="rulles-button" onClick={openModal}>rules</button>
+      <button className="rulles-button" onClick={() => setModal(true)}>rules</button>
       {modal === true ? <Modal setModal={setModal} /> : null}
 
     </div>

@@ -3,7 +3,6 @@
 
 
 .main-container {
-
 .home {
   display: flex; 
   flex-direction: column;
@@ -12,8 +11,6 @@
   background-image: url("../../images/bg-triangle.svg");  
   background-repeat: no-repeat;
   background-position: center;  
-  margin: auto;
-  margin-top: 2rem;
   position: relative;
    
     .flex-container  {
@@ -29,43 +26,17 @@
       flex-direction: row;
       justify-content: space-between;
       width: 31rem;
-      height: 15rem;  
-
-        .top-left {   
-          .body {    
-            @include option-secondary;            
-          }       
-          @include option-primary ($red);                      
-        }     
-     
-        .top-right {
-          .body {    
-            @include option-secondary;            
-          }
-          @include option-primary ($yellow);           
-        }
-      }
-
-      .bottom {
-        .bottom-center {
-          .body {    
-            @include option-secondary;            
-          }
-          @include option-primary ($blue);           
-        }
-     }    
- 
-  }
-   
+      height: 15rem;       
+    }   
+  }   
 }
+
 .rulles-button {
   display: flex;
   justify-content: center;
   padding: 10px 0;
-  margin-left: 85%;
   border: 1px solid #FFFFFF;
   border-radius: 8px;
-  margin-bottom: 0.3rem;
   width: 9.375rem;
   line-height: 19px;
   letter-spacing: 2.5px;
@@ -79,29 +50,41 @@
 //rock icon
 .parent-rock {
   @include parent-mixin($red);
+  width: 198px;
+  height: 203px;   
   .child-rock {
     @include child-mixin;
     background-image: url('../../images/icon-rock.svg');
+    width: 152px;
+    height: 152px;
   }
 }
 
 //paper icon
 .parent-paper {
-  @include parent-mixin($yellow);
+  @include parent-mixin($blue);
+  width: 198px;
+  height: 203px;   
   .child-paper {
     @include child-mixin;
     background-image: url('../../images/icon-paper.svg');
+    width: 152px;
+    height: 152px;
   }
 }
 
 //scissors icon
 .parent-scissors {
-  @include parent-mixin($blue);
+  @include parent-mixin($yellow);
+  width: 198px;
+  height: 203px;   
   .child-scissors {
     @include child-mixin;
     background-image: url('../../images/icon-scissors.svg');
+    width: 152px;
+    height: 152px;
   }
 }
 
-
 }
+

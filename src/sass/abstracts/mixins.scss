@@ -1,39 +1,6 @@
-@mixin option-primary ($backgroundColor) {
-  background-color: $backgroundColor;
-  width: 198px;
-  height: 203px;   
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  box-shadow: 0px 1px 2px #000000;
-  &:hover {
-    cursor: pointer;   
-    transition: all .4s;
-    transform: scale(1.1, 1.1);
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);    
-   }
-};
-
-@mixin option-secondary {
-  background-color: $background-color-option;
-  width: 152px;
-  height: 152px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 1px 2px #000000;  
-};
-
-
-
-
 //mixin for rock, paper and scissors icon
 @mixin parent-mixin ($background-color)  {
   background-color: $background-color;
-  width: 198px;
-  height: 203px;   
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -50,8 +17,6 @@
 @mixin child-mixin  {
   background-color: $lignt-gray; 
   border-radius: 50%; 
-  width: 152px;
-  height: 152px;
   background-position: center;
   background-repeat: no-repeat;
 }

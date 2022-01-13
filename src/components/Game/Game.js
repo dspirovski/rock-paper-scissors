@@ -5,7 +5,6 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
 
   const [computerChoise, setComputerChoise] = useState('');
 
-  const [message, setMessage] = useState('');
 
   //generate random computer choise
   const randomComputerChoise = () => {
@@ -13,18 +12,20 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
     setComputerChoise(choises[Math.floor(Math.random() * 3)])
   }
 
+  function incrementScore() {
+    // updatePageState();
+    setScore(score + 1);
+  };
+
+  function decrementScore() {
+    // updatePageState();
+    setScore(score - 1);
+  }
+
   //call the function when the page loads
   useEffect(() => {
     randomComputerChoise()
   });
-
-  const incrementScore = () => {
-    setScore(score = score + 1)
-  };
-
-  const decrementScore = () => {
-    setScore(score = score - 1)
-  }
 
   return (
 
@@ -47,27 +48,26 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
 
       <div className="message">
         <p className="message-text">
-          {humanChoise === "paper" && computerChoise === "scissors" && "you lose!"}
-          {humanChoise === "paper" && computerChoise === "rock" && 'you win!'}
+          {humanChoise === "paper" && computerChoise === "scissors" && "you lose"}
+          {humanChoise === "paper" && computerChoise === "rock" && "you win"}
           {humanChoise === "paper" && computerChoise === "paper" && "draw"}
 
-          {humanChoise === "rock" && computerChoise === "paper" && 'you lose!'}
-          {humanChoise === "rock" && computerChoise === "scissors" && 'you win!'}
+          {humanChoise === "rock" && computerChoise === "paper" && "you lose"}
+          {humanChoise === "rock" && computerChoise === "scissors" && "you win"}
           {humanChoise === "rock" && computerChoise === "rock" && "draw"}
 
-          {humanChoise === "scissors" && computerChoise === "rock" && 'you lose!'}
-          {humanChoise === "scissors" && computerChoise === "paper" && 'you win!'}
+          {humanChoise === "scissors" && computerChoise === "rock" && "you lose"}
+          {humanChoise === "scissors" && computerChoise === "paper" && "you win"}
           {humanChoise === "scissors" && computerChoise === "scissors" && "draw"}
         </p>
         <button className="play-again-btn" onClick={playAgain}>play again</button>
 
-
-
-
+        {/* <button onClick={incrementScore}>increment</button>
+        <button onClick={decrementScore}>decrement</button> */}
       </div>
 
       <div className="choise">
-        <h4 className="choise-text">House picked</h4>
+        <h4 className="choise-text">The House picked</h4>
         <div className="choise-picked">
           {computerChoise === "paper" &&
             <div className="parent-paper">
@@ -83,6 +83,7 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
             </div>}
         </div>
       </div>
+
     </div>
   )
 }
