@@ -13,15 +13,13 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
   }
 
   function incrementScore() {
-    // updatePageState();
     setScore(score + 1);
   };
 
   function decrementScore() {
-    // updatePageState();
-    // setScore(score - 1);   
+    setScore(score - 1);
   }
-  decrementScore()
+
 
   //call the function when the page loads
   useEffect(() => {
@@ -65,8 +63,8 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
 
         {/* <button onClick={incrementScore}>increment</button>
         <button onClick={decrementScore}>decrement</button> */}
-      </div>
 
+      </div>
 
       <div className="choise">
         <h4 className="choise-text">The House picked</h4>

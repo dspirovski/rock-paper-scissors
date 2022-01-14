@@ -6,15 +6,15 @@
   margin:auto; 
   display: flex;
   justify-content: space-around;
-  margin-top: 3rem;
+  height: 100%;
 
   .choise { 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width:293px;
-    height: 450px;  
+    width: 293px;
+    height: 400px; 
 
     .choise-text {     
       font-style: normal;
@@ -86,6 +86,7 @@
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    height: 400px; 
 
     .message-text {
       font-style: normal;
