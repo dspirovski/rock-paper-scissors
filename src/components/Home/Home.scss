@@ -55,6 +55,7 @@
   .child-rock {
     @include child-mixin;
     background-image: url('../../images/icon-rock.svg');
+    background-size:  76px 76px;
     width: 152px;
     height: 152px;
   }
@@ -68,23 +69,39 @@
   .child-paper {
     @include child-mixin;
     background-image: url('../../images/icon-paper.svg');
+    background-size:  76px 76px;
     width: 152px;
     height: 152px;
   }
 }
 
 //scissors icon
-.parent-scissors {
+.test {
+width: 240px;
+height: 240px;
+display: flex;
+justify-content: center;
+align-items: center;
+translate: all 2s;
+
+
+.parent-scissors { 
+  
   @include parent-mixin($yellow);
   width: 198px;
   height: 203px;   
   .child-scissors {
     @include child-mixin;
     background-image: url('../../images/icon-scissors.svg');
+    background-size:  76px 76px;
     width: 152px;
     height: 152px;
   }
 }
-
+}
+.test:hover {
+  border: 20px solid hsla(0, 0%, 100%, 0.05);
+  border-radius: 50%;
+}
 }
 
