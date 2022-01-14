@@ -1,6 +1,5 @@
 import React from 'react';
 import './Modal.scss';
-
 import rulesImage from '../../images/image-rules.svg';
 import closeButton from '../../images/icon-close.svg';
 

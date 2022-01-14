@@ -1,13 +1,12 @@
 import React from 'react';
 import "./Header.scss";
+import logo from '../../images/logo.svg';
 
 function Header({ score }) {
   return (
     <div className="header">
       <div className="game-name">
-        <p>Rock</p>
-        <p>Paper</p>
-        <p>Scissors</p>
+        <img src={logo} alt="logo" />
       </div>
       <div className="score-container">
         <p className="score">score</p>

@@ -51,7 +51,12 @@
 .parent-rock {
   @include parent-mixin($red);
   width: 198px;
-  height: 203px;   
+  height: 203px;
+  &:hover {
+    cursor: pointer; 
+    transform: rotate(-10deg);  
+    
+  }   
   .child-rock {
     @include child-mixin;
     background-image: url('../../images/icon-rock.svg');
@@ -65,7 +70,11 @@
 .parent-paper {
   @include parent-mixin($blue);
   width: 198px;
-  height: 203px;   
+  height: 203px; 
+  &:hover {
+    cursor: pointer;    
+    transform: rotate(-10deg);  
+  }  
   .child-paper {
     @include child-mixin;
     background-image: url('../../images/icon-paper.svg');
@@ -76,20 +85,15 @@
 }
 
 //scissors icon
-.test {
-width: 240px;
-height: 240px;
-display: flex;
-justify-content: center;
-align-items: center;
-translate: all 2s;
 
-
-.parent-scissors { 
-  
+.parent-scissors {   
   @include parent-mixin($yellow);
   width: 198px;
-  height: 203px;   
+  height: 203px;
+  &:hover {
+    cursor: pointer;   
+    transform: rotate(-10deg);   
+  }   
   .child-scissors {
     @include child-mixin;
     background-image: url('../../images/icon-scissors.svg');
@@ -97,11 +101,6 @@ translate: all 2s;
     width: 152px;
     height: 152px;
   }
-}
-}
-.test:hover {
-  border: 20px solid hsla(0, 0%, 100%, 0.05);
-  border-radius: 50%;
 }
 }
 

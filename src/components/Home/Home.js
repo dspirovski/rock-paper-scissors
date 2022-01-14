@@ -21,10 +21,8 @@ const Home = ({ setHumanChoise }) => {
           </div>
           <div className="bottom">
             <div className="bottom-center" onClick={() => { setHumanChoise('scissors') }}>
-              <div className='test'>
-                <div className="parent-scissors">
-                  <div className="child child-scissors"></div>
-                </div>
+              <div className="parent-scissors">
+                <div className="child child-scissors"></div>
               </div>
             </div>
           </div>
