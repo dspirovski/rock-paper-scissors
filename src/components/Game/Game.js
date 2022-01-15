@@ -4,30 +4,66 @@ import './Game.scss';
 const Game = ({ humanChoise, score, setScore, playAgain }) => {
 
   const [computerChoise, setComputerChoise] = useState('');
-
+  const [resultMessage, setResultMessage] = useState('');
 
   //generate random computer choise
   const randomComputerChoise = () => {
-    const choises = ['paper', 'rock', 'scissors'];
+    const choises = ['scissors', 'paper', 'scissors'];
+
     setComputerChoise(choises[Math.floor(Math.random() * 3)])
   }
-
-  function incrementScore() {
-    setScore(score + 1);
-  };
-
-  function decrementScore() {
-    setScore(score - 1);
-  }
-
 
   //call the function when the page loads
   useEffect(() => {
     randomComputerChoise()
-  });
+  }, [humanChoise]);
+
+
+  const calculateResult = () => {
+    if (humanChoise === "paper" && computerChoise === "scissors") {
+      setResultMessage('you lose');
+      setScore(score - 1);
+    } else if (humanChoise === "paper" && computerChoise === "rock") {
+      setResultMessage('you win');
+      setScore(score + 1);
+    } else if (humanChoise === "rock" && computerChoise === "paper") {
+      setResultMessage('you lose');
+      setScore(score - 1);
+    } else if (humanChoise === "rock" && computerChoise === "scissors") {
+      setResultMessage('you win');
+      setScore(score + 1);
+    } else if (humanChoise === "scissors" && computerChoise === "rock") {
+      setResultMessage('you lose');
+      setScore(score - 1);
+    } else if (humanChoise === "scissors" && computerChoise === "paper") {
+      setResultMessage('you win');
+      setScore(score + 1);
+    } else {
+      setResultMessage('draw');
+    }
+  }
+
+
+  // useEffect(() => {
+  //   const timer =
+  //     score > 0
+  //       ? setInterval(() => {
+  //         setScore(score - 1);
+  //       }, 1000)
+  //       : calculateResult();
+
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, []);
+
+  useEffect(() => {
+    calculateResult();
+  }, [computerChoise]);
+
+
 
   return (
-
     <div className="game">
       <div className="choise">
         <h4 className="choise-text">You picked</h4>
@@ -47,22 +83,9 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
 
       <div className="message">
         <p className="message-text">
-          {humanChoise === "paper" && computerChoise === "scissors" && "you lose"}
-          {humanChoise === "paper" && computerChoise === "rock" && "you win"}
-          {humanChoise === "paper" && computerChoise === "paper" && "draw"}
-
-          {humanChoise === "rock" && computerChoise === "paper" && "you lose"}
-          {humanChoise === "rock" && computerChoise === "scissors" && "you win"}
-          {humanChoise === "rock" && computerChoise === "rock" && "draw"}
-
-          {humanChoise === "scissors" && computerChoise === "rock" && "you lose"}
-          {humanChoise === "scissors" && computerChoise === "paper" && "you win"}
-          {humanChoise === "scissors" && computerChoise === "scissors" && "draw"}
+          {resultMessage}
         </p>
         <button className="play-again-btn" onClick={playAgain}>play again</button>
-
-        {/* <button onClick={incrementScore}>increment</button>
-        <button onClick={decrementScore}>decrement</button> */}
 
       </div>
 
@@ -87,4 +110,4 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
     </div>
   )
 }
-export default Game
+export default Game;

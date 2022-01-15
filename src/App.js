@@ -19,9 +19,9 @@ function App() {
 
     <div className="app">
       <Header score={score} />
-      {humanChoise === "" ? <Home setHumanChoise={setHumanChoise} /> 
-      : 
-      <Game humanChoise={humanChoise} score={score} setScore={setScore} playAgain={playAgain} />}
+      {humanChoise === "" ? <Home setHumanChoise={setHumanChoise} />
+        :
+        <Game humanChoise={humanChoise} score={score} setScore={setScore} playAgain={playAgain} />}
       <button className="rulles-button" onClick={() => setModal(true)}>rules</button>
       {modal === true ? <Modal setModal={setModal} /> : null}
     </div>
