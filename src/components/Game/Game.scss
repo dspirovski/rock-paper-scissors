@@ -29,10 +29,10 @@
 
     .choise-picked {
       width: 292.61px;
-      height: 300px;  
+      height: 300px;       
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center;   
 
       //rock icon
 .parent-rock {
@@ -77,6 +77,15 @@
     height: 224.63px;  
   }
 }
+    }
+
+    .house-picked {
+      background: rgba(0, 0, 0, 0.1);
+      width: 290px;
+      height: 290px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 32px;
     }
   }
 

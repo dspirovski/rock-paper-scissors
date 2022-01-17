@@ -5,19 +5,20 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
 
   const [computerChoise, setComputerChoise] = useState('');
   const [resultMessage, setResultMessage] = useState('');
+  const [timer, setTimer] = useState(3);
 
-  //generate random computer choise
+  //Generate random computer choise
   const randomComputerChoise = () => {
-    const choises = ['scissors', 'paper', 'scissors'];
+    const choises = ['paper', 'scissors', 'rock'];
 
     setComputerChoise(choises[Math.floor(Math.random() * 3)])
   }
 
-  //call the function when the page loads
+  //Call calculateResult function when humanChoise changes
   useEffect(() => {
     randomComputerChoise()
+    calculateResult()
   }, [humanChoise]);
-
 
   const calculateResult = () => {
     if (humanChoise === "paper" && computerChoise === "scissors") {
@@ -41,29 +42,35 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
     } else {
       setResultMessage('draw');
     }
-  }
+  };
 
-
-  // useEffect(() => {
-  //   const timer =
-  //     score > 0
-  //       ? setInterval(() => {
-  //         setScore(score - 1);
-  //       }, 1000)
-  //       : calculateResult();
-
-  //   return () => {
-  //     clearInterval(timer);
-  //   };
-  // }, []);
-
+  const countdown = () => {
+    setTimeout(function () { setTimer(2) }, 1000);
+    setTimeout(function () { setTimer(1) }, 2000);
+    setTimeout(function () { setTimer(0) }, 3000);
+  };
   useEffect(() => {
-    calculateResult();
+    countdown();
+    if (timer === 0) {
+      calculateResult();
+    }
   }, [computerChoise]);
+
+  // componentDidUpdate() {
+  //   console.log('test')
+  // };
+
+  // componentDidUpdate(prevProps) {
+  //   // Typical usage (don't forget to compare props):
+  //   if (this.props.userID !== prevProps.userID) {
+  //     this.fetchData(this.props.userID);
+  //   }
+  // };
 
 
 
   return (
+    //Display result for human choise
     <div className="game">
       <div className="choise">
         <h4 className="choise-text">You picked</h4>
@@ -86,23 +93,22 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
           {resultMessage}
         </p>
         <button className="play-again-btn" onClick={playAgain}>play again</button>
-
       </div>
 
+      {/* Display result for house choise */}
       <div className="choise">
         <h4 className="choise-text">The House picked</h4>
-        <div className="choise-picked">
-          {computerChoise === "paper" &&
-            <div className="parent-paper">
-              <div className="child child-paper"></div>
+        <div className="choise-picked house-picked">
+          {timer > 0 && timer}
+          {timer === 0 && computerChoise === "paper" &&
+            <div className="parent-paper"><div className="child child-paper"></div>
             </div>}
-          {computerChoise === "rock" &&
-            <div className="parent-rock">
-              <div className="child child-rock"></div>
+
+          {timer === 0 && computerChoise === "scissors" &&
+            <div className="parent-scissors"><div className="child child-scissors"></div>
             </div>}
-          {computerChoise === "scissors" &&
-            <div className="parent-scissors">
-              <div className="child child-scissors"></div>
+          {timer === 0 && computerChoise === "rock" &&
+            <div className="parent-rock"><div className="child child-rock"></div>
             </div>}
         </div>
       </div>
