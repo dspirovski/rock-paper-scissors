@@ -10,6 +10,11 @@
     margin: auto;
     height: 70px;
     margin-bottom: 5px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    border: 1px solid white;
     .test {
       width: 400px;
       display: flex;
