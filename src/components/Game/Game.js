@@ -47,23 +47,11 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
     setTimeout(function () { setTimer(2) }, 1000);
     setTimeout(function () { setTimer(1) }, 2000);
     setTimeout(function () { setTimer(0) }, 3000);
+    setTimeout(function () { calculateResult() }, 3000);
   };
   useEffect(() => {
     countdown();
-    calculateResult();
   }, [computerChoise]);
-
-  // componentDidUpdate() {
-  //   console.log('test')
-  // };
-
-  // componentDidUpdate(prevProps) {
-  //   // Typical usage (don't forget to compare props):
-  //   if (this.props.userID !== prevProps.userID) {
-  //     this.fetchData(this.props.userID);
-  //   }
-  // };
-
 
 
   return (
@@ -86,9 +74,13 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
       </div>
 
       <div className="message">
+
         <p className="message-text">
-          {resultMessage}
+          {timer === 0 &&
+            resultMessage
+          }
         </p>
+
         <button className="play-again-btn" onClick={playAgain}>play again</button>
       </div>
 
