@@ -11,15 +11,13 @@
     height: 70px;
     margin-bottom: 5px;
     position: absolute;
-    top: 0;
+    top: 24%;
     width: 100%;
 
-    border: 1px solid white;
     .test {
       width: 400px;
       display: flex;
       justify-content: space-around;
-
       .mode-option {
         @include button-style;
       }      
@@ -31,18 +29,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center; 
-  background-image: url("../../images/bg-triangle.svg");  
-  background-repeat: no-repeat;
-  background-position: center;  
   position: relative;
-   
-    .flex-container  {
+  
+  .easy-mode-container  {
     //Flex container
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; 
     position: relative;   
+    background-image: url("../../images/bg-triangle.svg");  
+    background-repeat: no-repeat;
+    background-position: center;  
     
       .top {
       display: flex;
@@ -51,7 +49,29 @@
       width: 31rem;
       height: 15rem;       
     }   
-  }   
+  }  
+  
+  .hard-mode-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    position: relative;   
+    background-image: url("../../images/bg-pentagon.svg");  
+    background-repeat: no-repeat;
+    background-position: center;   
+    width: 472px;
+    height: 463px;  
+
+    .possition {
+      width: 145px;
+      height: 148px;
+      background-color: yellow;
+      @include vertical-horizontal-centering;
+
+
+    }
+  }
 }
 
 //rock icon
