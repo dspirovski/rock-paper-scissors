@@ -17,7 +17,6 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
   //Call calculateResult function when humanChoise changes
   useEffect(() => {
     randomComputerChoise()
-    calculateResult()
   }, [humanChoise]);
 
   const calculateResult = () => {
@@ -51,9 +50,7 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
   };
   useEffect(() => {
     countdown();
-    if (timer === 0) {
-      calculateResult();
-    }
+    calculateResult();
   }, [computerChoise]);
 
   // componentDidUpdate() {
