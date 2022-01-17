@@ -3,7 +3,25 @@
 
 
 .main-container {
-.home {
+  .game-modes {
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    height: 70px;
+    margin-bottom: 5px;
+    .test {
+      width: 400px;
+      display: flex;
+      justify-content: space-around;
+
+      .mode-option {
+        @include button-style;
+      }      
+    }
+  }   
+    
+  .home {
   display: flex; 
   flex-direction: column;
   align-items: center;
@@ -29,22 +47,6 @@
       height: 15rem;       
     }   
   }   
-}
-
-.rulles-button {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-  border: 1px solid #FFFFFF;
-  border-radius: 8px;
-  width: 9.375rem;
-  line-height: 19px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-}
-
-.rulles-button:hover {
-  cursor: pointer;
 }
 
 //rock icon

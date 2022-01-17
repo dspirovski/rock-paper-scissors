@@ -4,7 +4,13 @@ import './Home.scss'
 const Home = ({ setHumanChoise }) => {
 
   return (
-    <div className="main-container">
+    <div className="main-container">      
+        <div className="game-modes">
+          <div className='test'>
+          <button className="mode-option">easy</button>
+          <button className="mode-option">hard</button>
+          </div>
+        </div>      
       <div className="home">
         <main className="flex-container">
           <div className="top">
