@@ -74,17 +74,12 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
       </div>
 
       <div className="message">
-
         <p className="message-text">
-          {timer === 0 &&
-            resultMessage
-          }
+          {timer === 0 ? resultMessage : null}
         </p>
-
-        <button className="play-again-btn" onClick={playAgain}>play again</button>
+        {timer === 0 ? <button className="play-again-btn" onClick={playAgain}>play again</button> : null}
       </div>
 
-      {/* Display result for house choise */}
       <div className="choise">
         <h4 className="choise-text">The House picked</h4>
         <div className="choise-picked house-picked">
