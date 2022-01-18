@@ -70,13 +70,40 @@
   .child-scissors {
     @include child-mixin;
     background-image: url('../../images/icon-scissors.svg');
-    // background-image: url('../../images/icon-paper.svg');
     background-size:  110px 110px;
-    transform: rotate(15deg);
     width: 224.63px;
     height: 224.63px;  
   }
 }
+
+//lizard icon
+.parent-lizard {
+  @include parent-mixin($purple);
+  width: 292.61px;
+  height: 286.7px;
+.child-lizard {
+  @include child-mixin;
+  background-image: url('../../images/icon-lizard.svg');
+  background-size:  110px 110px;
+  width: 224.63px;
+  height: 224.63px;  
+}
+}
+
+//spock icon
+.parent-spock {
+  @include parent-mixin($green);
+  width: 292.61px;
+  height: 286.7px;
+.child-spock {
+  @include child-mixin;
+  background-image: url('../../images/icon-spock.svg');
+  background-size:  110px 110px; 
+  width: 224.63px;
+  height: 224.63px;  
+}
+}
+
     }
 
     .house-picked {

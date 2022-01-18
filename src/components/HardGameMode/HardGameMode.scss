@@ -1,0 +1,123 @@
+@import "../../sass/abstracts/mixins.scss";
+@import "../../sass/abstracts/variables.scss";
+
+.hard-mode {   
+  height: 70vh;
+
+  
+  .hard-mode-container {
+    @include perfect-centering; 
+    flex-direction: column;
+ 
+
+    .game-modes {
+      width: 200px;
+      height: 50px; 
+      @include perfect-centering;
+      justify-content: space-between;
+      .mode-btn {
+        @include button-style;
+    }
+  }
+
+  .hard-mode-body {
+    width: 472px;
+    height: 463px; 
+    background-image: url("../../images/bg-pentagon.svg");  
+    background-repeat: no-repeat;
+    background-position: center; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    
+    .item {    
+      @include perfect-centering;
+      border-radius: 50%;  
+      
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .parent-scissors {
+      @include parent-mixin($yellow);
+      width: 145px;
+      height: 148px;
+      transform: translate(290px, -130px);
+
+
+      .child-scissors {
+        @include child-mixin;
+        background-image: url('../../images/icon-scissors.svg');
+        width: 112px;
+        height: 111px;
+      }
+    }
+
+    .parent-paper {
+      @include parent-mixin($blue);
+      width: 145px;
+      height: 148px;
+      transform: translate(295px, -25px);
+
+      .child-paper {
+        @include child-mixin;
+        background-image: url('../../images/icon-paper.svg');
+        width: 112px;
+        height: 111px;
+      }
+
+    }
+
+    .parent-rock {
+      @include parent-mixin($red);
+      width: 145px;
+      height: 148px;
+      transform: translate(110px, 150px);
+
+
+      .child-rock {
+        @include child-mixin;
+        background-image: url('../../images/icon-rock.svg');
+        width: 112px;
+        height: 111px;
+      }
+    }
+
+    .parent-lizard {
+      @include parent-mixin($purple);
+      width: 145px;
+      height: 148px;
+      transform: translate(-240px, 150px);
+      
+      .child-lizard {
+        @include child-mixin;
+        background-image: url('../../images/icon-lizard.svg');
+        width: 112px;
+        height: 111px;
+      }
+    }
+
+    .parent-spock {
+      @include parent-mixin($green);
+      width: 145px;
+      height: 148px;
+      transform: translate(-440px, -25px);   
+
+      .child-spock {
+        @include child-mixin;
+        background-image: url('../../images/icon-spock.svg');
+        width: 112px;
+        height: 111px;
+      }
+    }
+
+
+
+
+
+
+  }
+}
+}

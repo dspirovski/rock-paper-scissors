@@ -1,10 +1,11 @@
 import React from 'react';
 import './Modal.scss';
 import rulesImage from '../../images/image-rules.svg';
+import bonusRulesImage from '../../images/image-rules-bonus.svg';
 import closeButton from '../../images/icon-close.svg';
 
 
-const Modal = ({ setModal }) => {
+const Modal = ({ setModal, gameMode }) => {
 
   const closeModal = () => {
     setModal(false);
@@ -17,7 +18,10 @@ const Modal = ({ setModal }) => {
           <img src={closeButton} alt="close-btn" onClick={closeModal} className="close-btn" />
         </header>
         <div className="rules-img">
-          <img src={rulesImage} alt="rules-img" />
+          {gameMode === true ?
+            <img src={rulesImage} alt="rules-img" />
+            :
+            <img src={bonusRulesImage} alt="bonus-rules-img" />}
         </div>
 
       </div>

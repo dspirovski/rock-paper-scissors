@@ -1,3 +1,6 @@
+@import "../../sass/abstracts/mixins.scss";
+@import "../../sass/abstracts/variables.scss";
+
 .modal {
   width: 100vw;
   height: 100vh;
@@ -10,10 +13,10 @@
   .container {
     background-color: #E1E4ED;
     width: 400px;
-    height: 370px;
+    height: 400px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     border-radius: 8px;
 
@@ -23,7 +26,7 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding: 20px;
+      padding: 0 20px;
       
       .text {
         font-weight: bold;
@@ -39,10 +42,7 @@
     }
 
     .rules-img {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
+      @include perfect-centering;
     }
   }
 }

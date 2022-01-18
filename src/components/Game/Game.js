@@ -1,22 +1,30 @@
 import React, { useState, useEffect } from 'react';
+import EasyGameMode from '../EasyGameMode/EasyGameMode';
+
 import './Game.scss';
 
-const Game = ({ humanChoise, score, setScore, playAgain }) => {
+const Game = ({ humanChoise, score, setScore, gameMode }) => {
 
   const [computerChoise, setComputerChoise] = useState('');
   const [resultMessage, setResultMessage] = useState('');
   const [timer, setTimer] = useState(3);
 
-  //Generate random computer choise
-  const randomComputerChoise = () => {
+  //Generate random computer choise for easy mode 
+  const randomEasyModeChoise = () => {
     const choises = ['paper', 'scissors', 'rock'];
-
     setComputerChoise(choises[Math.floor(Math.random() * 3)])
   }
 
-  //Call calculateResult function when humanChoise changes
+  //Generate random computer choise for hard mode 
+  const randomHardModeChoise = () => {
+    const choises = ['paper', 'scissors', 'rock', 'lizard', 'spock'];
+    setComputerChoise(choises[Math.floor(Math.random() * 5)])
+  }
+
+  //Invoke function regarding user choise (easy or hard mode)
   useEffect(() => {
-    randomComputerChoise()
+    gameMode && randomEasyModeChoise();
+    !gameMode && randomHardModeChoise();
   }, [humanChoise]);
 
   const calculateResult = () => {
@@ -26,9 +34,6 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
     } else if (humanChoise === "paper" && computerChoise === "rock") {
       setResultMessage('you win');
       setScore(score + 1);
-    } else if (humanChoise === "rock" && computerChoise === "paper") {
-      setResultMessage('you lose');
-      setScore(score - 1);
     } else if (humanChoise === "rock" && computerChoise === "scissors") {
       setResultMessage('you win');
       setScore(score + 1);
@@ -53,7 +58,6 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
     countdown();
   }, [computerChoise]);
 
-
   return (
     //Display result for human choise
     <div className="game">
@@ -70,6 +74,19 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
             <div className="child child-scissors"></div>
           </div>
           }
+
+
+          {humanChoise === 'lizard' && <div className="parent-lizard">
+            <div className="child child-lizard"></div>
+          </div>
+          }
+
+          {humanChoise === 'spock' && <div className="parent-spock">
+            <div className="child child-spock"></div>
+          </div>
+          }
+
+          
         </div>
       </div>
 
@@ -77,7 +94,7 @@ const Game = ({ humanChoise, score, setScore, playAgain }) => {
         <p className="message-text">
           {timer === 0 ? resultMessage : null}
         </p>
-        {timer === 0 ? <button className="play-again-btn" onClick={playAgain}>play again</button> : null}
+        {timer === 0 ? <button className="play-again-btn" onClick={() => { <EasyGameMode /> }}>play again</button> : null}
       </div>
 
       <div className="choise">
