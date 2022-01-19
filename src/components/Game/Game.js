@@ -30,22 +30,68 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
     !gameMode && randomHardModeChoise();
   }, [humanChoise]);
 
+  // 'paper', 'scissors', 'rock', 'lizard', 'spock'
   const calculateResult = () => {
-    if (humanChoise === "paper" && computerChoise === "scissors") {
-      setResultMessage('you lose');
-      setScore(score - 1);
+    if (humanChoise === "scissors" && computerChoise === "paper") {
+      setResultMessage('you win');
+      setScore(score + 1);
+    } else if (humanChoise === "scissors" && computerChoise === "lizard") {
+      setResultMessage('you win');
+      setScore(score + 1);
     } else if (humanChoise === "paper" && computerChoise === "rock") {
+      setResultMessage('you win');
+      setScore(score + 1);
+    } else if (humanChoise === "paper" && computerChoise === "spock") {
+      setResultMessage('you win');
+      setScore(score + 1);
+    } else if (humanChoise === "rock" && computerChoise === "lizard") {
       setResultMessage('you win');
       setScore(score + 1);
     } else if (humanChoise === "rock" && computerChoise === "scissors") {
       setResultMessage('you win');
       setScore(score + 1);
-    } else if (humanChoise === "scissors" && computerChoise === "rock") {
-      setResultMessage('you lose');
-      setScore(score - 1);
-    } else if (humanChoise === "scissors" && computerChoise === "paper") {
+    } else if (humanChoise === "lizard" && computerChoise === "spock") {
       setResultMessage('you win');
       setScore(score + 1);
+    } else if (humanChoise === "lizard" && computerChoise === "paper") {
+      setResultMessage('you win');
+      setScore(score + 1);
+    } else if (humanChoise === "spock" && computerChoise === "scissors") {
+      setResultMessage('you win');
+      setScore(score + 1);
+    } else if (humanChoise === "spock" && computerChoise === "rock") {
+      setResultMessage('you win');
+      setScore(score + 1);
+    } else if (computerChoise === "scissors" && humanChoise === "paper") {
+      setResultMessage('you lose');
+      setScore(score - 1);
+    } else if (computerChoise === "scissors" && humanChoise === "lizard") {
+      setResultMessage('you lose');
+      setScore(score - 1);
+    } else if (computerChoise === "paper" && humanChoise === "rock") {
+      setResultMessage('you lose');
+      setScore(score - 1);
+    } else if (computerChoise === "paper" && humanChoise === "spock") {
+      setResultMessage('you lose');
+      setScore(score - 1);
+    } else if (computerChoise === "rock" && humanChoise === "lizard") {
+      setResultMessage('you lose');
+      setScore(score - 1);
+    } else if (computerChoise === "rock" && humanChoise === "scissors") {
+      setResultMessage('you lose');
+      setScore(score - 1);
+    } else if (computerChoise === "lizard" && humanChoise === "spock") {
+      setResultMessage('you lose');
+      setScore(score - 1);
+    } else if (computerChoise === "lizard" && humanChoise === "paper") {
+      setResultMessage('you lose');
+      setScore(score - 1);
+    } else if (computerChoise === "spock" && humanChoise === "scissors") {
+      setResultMessage('you lose');
+      setScore(score - 1);
+    } else if (computerChoise === "spock" && humanChoise === "rock") {
+      setResultMessage('you lose');
+      setScore(score - 1);
     } else {
       setResultMessage('draw');
     }
@@ -110,6 +156,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
           onClick={playAgain}>play again</button> : null}
       </div>
 
+        {/* display result for house choise */}
       <div className="choise">
         <h4 className="choise-text">The House picked</h4>
         <div className="choise-picked house-picked">
@@ -121,8 +168,17 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
           {timer === 0 && computerChoise === "scissors" &&
             <div className="parent-scissors"><div className="child child-scissors"></div>
             </div>}
+
           {timer === 0 && computerChoise === "rock" &&
             <div className="parent-rock"><div className="child child-rock"></div>
+            </div>}
+
+            {timer === 0 && computerChoise === "spock" &&
+            <div className="parent-spock"><div className="child child-spock"></div>
+            </div>}
+
+            {timer === 0 && computerChoise === "lizard" &&
+            <div className="parent-lizard"><div className="child child-lizard"></div>
             </div>}
         </div>
       </div>
