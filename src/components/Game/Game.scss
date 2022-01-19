@@ -3,11 +3,15 @@
 
 .game {
   width: 75rem;
-  margin:auto; 
+  margin: auto; 
   display: flex;
   justify-content: space-around;
-  height: 100%;
 
+  @media only screen and (max-width: 375px) {
+    height: 50vh;   
+    width: 100vw;    
+  }
+ 
   .choise { 
     display: flex;
     flex-direction: column;
@@ -15,6 +19,12 @@
     align-items: center;
     width: 293px;
     height: 395px; 
+
+    @media only screen and (max-width: 375px) {
+      width: 200px;
+      height: 200px;
+      flex-direction: column-reverse;
+    }
 
     .choise-text {     
       font-style: normal;
@@ -25,6 +35,11 @@
       color: #FFFFFF;
       text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
       text-transform: uppercase;
+
+      @media only screen and (max-width: 375px) {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+      }
     }
 
     .choise-picked {
@@ -32,19 +47,37 @@
       height: 300px;       
       display: flex;
       justify-content: center;
-      align-items: center;   
+      align-items: center;     
+      
+      @media only screen and (max-width: 375px) {
+        width: 130px;
+       height: 130px;        
+      }
 
       //rock icon
-.parent-rock {
-  @include parent-mixin($red);  
-  width: 292.61px;
-   height: 286.7px;
+    .parent-rock {
+       @include parent-mixin($red);  
+         width: 292.61px;
+         height: 286.7px;
+
+       @media only screen and (max-width: 375px) {
+         width: 130px;
+        height: 130px;        
+       }
+
+   
   .child-rock {
     @include child-mixin;
     background-image: url('../../images/icon-rock.svg');
     background-size:  110px 110px;
     width: 224.63px;
     height: 224.63px;
+
+    @media only screen and (max-width: 375px) {
+      width: 100px;
+      height: 100px;     
+      background-size: 50px 50px;   
+    }
   }
 }
 
@@ -53,12 +86,23 @@
   @include parent-mixin($blue);
   width: 292.61px;
   height: 286.7px;
+
+  @media only screen and (max-width: 375px) {
+    width: 130px;
+    height: 130px;        
+  }
   .child-paper {
     @include child-mixin;
     background-image: url('../../images/icon-paper.svg');
     background-size:  110px 110px;
     width: 224.63px;
     height: 224.63px;
+
+    @media only screen and (max-width: 375px) {
+      width: 100px;
+      height: 100px;     
+      background-size: 50px 50px;   
+    }
    }
 }
 
@@ -67,12 +111,23 @@
     @include parent-mixin($yellow);
     width: 292.61px;
     height: 286.7px;
+
+    @media only screen and (max-width: 375px) {
+      width: 130px;
+      height: 130px;        
+    }
   .child-scissors {
     @include child-mixin;
     background-image: url('../../images/icon-scissors.svg');
     background-size:  110px 110px;
     width: 224.63px;
     height: 224.63px;  
+
+    @media only screen and (max-width: 375px) {
+      width: 100px;
+      height: 100px;     
+      background-size: 50px 50px;   
+    }
   }
 }
 
@@ -81,12 +136,23 @@
   @include parent-mixin($purple);
   width: 292.61px;
   height: 286.7px;
+
+  @media only screen and (max-width: 375px) {
+    width: 130px;
+    height: 130px;        
+  }
 .child-lizard {
   @include child-mixin;
   background-image: url('../../images/icon-lizard.svg');
   background-size:  110px 110px;
   width: 224.63px;
   height: 224.63px;  
+
+  @media only screen and (max-width: 375px) {
+    width: 100px;
+    height: 100px;     
+    background-size: 50px 50px;   
+  }
 }
 }
 
@@ -95,12 +161,23 @@
   @include parent-mixin($green);
   width: 292.61px;
   height: 286.7px;
+
+  @media only screen and (max-width: 375px) {
+    width: 130px;
+    height: 130px;        
+  }
 .child-spock {
   @include child-mixin;
   background-image: url('../../images/icon-spock.svg');
   background-size:  110px 110px; 
   width: 224.63px;
   height: 224.63px;  
+
+  @media only screen and (max-width: 375px) {
+    width: 100px;
+    height: 100px;     
+    background-size: 50px 50px;   
+  }
 }
 }
 
@@ -113,6 +190,12 @@
       border-radius: 50%;
       color: #fff;
       font-size: 32px;
+
+      @media only screen and (max-width: 375px) {
+        width: 130px;
+        height: 130px;     
+  
+      }
     }
   }
 
@@ -122,6 +205,11 @@
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 375px) {
+      bottom: 0;
+      position: absolute;
+    }
 
     .message-text {
       font-style: normal;

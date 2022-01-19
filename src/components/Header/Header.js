@@ -7,7 +7,7 @@ function Header({ score, gameMode }) {
   return (
     <div className="header">
       <div className="game-name">
-        {gameMode === true ? <img src={logo} alt="logo" /> : <img src={bonus} alt="bomus-logo" />}
+        {gameMode === true ? <img src={logo} alt="logo" className="logo-img" /> : <img src={bonus} alt="bonus-logo" className="logo-img" />}
       </div>
       <div className="score-container">
         <p className="score">score</p>

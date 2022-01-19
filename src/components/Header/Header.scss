@@ -8,6 +8,20 @@
   margin-top: 0.5rem;
   width: 43.75rem; //=700px
   padding: 0 1rem;
+
+
+
+  .logo-img {
+    @media only screen and (max-width: 376px) {
+      width: 120px;
+      height: 80px;
+    }
+  }
+
+  @media only screen and (max-width: 376px) {
+    margin-top: 2.5rem;
+    width: 311px;
+  }
  
   
     .score-container {
@@ -21,6 +35,11 @@
       align-items: center;
       justify-content: center;  
       margin: 1rem 0;
+
+      @media only screen and (max-width: 376px) {
+        width: 120px;
+        height: 80px;
+      }
    
         .score {     
           font-family: Barlow Semi Condensed;
@@ -31,7 +50,11 @@
           letter-spacing: 2.5px;
           text-align: left;
           color: #2A45C2;     
-          text-transform: uppercase; 
+          text-transform: uppercase;  
+
+          @media only screen and (max-width: 375px) {
+            font-size: 0.75rem;
+          }
         }
 
         .value {   
@@ -43,6 +66,10 @@
           letter-spacing: 0px;
           text-align: center;
           color: #565468; 
+
+          @media only screen and (max-width: 375px) {
+            font-size: 3.75rem;
+          }
        }   
  }
 }

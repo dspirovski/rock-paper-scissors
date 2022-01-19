@@ -4,12 +4,23 @@
 .app {
   display: grid;
   height: 100vh;
-  width: 100vw; 
+  min-width: 100vw;
+  position: relative;
+  border: 3px solid white;
   
     .rulles-button {
       @include button-style;
       position: absolute;  
       bottom: 5%;
       right: 5%;
+      display: flex;
+
+      @media only screen and (max-width: 375px) {
+        left:0;
+        right:0;  
+      bottom: 2.5%;
+        margin-left: auto;
+        margin-right: auto;
+      }      
     }
-}
+  }

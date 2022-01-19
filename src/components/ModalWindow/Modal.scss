@@ -9,6 +9,10 @@
   justify-content: center;
   align-items: center;
   position: absolute;
+
+  @media only screen and (max-width: 375px) {
+    background-color: #fff;     
+  }
   
   .container {
     background-color: #E1E4ED;
@@ -20,6 +24,12 @@
     flex-direction: column;
     border-radius: 8px;
 
+    @media only screen and (max-width: 375px) {
+      background-color: #fff;   
+      height: 100vh;  
+      justify-content: space-around;
+    }
+
     .modal-header {
       display: flex;
       flex-direction: row;
@@ -27,6 +37,10 @@
       align-items: center;
       width: 100%;
       padding: 0 20px;
+
+      @media only screen and (max-width: 375px) {
+       flex-direction: column; 
+      }
       
       .text {
         font-weight: bold;
@@ -34,10 +48,19 @@
         line-height: 32px;
         text-transform: uppercase;       
         color: #3B4262;
+
+        @media only screen and (max-width: 375px) {
+          display: flex;
+          justify-content: center;     
+        }        
       }
 
       .close-btn:hover {
         cursor: pointer;
+
+        @media only screen and (max-width: 375px) {
+          bottom: 0;     
+        }
       }
     }
 

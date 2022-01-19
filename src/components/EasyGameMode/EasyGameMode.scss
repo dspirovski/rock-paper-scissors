@@ -2,6 +2,7 @@
 @import "../../sass/abstracts/variables.scss";
 
 
+
 .easy-mode {  
     
   .easy-mode-container {
@@ -13,6 +14,12 @@
     height: 50px; 
     @include perfect-centering;
     justify-content: space-between;
+
+    @media only screen and (max-width: 375px) {   
+      position: absolute;
+      top: 165px;  
+    }
+
     .mode-btn {
       @include button-style;
     }    
@@ -28,13 +35,23 @@
     background-image: url("../../images/bg-triangle.svg");  
     background-repeat: no-repeat;
     background-position: center;  
+
+    @media only screen and (max-width: 375px) {   
+      background-size: 200px 200px;   
+    }
     
       .top {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       width: 31rem;
-      height: 15rem;       
+      height: 15rem;   
+      
+      @media only screen and (max-width: 375px) {
+        width: 20rem;
+        height: 10rem;        
+      }
+
     }   
   } 
 
@@ -45,15 +62,25 @@
   height: 203px;
   &:hover {
     cursor: pointer; 
-    transform: rotate(-10deg);  
-    
-  }   
+    transform: rotate(-10deg);      
+  } 
+  
+  @media only screen and (max-width: 375px) {
+    width: 130px;
+    height: 130px;        
+  }
   .child-rock {
     @include child-mixin;
     background-image: url('../../images/icon-rock.svg');
     background-size:  76px 76px;
     width: 152px;
     height: 152px;
+
+    @media only screen and (max-width: 375px) {
+      width: 100px;
+      height: 100px;     
+      background-size: 50px 50px;   
+    }
   }
 }
 
@@ -65,13 +92,24 @@
   &:hover {
     cursor: pointer;    
     transform: rotate(-10deg);  
-  }  
+  } 
+  
+  @media only screen and (max-width: 375px) {
+    width: 130px;
+    height: 130px;        
+  }
   .child-paper {
     @include child-mixin;
     background-image: url('../../images/icon-paper.svg');
     background-size:  76px 76px;
     width: 152px;
     height: 152px;
+
+    @media only screen and (max-width: 375px) {
+      width: 100px;
+      height: 100px;     
+      background-size: 50px 50px;   
+    }
   }
 }
 
@@ -84,13 +122,24 @@
   &:hover {
     cursor: pointer;   
     transform: rotate(-10deg);   
-  }   
+  }
+  
+  @media only screen and (max-width: 375px) {
+    width: 130px;
+    height: 130px;        
+  }
   .child-scissors {
     @include child-mixin;
     background-image: url('../../images/icon-scissors.svg');
     background-size:  76px 76px;
     width: 152px;
     height: 152px;
+
+    @media only screen and (max-width: 375px) {
+      width: 100px;
+      height: 100px;     
+      background-size: 50px 50px;   
+    }
   }
 }
 }
