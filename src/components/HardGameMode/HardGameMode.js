@@ -42,7 +42,7 @@ function HardGameMode({ gameMode, setGameMode, score, setScore }) {
             </div>
           </div>
         </div>
-        : <Game humanChoise={humanChoise} gameMode={gameMode} score={score} setScore={setScore} />}
+        : <Game humanChoise={humanChoise} setHumanChoise={setHumanChoise} gameMode={gameMode} score={score} setScore={setScore} setGameMode={setGameMode} />}
     </div>
 
   )

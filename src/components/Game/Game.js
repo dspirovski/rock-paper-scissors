@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import App from '../../App';
 import EasyGameMode from '../EasyGameMode/EasyGameMode';
+import HardGameMode from '../HardGameMode/HardGameMode';
 
 import './Game.scss';
 
-const Game = ({ humanChoise, score, setScore, gameMode }) => {
+const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, setGameMode }) => {
 
   const [computerChoise, setComputerChoise] = useState('');
   const [resultMessage, setResultMessage] = useState('');
   const [timer, setTimer] = useState(3);
+  // const [test, setTest] = useState(false);
 
   //Generate random computer choise for easy mode 
   const randomEasyModeChoise = () => {
@@ -54,12 +57,18 @@ const Game = ({ humanChoise, score, setScore, gameMode }) => {
     setTimeout(function () { setTimer(0) }, 3000);
     setTimeout(function () { calculateResult() }, 3000);
   };
+
   useEffect(() => {
     countdown();
   }, [computerChoise]);
 
+  const playAgain = () => {
+    setHumanChoise("");
+  }
+
   return (
     //Display result for human choise
+
     <div className="game">
       <div className="choise">
         <h4 className="choise-text">You picked</h4>
@@ -75,7 +84,6 @@ const Game = ({ humanChoise, score, setScore, gameMode }) => {
           </div>
           }
 
-
           {humanChoise === 'lizard' && <div className="parent-lizard">
             <div className="child child-lizard"></div>
           </div>
@@ -86,7 +94,6 @@ const Game = ({ humanChoise, score, setScore, gameMode }) => {
           </div>
           }
 
-          
         </div>
       </div>
 
@@ -94,7 +101,7 @@ const Game = ({ humanChoise, score, setScore, gameMode }) => {
         <p className="message-text">
           {timer === 0 ? resultMessage : null}
         </p>
-        {timer === 0 ? <button className="play-again-btn" onClick={() => { <EasyGameMode /> }}>play again</button> : null}
+        {timer === 0 ? <button className="play-again-btn" onClick={playAgain}>play again</button> : null}
       </div>
 
       <div className="choise">

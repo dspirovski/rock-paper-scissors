@@ -35,7 +35,9 @@ function EasyGameMode({ gameMode, setGameMode, score, setScore }) {
               </div>
             </div>
           </main>
-        </div > : <Game humanChoise={humanChoise} gameMode={gameMode} score={score} setScore={setScore} />}
+        </div >
+        :
+        <Game humanChoise={humanChoise} setHumanChoise={setHumanChoise} gameMode={gameMode} score={score} setScore={setScore} />}
     </div >
   )
 
