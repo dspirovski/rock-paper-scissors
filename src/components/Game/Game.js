@@ -5,7 +5,7 @@ import HardGameMode from '../HardGameMode/HardGameMode';
 
 import './Game.scss';
 
-const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, setGameMode }) => {
+const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
   const [computerChoise, setComputerChoise] = useState('');
   const [resultMessage, setResultMessage] = useState('');
@@ -68,7 +68,6 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, setGameM
 
   return (
     //Display result for human choise
-
     <div className="game">
       <div className="choise">
         <h4 className="choise-text">You picked</h4>
@@ -101,7 +100,14 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, setGameM
         <p className="message-text">
           {timer === 0 ? resultMessage : null}
         </p>
-        {timer === 0 ? <button className="play-again-btn" onClick={playAgain}>play again</button> : null}
+        {timer === 0 ? <button className={
+          resultMessage === 'draw' ? "play-again-btn"
+            :
+            resultMessage === 'you lose' ? 'play-again-btn lose'
+              :
+              'play-again-btn win'
+        }
+          onClick={playAgain}>play again</button> : null}
       </div>
 
       <div className="choise">
