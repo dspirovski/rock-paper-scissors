@@ -110,6 +110,10 @@
    }
 }
 
+.parent-paper.win {
+  @include winner-shadow;
+  }
+
 //scissors icon
 .parent-scissors {
     @include parent-mixin($yellow);
@@ -134,6 +138,10 @@
     }
   }
 }
+
+.parent-scissors.win {
+  @include winner-shadow;
+  }
 
 //lizard icon
 .parent-lizard {
@@ -160,6 +168,10 @@
 }
 }
 
+.parent-lizard.win {
+  @include winner-shadow;
+  }
+
 //spock icon
 .parent-spock {
   @include parent-mixin($green);
@@ -185,6 +197,10 @@
 }
 }
 
+.parent-spock.win {
+  @include winner-shadow;
+  }
+
     }
 
     .house-picked {
@@ -197,10 +213,11 @@
 
       @media only screen and (max-width: 375px) {
         width: 130px;
-        height: 130px;     
-  
-      }
+        height: 130px;   
+      }     
+
     }
+    
   }
 
   .message {    

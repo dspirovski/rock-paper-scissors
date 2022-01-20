@@ -16,9 +16,8 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
   //Generate random computer choise for easy mode 
   const randomEasyModeChoise = () => {
-    // const choises = [1,2,3];
-    // setComputerChoise(choises[Math.floor(Math.random() * 3)])
-    setComputerChoise(1)
+    const choises = [1, 2, 3];
+    setComputerChoise(choises[Math.floor(Math.random() * 3)])
   }
 
   //Generate random computer choise for hard mode 
@@ -137,12 +136,12 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
           {humanChoise === 3 && <div className={timer > 0 ? "parent-rock" : (resultMessage === "you win" ? "parent-rock win" : "parent-rock")}>
             <div className="child child-rock"></div>
           </div>}
-          {humanChoise === 1 && <div className="parent-scissors">
+          {humanChoise === 1 && <div className={timer > 0 ? "parent-scissors" : (resultMessage === "you win" ? "parent-scissors win" : "parent-scissors")}>
             <div className="child child-scissors"></div>
           </div>
           }
 
-          {humanChoise === 4 && <div className="parent-lizard">
+          {humanChoise === 4 && <div className={timer > 0 ? "parent-lizard" : (resultMessage === "you win" ? "parent-lizard win" : "parent-lizard")}>
             <div className="child child-lizard"></div>
           </div>
           }
@@ -174,9 +173,12 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
         <h4 className="choise-text">The House picked</h4>
         <div className="choise-picked house-picked">
           {timer > 0 && timer}
+
           {timer === 0 && computerChoise === 2 &&
-            <div className="parent-paper"><div className="child child-paper"></div>
+            <div className={resultMessage === "you lose" ? "parent-paper win" : "parent-paper"}><div className="child child-paper"></div>
             </div>}
+
+          {/* <div className={timer > 0 ? "parent-rock" : (resultMessage === "you win" ? "parent-rock win" : "parent-rock")}></div> */}
 
           {timer === 0 && computerChoise === 1 &&
             <div className="parent-scissors"><div className="child child-scissors"></div>
