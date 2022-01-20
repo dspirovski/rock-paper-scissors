@@ -15,27 +15,27 @@ function HardGameMode({ gameMode, setGameMode, score, setScore }) {
             <button className='mode-btn' onClick={() => setGameMode(false)}>hard</button>
           </div>
           <div className="hard-mode-body">
-            <div className="item scissors-position" onClick={() => { setHumanChoise('scissors') }}>
+            <div className="item scissors-position" onClick={() => { setHumanChoise(1) }}>
               <div className="parent-scissors">
                 <div className="child child-scissors"></div>
               </div>
             </div>
-            <div className="item paper-position" onClick={() => { setHumanChoise('paper') }}>
+            <div className="item paper-position" onClick={() => { setHumanChoise(2) }}>
               <div className="parent-paper">
                 <div className="child child-paper"></div>
               </div>
             </div>
-            <div className="item rock-position" onClick={() => { setHumanChoise('rock') }}>
+            <div className="item rock-position" onClick={() => { setHumanChoise(3) }}>
               <div className="parent-rock">
                 <div className="child child-rock"></div>
               </div>
             </div>
-            <div className="item lizard-position" onClick={() => { setHumanChoise('lizard') }}>
+            <div className="item lizard-position" onClick={() => { setHumanChoise(4) }}>
               <div className="parent-lizard">
                 <div className="child child-lizard"></div>
               </div>
             </div>
-            <div className="item spock-position" onClick={() => { setHumanChoise('spock') }}>
+            <div className="item spock-position" onClick={() => { setHumanChoise(5) }}>
               <div className="parent-spock">
                 <div className="child child-spock"></div>
               </div>
