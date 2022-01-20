@@ -81,6 +81,10 @@
   }
 }
 
+.parent-rock.win {
+@include winner-shadow;
+}
+
 //paper icon
 .parent-paper {
   @include parent-mixin($blue);
@@ -245,7 +249,6 @@
     }
   }
 }
-
 
 
 

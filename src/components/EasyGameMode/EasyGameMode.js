@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Game from '../Game/Game';
 import './EasyGameMode.scss';
+import { motion } from 'framer-motion';
 
 function EasyGameMode({ gameMode, setGameMode, score, setScore }) {
 
@@ -10,29 +11,39 @@ function EasyGameMode({ gameMode, setGameMode, score, setScore }) {
     <div className="easy-mode">
       {humanChoise === "" ?
         <div className="easy-mode-container">
-          <div className="game-modes">
+          <motion.div className="game-modes"
+            initial={{ x: '30vw', opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 1, type: "spring", stiffness: 150 }}
+          >
             <button className='mode-btn' onClick={() => setGameMode(true)}>easy</button>
             <button className='mode-btn' onClick={() => setGameMode(false)}>hard</button>
-          </div>
+          </motion.div>
           <main className="easy-mode-body">
             <div className="top">
-              <div className="top-left" onClick={() => { setHumanChoise(2) }}>
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                className="top-left" onClick={() => { setHumanChoise(2) }}>
                 <div className="parent-paper">
                   <div className="child child-paper"></div>
                 </div>
-              </div>
-              <div className="top-right" onClick={() => { setHumanChoise(1) }}>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                className="top-right" onClick={() => { setHumanChoise(1) }}>
                 <div className="parent-scissors">
                   <div className="child child-scissors"></div>
                 </div>
-              </div>
+              </motion.div>
             </div>
             <div className="bottom">
-              <div className="bottom-center" onClick={() => { setHumanChoise(3) }}>
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                className="bottom-center" onClick={() => { setHumanChoise(3) }}>
                 <div className="parent-rock">
                   <div className="child child-rock"></div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </main>
         </div >

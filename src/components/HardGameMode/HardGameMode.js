@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Game from '../Game/Game';
 import './HardGameMode.scss';
+import { motion } from 'framer-motion';
+
 
 function HardGameMode({ gameMode, setGameMode, score, setScore }) {
 
@@ -15,31 +17,41 @@ function HardGameMode({ gameMode, setGameMode, score, setScore }) {
             <button className='mode-btn' onClick={() => setGameMode(false)}>hard</button>
           </div>
           <div className="hard-mode-body">
-            <div className="item scissors-position" onClick={() => { setHumanChoise(1) }}>
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              className="item scissors-position" onClick={() => { setHumanChoise(1) }}>
               <div className="parent-scissors">
                 <div className="child child-scissors"></div>
               </div>
-            </div>
-            <div className="item paper-position" onClick={() => { setHumanChoise(2) }}>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              className="item paper-position" onClick={() => { setHumanChoise(2) }}>
               <div className="parent-paper">
                 <div className="child child-paper"></div>
               </div>
-            </div>
-            <div className="item rock-position" onClick={() => { setHumanChoise(3) }}>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              className="item rock-position" onClick={() => { setHumanChoise(3) }}>
               <div className="parent-rock">
                 <div className="child child-rock"></div>
               </div>
-            </div>
-            <div className="item lizard-position" onClick={() => { setHumanChoise(4) }}>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              className="item lizard-position" onClick={() => { setHumanChoise(4) }}>
               <div className="parent-lizard">
                 <div className="child child-lizard"></div>
               </div>
-            </div>
-            <div className="item spock-position" onClick={() => { setHumanChoise(5) }}>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              className="item spock-position" onClick={() => { setHumanChoise(5) }}>
               <div className="parent-spock">
                 <div className="child child-spock"></div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         : <Game humanChoise={humanChoise} setHumanChoise={setHumanChoise} gameMode={gameMode} score={score} setScore={setScore} setGameMode={setGameMode} />}

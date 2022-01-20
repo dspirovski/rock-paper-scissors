@@ -3,6 +3,7 @@ import './Modal.scss';
 import rulesImage from '../../images/image-rules.svg';
 import bonusRulesImage from '../../images/image-rules-bonus.svg';
 import closeButton from '../../images/icon-close.svg';
+import { motion } from 'framer-motion';
 
 
 const Modal = ({ setModal, gameMode }) => {
@@ -19,9 +20,9 @@ const Modal = ({ setModal, gameMode }) => {
         </header>
         <div className="rules-img">
           {gameMode === true ?
-            <img src={rulesImage} alt="rules-img" />
+            <motion.img src={rulesImage} alt="rules-img" animate={{ rotateZ: 360 }} />
             :
-            <img src={bonusRulesImage} alt="bonus-rules-img" />}
+            <motion.img src={bonusRulesImage} alt="bonus-rules-img" animate={{ rotateZ: 360 }} />}
         </div>
 
       </div>

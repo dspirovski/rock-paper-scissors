@@ -76,7 +76,6 @@
       height: 148px;
       transform: translate(110px, 150px);
 
-
       .child-rock {
         @include child-mixin;
         background-image: url('../../images/icon-rock.svg');

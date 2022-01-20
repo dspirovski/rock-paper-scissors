@@ -16,8 +16,9 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
   //Generate random computer choise for easy mode 
   const randomEasyModeChoise = () => {
-    const choises = [1, 2, 3];
-    setComputerChoise(choises[Math.floor(Math.random() * 3)])
+    // const choises = [1,2,3];
+    // setComputerChoise(choises[Math.floor(Math.random() * 3)])
+    setComputerChoise(1)
   }
 
   //Generate random computer choise for hard mode 
@@ -27,6 +28,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
   }
 
   //Invoke function regarding user choise (easy or hard mode)
+
   useEffect(() => {
     gameMode && randomEasyModeChoise();
     !gameMode && randomHardModeChoise();
@@ -35,25 +37,31 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
   const calculateResult = () => {
     //HUMAN CHOISE IS EVEN, COMPUTER CHOISE IS EVEN
-    if (humanChoise % 2 === 0 && computerChoise % 2 === 0 && humanChoise > computerChoise) {
+    if ((humanChoise % 2 === 0 && computerChoise % 2 === 0) && (humanChoise > computerChoise)) {
       setResultMessage('you win');
       setScore(score + 1);
       console.log(`Human choise ${humanChoise}`);
       console.log(`Computer choise ${computerChoise}`);
-    } else if (humanChoise % 2 === 0 && computerChoise % 2 === 0 && computerChoise > humanChoise) {
+
+    } else if ((humanChoise % 2 === 0 && computerChoise % 2 === 0) && (humanChoise < computerChoise)) {
       setResultMessage('you lose');
       setScore(score - 1);
+      console.log(`Human choise ${humanChoise}`);
+      console.log(`Computer choise ${computerChoise}`);
+
+    } else if ((humanChoise % 2 === 0 && computerChoise % 2 === 0) && (humanChoise === computerChoise)) {
+      setResultMessage('draw');
       console.log(`Human choise ${humanChoise}`);
       console.log(`Computer choise ${computerChoise}`);
     }
 
     //HUMAN CHOISE IS ODD, COMPUTER CHOISE IS ODD
-    else if (humanChoise % 2 !== 0 && computerChoise % 2 !== 0 && computerChoise > humanChoise) {
+    else if ((humanChoise % 2 !== 0 && computerChoise % 2 !== 0) && (computerChoise > humanChoise)) {
       setResultMessage('you lose');
       setScore(score - 1);
       console.log(`Human choise ${humanChoise}`);
       console.log(`Computer choise ${computerChoise}`);
-    } else if (humanChoise % 2 !== 0 && computerChoise % 2 !== 0 && computerChoise < humanChoise) {
+    } else if ((humanChoise % 2 !== 0 && computerChoise % 2 !== 0) && (computerChoise < humanChoise)) {
       setResultMessage('you win');
       setScore(score + 1);
       console.log(`Human choise ${humanChoise}`);
@@ -61,12 +69,12 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
     }
 
     //HUMAN CHOISE IS EVEN, COMPUTER CHOISE IS ODD
-    else if (humanChoise % 2 === 0 && computerChoise % 2 !== 0 && humanChoise < computerChoise) {
+    else if ((humanChoise % 2 === 0 && computerChoise % 2 !== 0) && (humanChoise < computerChoise)) {
       setResultMessage('you win');
       setScore(score + 1);
       console.log(`Human choise ${humanChoise}`);
       console.log(`Computer choise ${computerChoise}`);
-    } else if (humanChoise % 2 === 0 && computerChoise % 2 !== 0 && humanChoise > computerChoise) {
+    } else if ((humanChoise % 2 === 0 && computerChoise % 2 !== 0) && (humanChoise > computerChoise)) {
       setResultMessage('you lose');
       setScore(score - 1);
       console.log(`Human choise ${humanChoise}`);
@@ -74,13 +82,13 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
     }
 
     //HUMAN CHOISE IS ODD, COMPUTER CHOISE IS EVEN
-    else if (humanChoise % 2 !== 0 && computerChoise % 2 === 0 && humanChoise < computerChoise) {
+    else if ((humanChoise % 2 !== 0 && computerChoise % 2 === 0) && (humanChoise < computerChoise)) {
       setResultMessage('you win');
       setScore(score + 1);
       console.log(`Human choise ${humanChoise}`);
       console.log(`Computer choise ${computerChoise}`);
     }
-    else if (humanChoise % 2 !== 0 && computerChoise % 2 === 0 && computerChoise < humanChoise) {
+    else if ((humanChoise % 2 !== 0 && computerChoise % 2 === 0) && (humanChoise > computerChoise)) {
       setResultMessage('you lose');
       setScore(score - 1);
       console.log(`Human choise ${humanChoise}`);
@@ -92,17 +100,26 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
     }
   };
 
-
-  const countdown = () => {
-    setTimeout(function () { setTimer(2) }, 1000);
-    setTimeout(function () { setTimer(1) }, 2000);
-    setTimeout(function () { setTimer(0) }, 3000);
-    setTimeout(function () { calculateResult() }, 3000);
-  };
-
   useEffect(() => {
-    countdown();
-  }, [computerChoise]);
+    const countDown = timer > 0 ? setInterval(() => {
+      setTimer(timer - 1)
+    }, 1000) : calculateResult();
+    return () => {
+      clearInterval(countDown)
+    }
+
+  }, [timer]);
+
+  // const countdown = () => {
+  //   setTimeout(function () { setTimer(2) }, 1000);
+  //   setTimeout(function () { setTimer(1) }, 2000);
+  //   setTimeout(function () { setTimer(0) }, 3000);
+  //   setTimeout(function () { calculateResult() }, 3000);
+  // };
+
+  // useEffect(() => {
+  //   countdown();
+  // }, [computerChoise]);
 
   const playAgain = () => {
     setHumanChoise("");
@@ -117,7 +134,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
           {humanChoise === 2 && <div className="parent-paper">
             <div className="child child-paper"></div>
           </div>}
-          {humanChoise === 3 && <div className="parent-rock">
+          {humanChoise === 3 && <div className={timer > 0 ? "parent-rock" : (resultMessage === "you win" ? "parent-rock win" : "parent-rock")}>
             <div className="child child-rock"></div>
           </div>}
           {humanChoise === 1 && <div className="parent-scissors">
