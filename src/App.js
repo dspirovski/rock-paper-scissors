@@ -19,10 +19,9 @@ function App() {
     <motion.div className="app"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.5, duration: 1.8 }}
+      transition={{ delay: 0.5, duration: 2.8 }}
     >
       <Header score={score} gameMode={gameMode} />
-
       {gameMode === true ? <EasyGameMode setGameMode={setGameMode} score={score} setScore={setScore} gameMode={gameMode} /> : <HardGameMode setGameMode={setGameMode} score={score} setScore={setScore} gameMode={gameMode} />}
       <motion.button
         className="rulles-button"

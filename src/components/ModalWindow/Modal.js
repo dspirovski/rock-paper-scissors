@@ -20,7 +20,11 @@ const Modal = ({ setModal, gameMode }) => {
         </header>
         <div className="rules-img">
           {gameMode === true ?
-            <motion.img src={rulesImage} alt="rules-img" animate={{ rotateZ: 360 }} />
+            <motion.img src={rulesImage} alt="rules-img"
+              animate={{ rotateZ: 360 }}
+              transition={{ delay: 0, duration: 0.2 }}
+
+            />
             :
             <motion.img src={bonusRulesImage} alt="bonus-rules-img" animate={{ rotateZ: 360 }} />}
         </div>

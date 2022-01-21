@@ -8,7 +8,10 @@ function EasyGameMode({ gameMode, setGameMode, score, setScore }) {
   const [humanChoise, setHumanChoise] = useState('');
 
   return (
-    <div className="easy-mode">
+    <motion.div
+      initial={{ scale: 1.5 }}
+      animate={{ scale: 1 }}
+      className="easy-mode">
       {humanChoise === "" ?
         <div className="easy-mode-container">
           <motion.div className="game-modes"
@@ -49,7 +52,7 @@ function EasyGameMode({ gameMode, setGameMode, score, setScore }) {
         </div >
         :
         <Game humanChoise={humanChoise} setHumanChoise={setHumanChoise} gameMode={gameMode} score={score} setScore={setScore} />}
-    </div >
+    </motion.div >
   )
 
 }

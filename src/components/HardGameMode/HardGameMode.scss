@@ -2,14 +2,10 @@
 @import "../../sass/abstracts/variables.scss";
 
 .hard-mode {   
-  // height: 70vh;
 
-
-  
   .hard-mode-container {
     @include perfect-centering; 
-    flex-direction: column;
- 
+    flex-direction: column; 
 
     .game-modes {
       width: 200px;
