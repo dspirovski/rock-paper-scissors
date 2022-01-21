@@ -9,14 +9,11 @@
   width: 43.75rem; //=700px
   padding: 0 1rem;
 
-  
-
-
 
   .logo-img {
     @media only screen and (max-width: 376px) {
-      width: 120px;
-      height: 80px;
+      width: 100px;
+      height: 70px;
     }
   }
 
@@ -38,9 +35,9 @@
       justify-content: center;  
       margin: 1rem 0;
 
-      @media only screen and (max-width: 376px) {
-        width: 120px;
-        height: 80px;
+      @media only screen and (max-width: 375px) {
+        width: 100px;
+        height: 70px;
       }
    
         .score {     
@@ -70,7 +67,8 @@
           color: #565468; 
 
           @media only screen and (max-width: 375px) {
-            font-size: 3.75rem;
+            font-size: 2.75rem;
+            line-height: 2.75rem;
           }
        }   
  }
