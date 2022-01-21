@@ -17,9 +17,11 @@ function App() {
   return (
 
     <motion.div className="app"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5, duration: 2.8 }}
+      initial={{ scale: 1.5 }}
+      animate={{ scale: 1 }}
+      // transition={{ delay: 0.5, duration: 2.8 }}
+      transition={{ delay: 0, type: "spring", stiffness: 600 }}
+
     >
       <Header score={score} gameMode={gameMode} />
       {gameMode === true ? <EasyGameMode setGameMode={setGameMode} score={score} setScore={setScore} gameMode={gameMode} /> : <HardGameMode setGameMode={setGameMode} score={score} setScore={setScore} gameMode={gameMode} />}

@@ -53,9 +53,9 @@
 
 //shadow when the human/computer wins
 @mixin winner-shadow {
-  box-shadow: 0px 0px 0px 50px rgba(#ffffff, .07),
-  0px 0px 0px 100px rgba(#ffffff, .05),
-  0px 0px 0px 150px rgba(#ffffff, .025),;
+  box-shadow: 0px 0px 0px 80px rgba(#ffffff, .07),
+  0px 0px 0px 160px rgba(#ffffff, .05),
+  0px 0px 0px 240px rgba(#ffffff, .025),;
 
   @media only screen and (max-width: 375px) {
     box-shadow: 0px 0px 0px 15px rgba(#ffffff, .07),

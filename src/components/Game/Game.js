@@ -6,7 +6,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
   const [computerChoise, setComputerChoise] = useState('');
   const [resultMessage, setResultMessage] = useState('');
-  const [timer, setTimer] = useState(3);
+  const [timer, setTimer] = useState(2);
   //HARD GAME MODE            EASY GAME MODE
   // 1 >>> scissors           1 >>> paper
   // 2 >>> paper              2 >>> scissors
@@ -16,8 +16,9 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
   //Generate random computer choise for easy mode 
   const randomEasyModeChoise = () => {
-    const choises = [1, 2, 3];
-    setComputerChoise(choises[Math.floor(Math.random() * 3)])
+    // const choises = [1, 2, 3];
+    // setComputerChoise(choises[Math.floor(Math.random() * 3)])
+    setComputerChoise(1);
   }
 
   //Generate random computer choise for hard mode 
@@ -91,17 +92,6 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
   }, [timer]);
 
-  // const countdown = () => {
-  //   setTimeout(function () { setTimer(2) }, 1000);
-  //   setTimeout(function () { setTimer(1) }, 2000);
-  //   setTimeout(function () { setTimer(0) }, 3000);
-  //   setTimeout(function () { calculateResult() }, 3000);
-  // };
-
-  // useEffect(() => {
-  //   countdown();
-  // }, [computerChoise]);
-
   const playAgain = () => {
     setHumanChoise("");
   }
@@ -155,7 +145,6 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
         <h4 className="choise-text">The House picked</h4>
         <div className="choise-picked house-picked">
           {timer > 0 && timer}
-
           {timer === 0 && computerChoise === 2 &&
             <div className={resultMessage === "you lose" ? "parent-paper win" : "parent-paper"}><div className="child child-paper"></div>
             </div>}

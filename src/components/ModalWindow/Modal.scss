@@ -17,14 +17,17 @@
   .container {
     background-color: #E1E4ED;
     width: 400px;
-    height: 400px;
+    height: 415px;
     border-radius: 8px;
     position: relative;
+
+    .bonus {
+      height: 461px;
+    }
     
     @media only screen and (max-width: 375px) {
       background-color: #fff;   
-      height: 70vh;  
-      // justify-content: space-around;   
+      height: 70vh;   
     }
 
     .modal-header {

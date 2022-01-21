@@ -13,7 +13,7 @@ const Modal = ({ setModal, gameMode }) => {
   }
   return (
     <div className="modal" onClick={closeModal}>
-      <div className="container">
+      <div className={gameMode === true ? "container" : "container bonus"}>
         <header className="modal-header">
           <h4 className="text">rules</h4>
           <img src={closeButton} alt="close-btn" onClick={closeModal} className="close-btn" />

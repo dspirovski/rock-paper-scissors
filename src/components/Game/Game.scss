@@ -18,7 +18,7 @@
     justify-content: space-between;
     align-items: center;
     width: 293px;
-    height: 395px; 
+    height: 395px;
 
     @media only screen and (max-width: 375px) {
       width: 200px;
@@ -47,7 +47,7 @@
       height: 300px;       
       display: flex;
       justify-content: center;
-      align-items: center;     
+      align-items: center;  
       
       @media only screen and (max-width: 375px) {
         width: 130px;
@@ -59,6 +59,7 @@
        @include parent-mixin($red);  
          width: 292.61px;
          height: 286.7px;
+         position: absolute;
 
        @media only screen and (max-width: 375px) {
          width: 130px;
@@ -90,6 +91,7 @@
   @include parent-mixin($blue);
   width: 292.61px;
   height: 286.7px;
+  position: absolute;
 
   @media only screen and (max-width: 375px) {
     width: 130px;
@@ -119,6 +121,7 @@
     @include parent-mixin($yellow);
     width: 292.61px;
     height: 286.7px;
+    position: absolute;
 
     @media only screen and (max-width: 375px) {
       width: 130px;
@@ -148,6 +151,7 @@
   @include parent-mixin($purple);
   width: 292.61px;
   height: 286.7px;
+  position: absolute;
 
   @media only screen and (max-width: 375px) {
     width: 130px;
@@ -176,7 +180,8 @@
 .parent-spock {
   @include parent-mixin($green);
   width: 292.61px;
-  height: 286.7px;
+  height: 286.7px; 
+  position: absolute; 
 
   @media only screen and (max-width: 375px) {
     width: 130px;
@@ -197,19 +202,19 @@
 }
 }
 
-.parent-spock.win {
-  @include winner-shadow;
-  }
-
+      .parent-spock.win {
+        @include winner-shadow;
+        }
     }
 
     .house-picked {
       background: rgba(0, 0, 0, 0.1);
-      width: 290px;
-      height: 290px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       color: #fff;
       font-size: 32px;
+      margin-bottom: 70px;
 
       @media only screen and (max-width: 375px) {
         width: 130px;
