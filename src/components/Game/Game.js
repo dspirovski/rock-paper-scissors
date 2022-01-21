@@ -39,59 +39,41 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
     if ((humanChoise % 2 === 0 && computerChoise % 2 === 0) && (humanChoise > computerChoise)) {
       setResultMessage('you win');
       setScore(score + 1);
-      console.log(`Human choise ${humanChoise}`);
-      console.log(`Computer choise ${computerChoise}`);
 
     } else if ((humanChoise % 2 === 0 && computerChoise % 2 === 0) && (humanChoise < computerChoise)) {
       setResultMessage('you lose');
       setScore(score - 1);
-      console.log(`Human choise ${humanChoise}`);
-      console.log(`Computer choise ${computerChoise}`);
 
     } else if ((humanChoise % 2 === 0 && computerChoise % 2 === 0) && (humanChoise === computerChoise)) {
       setResultMessage('draw');
-      console.log(`Human choise ${humanChoise}`);
-      console.log(`Computer choise ${computerChoise}`);
     }
 
     //HUMAN CHOISE IS ODD, COMPUTER CHOISE IS ODD
     else if ((humanChoise % 2 !== 0 && computerChoise % 2 !== 0) && (computerChoise > humanChoise)) {
       setResultMessage('you lose');
       setScore(score - 1);
-      console.log(`Human choise ${humanChoise}`);
-      console.log(`Computer choise ${computerChoise}`);
     } else if ((humanChoise % 2 !== 0 && computerChoise % 2 !== 0) && (computerChoise < humanChoise)) {
       setResultMessage('you win');
       setScore(score + 1);
-      console.log(`Human choise ${humanChoise}`);
-      console.log(`Computer choise ${computerChoise}`);
     }
 
     //HUMAN CHOISE IS EVEN, COMPUTER CHOISE IS ODD
     else if ((humanChoise % 2 === 0 && computerChoise % 2 !== 0) && (humanChoise < computerChoise)) {
       setResultMessage('you win');
       setScore(score + 1);
-      console.log(`Human choise ${humanChoise}`);
-      console.log(`Computer choise ${computerChoise}`);
     } else if ((humanChoise % 2 === 0 && computerChoise % 2 !== 0) && (humanChoise > computerChoise)) {
       setResultMessage('you lose');
       setScore(score - 1);
-      console.log(`Human choise ${humanChoise}`);
-      console.log(`Computer choise ${computerChoise}`);
     }
 
     //HUMAN CHOISE IS ODD, COMPUTER CHOISE IS EVEN
     else if ((humanChoise % 2 !== 0 && computerChoise % 2 === 0) && (humanChoise < computerChoise)) {
       setResultMessage('you win');
       setScore(score + 1);
-      console.log(`Human choise ${humanChoise}`);
-      console.log(`Computer choise ${computerChoise}`);
     }
     else if ((humanChoise % 2 !== 0 && computerChoise % 2 === 0) && (humanChoise > computerChoise)) {
       setResultMessage('you lose');
       setScore(score - 1);
-      console.log(`Human choise ${humanChoise}`);
-      console.log(`Computer choise ${computerChoise}`);
     } else if (humanChoise === computerChoise) {
       setResultMessage('draw');
     } else {
