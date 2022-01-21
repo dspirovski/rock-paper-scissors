@@ -16,9 +16,8 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
   //Generate random computer choise for easy mode 
   const randomEasyModeChoise = () => {
-    // const choises = [1, 2, 3];
-    // setComputerChoise(choises[Math.floor(Math.random() * 3)])
-    setComputerChoise(3)
+    const choises = [1, 2, 3];
+    setComputerChoise(choises[Math.floor(Math.random() * 3)])
   }
 
   //Generate random computer choise for hard mode 
