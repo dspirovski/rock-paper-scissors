@@ -16,8 +16,9 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
   //Generate random computer choise for easy mode 
   const randomEasyModeChoise = () => {
-    const choises = [1, 2, 3];
-    setComputerChoise(choises[Math.floor(Math.random() * 3)])
+    // const choises = [1, 2, 3];
+    // setComputerChoise(choises[Math.floor(Math.random() * 3)])
+    setComputerChoise(3)
   }
 
   //Generate random computer choise for hard mode 
@@ -130,7 +131,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
       <div className="choise">
         <h4 className="choise-text">You picked</h4>
         <div className="choise-picked">
-          {humanChoise === 2 && <div className="parent-paper">
+          {humanChoise === 2 && <div className={timer > 0 ? "parent-paper" : (resultMessage === "you win" ? "parent-paper win" : "parent-paper")}>
             <div className="child child-paper"></div>
           </div>}
           {humanChoise === 3 && <div className={timer > 0 ? "parent-rock" : (resultMessage === "you win" ? "parent-rock win" : "parent-rock")}>
@@ -178,22 +179,20 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
             <div className={resultMessage === "you lose" ? "parent-paper win" : "parent-paper"}><div className="child child-paper"></div>
             </div>}
 
-          {/* <div className={timer > 0 ? "parent-rock" : (resultMessage === "you win" ? "parent-rock win" : "parent-rock")}></div> */}
-
           {timer === 0 && computerChoise === 1 &&
-            <div className="parent-scissors"><div className="child child-scissors"></div>
+            <div className={resultMessage === "you lose" ? "parent-scissors win" : "parent-scissors"}><div className="child child-scissors"></div>
             </div>}
 
           {timer === 0 && computerChoise === 3 &&
-            <div className="parent-rock"><div className="child child-rock"></div>
+            <div className={resultMessage === "you lose" ? "parent-rock win" : "parent-rock"}><div className="child child-rock"></div>
             </div>}
 
           {timer === 0 && computerChoise === 5 &&
-            <div className="parent-spock"><div className="child child-spock"></div>
+            <div className={resultMessage === "you lose" ? "parent-spock win" : "parent-spock"}><div className="child child-spock"></div>
             </div>}
 
           {timer === 0 && computerChoise === 4 &&
-            <div className="parent-lizard"><div className="child child-lizard"></div>
+            <div className={resultMessage === "you lose" ? "parent-lizard win" : "parent-lizard"}><div className="child child-lizard"></div>
             </div>}
         </div>
       </div>
