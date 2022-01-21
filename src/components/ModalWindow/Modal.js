@@ -18,7 +18,7 @@ const Modal = ({ setModal, gameMode }) => {
           <h4 className="text">rules</h4>
           <img src={closeButton} alt="close-btn" onClick={closeModal} className="close-btn" />
         </header>
-        <div className="rules-img">
+        <div className='rules-img'>
           {gameMode === true ?
             <motion.img src={rulesImage} alt="rules-img"
               animate={{ rotateZ: 360 }}

@@ -18,23 +18,16 @@
     background-color: #E1E4ED;
     width: 400px;
     height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
     border-radius: 8px;
-
+    position: relative;
+    
     @media only screen and (max-width: 375px) {
       background-color: #fff;   
-      height: 100vh;  
-      justify-content: space-around;
+      height: 70vh;  
+      // justify-content: space-around;   
     }
 
     .modal-header {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
       width: 100%;
       padding: 0 20px;
 
@@ -48,6 +41,9 @@
         line-height: 32px;
         text-transform: uppercase;       
         color: #3B4262;
+        top: 20px;
+        left: 20px;
+        position: absolute;
 
         @media only screen and (max-width: 375px) {
           display: flex;
@@ -55,17 +51,25 @@
         }        
       }
 
+      .close-btn {
+        top: 20px;
+        right: 20px;
+        position: absolute;        
+      }
+
       .close-btn:hover {
         cursor: pointer;
-
-        @media only screen and (max-width: 375px) {
-          bottom: 0;     
-        }
       }
     }
 
-    .rules-img {
-      @include perfect-centering;
+    .rules-img {    
+      width: 100%;
+      display: flex;
+      bottom: 10px;
+      position: absolute;
+      justify-content: center;
+  
+
     }
   }
 }
