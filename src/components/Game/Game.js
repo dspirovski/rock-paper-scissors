@@ -8,8 +8,8 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
   const [resultMessage, setResultMessage] = useState('');
   const [timer, setTimer] = useState(2);
   //HARD GAME MODE            EASY GAME MODE
-  // 1 >>> scissors           1 >>> paper
-  // 2 >>> paper              2 >>> scissors
+  // 2 >>> paper              1 >>> scissors
+  // 1 >>> scissors           2 >>> paper
   // 3 >>> rock               3 >>> rock
   // 4 >>> lizard
   // 5 >>> spock 
@@ -102,26 +102,10 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
       <div className="choise">
         <h4 className="choise-text">You picked</h4>
         <div className="choise-picked">
-          {humanChoise === 2 && <div className={timer > 0 ? "parent-paper" : (resultMessage === "you win" ? "parent-paper win" : "parent-paper")}>
-            <div className="child child-paper"></div>
-          </div>}
-          {humanChoise === 3 && <div className={timer > 0 ? "parent-rock" : (resultMessage === "you win" ? "parent-rock win" : "parent-rock")}>
-            <div className="child child-rock"></div>
-          </div>}
-          {humanChoise === 1 && <div className={timer > 0 ? "parent-scissors" : (resultMessage === "you win" ? "parent-scissors win" : "parent-scissors")}>
-            <div className="child child-scissors"></div>
-          </div>
-          }
 
-          {humanChoise === 4 && <div className={timer > 0 ? "parent-lizard" : (resultMessage === "you win" ? "parent-lizard win" : "parent-lizard")}>
-            <div className="child child-lizard"></div>
-          </div>
-          }
-
-          {humanChoise === 5 && <div className="parent-spock">
-            <div className="child child-spock"></div>
-          </div>
-          }
+          {humanChoise == `${humanChoise}` && <div className={timer > 0 ? `parent-${humanChoise}` : (resultMessage === "you win" ? `parent-${humanChoise} win` : `parent-${humanChoise}`)}>
+            <div className={`child child-${humanChoise}`}></div>
+          </div>}
 
         </div>
       </div>
@@ -145,25 +129,11 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
         <h4 className="choise-text">The House picked</h4>
         <div className="choise-picked house-picked">
           {timer > 0 && timer}
-          {timer === 0 && computerChoise === 2 &&
-            <div className={resultMessage === "you lose" ? "parent-paper win" : "parent-paper"}><div className="child child-paper"></div>
+
+          {timer === 0 && computerChoise == `${computerChoise}` &&
+            <div className={resultMessage === "you lose" ? `parent-${computerChoise} win` : `parent-${computerChoise}`}><div className={`child child-${computerChoise}`}></div>
             </div>}
 
-          {timer === 0 && computerChoise === 1 &&
-            <div className={resultMessage === "you lose" ? "parent-scissors win" : "parent-scissors"}><div className="child child-scissors"></div>
-            </div>}
-
-          {timer === 0 && computerChoise === 3 &&
-            <div className={resultMessage === "you lose" ? "parent-rock win" : "parent-rock"}><div className="child child-rock"></div>
-            </div>}
-
-          {timer === 0 && computerChoise === 5 &&
-            <div className={resultMessage === "you lose" ? "parent-spock win" : "parent-spock"}><div className="child child-spock"></div>
-            </div>}
-
-          {timer === 0 && computerChoise === 4 &&
-            <div className={resultMessage === "you lose" ? "parent-lizard win" : "parent-lizard"}><div className="child child-lizard"></div>
-            </div>}
         </div>
       </div>
 

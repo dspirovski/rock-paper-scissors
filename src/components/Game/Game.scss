@@ -54,8 +54,9 @@
        height: 130px;        
       }
 
+    
       //rock icon
-    .parent-rock {
+    .parent-3 {
        @include parent-mixin($red);  
          width: 292.61px;
          height: 286.7px;
@@ -67,7 +68,7 @@
        }
 
    
-  .child-rock {
+  .child-3 {
     @include child-mixin;
     background-image: url('../../images/icon-rock.svg');
     background-size:  110px 110px;
@@ -82,12 +83,12 @@
   }
 }
 
-.parent-rock.win {
+.parent-3.win {
 @include winner-shadow;
 }
 
 //paper icon
-.parent-paper {
+.parent-2 {
   @include parent-mixin($blue);
   width: 292.61px;
   height: 286.7px;
@@ -97,7 +98,7 @@
     width: 130px;
     height: 130px;        
   }
-  .child-paper {
+  .child-2 {
     @include child-mixin;
     background-image: url('../../images/icon-paper.svg');
     background-size:  110px 110px;
@@ -112,12 +113,12 @@
    }
 }
 
-.parent-paper.win {
+.parent-2.win {
   @include winner-shadow;
   }
 
 //scissors icon
-.parent-scissors {
+.parent-1 {
     @include parent-mixin($yellow);
     width: 292.61px;
     height: 286.7px;
@@ -127,7 +128,7 @@
       width: 130px;
       height: 130px;        
     }
-  .child-scissors {
+  .child-1 {
     @include child-mixin;
     background-image: url('../../images/icon-scissors.svg');
     background-size:  110px 110px;
@@ -142,12 +143,12 @@
   }
 }
 
-.parent-scissors.win {
+.parent-1.win {
   @include winner-shadow;
   }
 
 //lizard icon
-.parent-lizard {
+.parent-4 {
   @include parent-mixin($purple);
   width: 292.61px;
   height: 286.7px;
@@ -157,7 +158,7 @@
     width: 130px;
     height: 130px;        
   }
-.child-lizard {
+.child-4 {
   @include child-mixin;
   background-image: url('../../images/icon-lizard.svg');
   background-size:  110px 110px;
@@ -172,12 +173,12 @@
 }
 }
 
-.parent-lizard.win {
+.parent-4.win {
   @include winner-shadow;
   }
 
 //spock icon
-.parent-spock {
+.parent-5 {
   @include parent-mixin($green);
   width: 292.61px;
   height: 286.7px; 
@@ -187,7 +188,7 @@
     width: 130px;
     height: 130px;        
   }
-.child-spock {
+.child-5 {
   @include child-mixin;
   background-image: url('../../images/icon-spock.svg');
   background-size:  110px 110px; 
@@ -202,8 +203,12 @@
 }
 }
 
-      .parent-spock.win {
+      .parent-5.win {
         @include winner-shadow;
+        }
+
+        &:hover {
+          cursor: pointer;
         }
     }
 
@@ -214,11 +219,13 @@
       border-radius: 50%;
       color: #fff;
       font-size: 32px;
-      margin-bottom: 70px;
+      margin-bottom: 70px;    
 
       @media only screen and (max-width: 375px) {
         width: 130px;
         height: 130px;   
+        margin-bottom: 0px;    
+
       }     
 
     }
@@ -281,6 +288,5 @@
     }
   }
 }
-
 
 
