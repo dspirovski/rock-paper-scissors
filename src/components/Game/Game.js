@@ -7,18 +7,18 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
   const [computerChoise, setComputerChoise] = useState('');
   const [resultMessage, setResultMessage] = useState('');
   const [timer, setTimer] = useState(2);
-  //HARD GAME MODE            EASY GAME MODE
-  // 2 >>> paper              1 >>> scissors
-  // 1 >>> scissors           2 >>> paper
-  // 3 >>> rock               3 >>> rock
-  // 4 >>> lizard
-  // 5 >>> spock 
+
+  //EASY GAME MODE              //HARD GAME MODE                
+  // 1. scissors                  1. scissors
+  // 2. paper                     2. paper
+  // 3. rock                      3. rock
+  //                              4. lizard
+  //                              5. spock 
 
   //Generate random computer choise for easy mode 
   const randomEasyModeChoise = () => {
-    // const choises = [1, 2, 3];
-    // setComputerChoise(choises[Math.floor(Math.random() * 3)])
-    setComputerChoise(1);
+    const choises = [1, 2, 3];
+    setComputerChoise(choises[Math.floor(Math.random() * 3)])
   }
 
   //Generate random computer choise for hard mode 
