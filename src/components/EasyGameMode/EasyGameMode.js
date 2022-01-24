@@ -18,20 +18,20 @@ function EasyGameMode({ gameMode, score, setScore }) {
           <main className="easy-mode-body">
             <div className="top">
               <div className="top-left" onClick={() => { setHumanChoise(2) }}>
-                <div className="parent-paper">
-                  <div className="child child-paper"></div>
+                <div className="icon-paper">
+                  <div className="image image-paper"></div>
                 </div>
               </div>
               <div className="top-right" onClick={() => { setHumanChoise(1) }}>
-                <div className="parent-scissors">
-                  <div className="child child-scissors"></div>
+                <div className="icon-scissors">
+                  <div className="image image-scissors"></div>
                 </div>
               </div>
             </div>
             <div className="bottom">
               <div className="bottom-center" onClick={() => { setHumanChoise(3) }}>
-                <div className="parent-rock">
-                  <div className="child child-rock"></div>
+                <div className="icon-rock">
+                  <div className="image image-rock"></div>
                 </div>
               </div>
             </div>

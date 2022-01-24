@@ -97,8 +97,8 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
         <h4 className="choise-text">You picked</h4>
         <div className="choise-picked">
 
-          {humanChoise == `${humanChoise}` && <div className={timer > 0 ? `parent-${humanChoise}` : (resultMessage === "you win" ? `parent-${humanChoise} win` : `parent-${humanChoise}`)}>
-            <div className={`child child-${humanChoise}`}></div>
+          {humanChoise == `${humanChoise}` && <div className={timer > 0 ? `icon-${humanChoise}` : (resultMessage === "you win" ? `icon-${humanChoise} win` : `icon-${humanChoise}`)}>
+            <div className={`image image-${humanChoise}`}></div>
           </div>}
 
         </div>
@@ -125,7 +125,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
           {timer > 0 && timer}
 
           {timer === 0 && computerChoise == `${computerChoise}` &&
-            <div className={resultMessage === "you lose" ? `parent-${computerChoise} win` : `parent-${computerChoise}`}><div className={`child child-${computerChoise}`}></div>
+            <div className={resultMessage === "you lose" ? `icon-${computerChoise} win` : `icon-${computerChoise}`}><div className={`image image-${computerChoise}`}></div>
             </div>}
 
         </div>

@@ -53,7 +53,7 @@
         } 
 
         //rock icon
-        .parent-rock {
+        .icon-rock {
           @include icon-background($red);
           width: 198px;
           height: 203px;
@@ -67,7 +67,7 @@
               height: 133px;     
             }          
 
-          .child-rock {
+          .image-rock {
             @include icon-body;
             background-image: url('../../images/icon-rock.svg');
             background-size:  76px 76px;
@@ -83,7 +83,7 @@
         }
 
       //paper icon
-      .parent-paper {
+      .icon-paper {
         @include icon-background($blue-1);
         width: 198px;
         height: 203px; 
@@ -97,7 +97,7 @@
           height: 133px;      
         }        
   
-        .child-paper {
+        .image-paper {
           @include icon-body;
           background-image: url('../../images/icon-paper.svg');
           background-size:  76px 76px;
@@ -113,7 +113,7 @@
       }
 
       //scissors icon
-      .parent-scissors {   
+      .icon-scissors {   
         @include icon-background($yellow);
         width: 198px;
         height: 203px;
@@ -127,7 +127,7 @@
           height: 133px;   
         }
           
-        .child-scissors {
+        .image-scissors {
           @include icon-body;
           background-image: url('../../images/icon-scissors.svg');
           background-size:  76px 76px;

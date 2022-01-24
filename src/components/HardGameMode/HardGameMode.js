@@ -21,8 +21,8 @@ function HardGameMode({ gameMode, setGameMode, score, setScore }) {
             {/* TOP position */}
             <div className='position-top'>
               <div className="scissors-position" onClick={() => { setHumanChoise(1) }}>
-                <div className="parent-scissors">
-                  <div className="child child-scissors"></div>
+                <div className="icon-scissors">
+                  <div className="image image-scissors"></div>
                 </div>
               </div>
             </div>
@@ -31,13 +31,13 @@ function HardGameMode({ gameMode, setGameMode, score, setScore }) {
             <div className='position-middle'>
 
               <div className="spock-position" onClick={() => { setHumanChoise(5) }}>
-                <div className="parent-spock">
-                  <div className="child child-spock"></div>
+                <div className="icon-spock">
+                  <div className="image image-spock"></div>
                 </div>
               </div>
               <div className="paper-position" onClick={() => { setHumanChoise(2) }}>
-                <div className="parent-paper">
-                  <div className="child child-paper"></div>
+                <div className="icon-paper">
+                  <div className="image image-paper"></div>
                 </div>
               </div>
 
@@ -46,13 +46,13 @@ function HardGameMode({ gameMode, setGameMode, score, setScore }) {
             {/* position bottom */}
             <div className='position-bottom'>
               <div className="lizard-position" onClick={() => { setHumanChoise(4) }}>
-                <div className="parent-lizard">
-                  <div className="child child-lizard"></div>
+                <div className="icon-lizard">
+                  <div className="image image-lizard"></div>
                 </div>
               </div>
               <div className="rock-position" onClick={() => { setHumanChoise(3) }}>
-                <div className="parent-rock">
-                  <div className="child child-rock"></div>
+                <div className="icon-rock">
+                  <div className="image image-rock"></div>
                 </div>
               </div>
             </div>

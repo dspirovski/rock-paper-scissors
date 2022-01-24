@@ -31,7 +31,7 @@
       justify-content: center;
       display: flex;
       margin-bottom: -30px;
-      .parent-scissors {
+      .icon-scissors {
         @include icon-background($yellow);
         width: 145px;
         height: 148px;
@@ -46,7 +46,7 @@
           margin-bottom: -25px;  
         }
 
-      .child-scissors {
+      .image-scissors {
         @include icon-body;
         background-image: url('../../images/icon-scissors.svg');
         width: 112px;
@@ -68,7 +68,7 @@
       justify-content: space-between;
       margin-bottom: 15px;
       
-      .parent-paper {
+      .icon-paper {
         @include icon-background($blue-1);
         width: 145px;
         height: 148px;
@@ -82,7 +82,7 @@
           height: 97px;      
         }
       
-       .child-paper {
+       .image-paper {
         @include icon-body;
         background-image: url('../../images/icon-paper.svg');
         width: 112px;
@@ -96,7 +96,7 @@
       }
     }
 
-    .parent-spock {
+    .icon-spock {
       @include icon-background($green);
       width: 145px;
       height: 148px;
@@ -110,7 +110,7 @@
         height: 97px;      
       }
  
-      .child-spock {
+      .image-spock {
         @include icon-body;
         background-image: url('../../images/icon-spock.svg');
         width: 112px;
@@ -133,7 +133,7 @@
       padding: 0 30px;
 
       
-     .parent-lizard {
+     .icon-lizard {
       @include icon-background($purple);
        width: 145px;
        height: 148px;
@@ -147,7 +147,7 @@
          height: 97px;       
       }
        
-      .child-lizard {
+      .image-lizard {
         @include icon-body;
         background-image: url('../../images/icon-lizard.svg');
         width: 112px;
@@ -161,7 +161,7 @@
       }
     }
 
-    .parent-rock {
+    .icon-rock {
       @include icon-background($red);
       width: 145px;
       height: 148px;
@@ -175,7 +175,7 @@
         height: 97px;      
       }
 
-      .child-rock {
+      .image-rock {
         @include icon-body;
         background-image: url('../../images/icon-rock.svg');
         width: 112px;

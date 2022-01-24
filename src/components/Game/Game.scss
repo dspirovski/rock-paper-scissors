@@ -57,7 +57,7 @@
 
     
       //rock icon
-    .parent-3 {
+    .icon-3 {
        @include icon-background($red);  
          width: 292.61px;
          height: 286.7px;
@@ -69,7 +69,7 @@
        }
 
    
-  .child-3 {
+  .image-3 {
     @include icon-body;
     background-image: url('../../images/icon-rock.svg');
     background-size:  110px 110px;
@@ -84,12 +84,12 @@
   }
 }
 
-.parent-3.win {
+.icon-3.win {
 @include winner-shadow;
 }
 
 //paper icon
-.parent-2 {
+.icon-2 {
   @include icon-background($blue-1);
   width: 292.61px;
   height: 286.7px;
@@ -99,7 +99,7 @@
     width: 130px;
     height: 130px;        
   }
-  .child-2 {
+  .image-2 {
     @include icon-body;
     background-image: url('../../images/icon-paper.svg');
     background-size:  110px 110px;
@@ -114,12 +114,12 @@
    }
 }
 
-.parent-2.win {
+.icon-2.win {
   @include winner-shadow;
   }
 
 //scissors icon
-.parent-1 {
+.icon-1 {
     @include icon-background($yellow);
     width: 292.61px;
     height: 286.7px;
@@ -129,7 +129,7 @@
       width: 130px;
       height: 130px;        
     }
-  .child-1 {
+  .image-1 {
     @include icon-body;
     background-image: url('../../images/icon-scissors.svg');
     background-size:  110px 110px;
@@ -144,12 +144,12 @@
   }
 }
 
-.parent-1.win {
+.icon-1.win {
   @include winner-shadow;
   }
 
 //lizard icon
-.parent-4 {
+.icon-4 {
   @include icon-background($purple);
   width: 292.61px;
   height: 286.7px;
@@ -159,7 +159,7 @@
     width: 130px;
     height: 130px;        
   }
-.child-4 {
+.image-4 {
   @include icon-body;
   background-image: url('../../images/icon-lizard.svg');
   background-size:  110px 110px;
@@ -174,12 +174,12 @@
 }
 }
 
-.parent-4.win {
+.icon-4.win {
   @include winner-shadow;
   }
 
 //spock icon
-.parent-5 {
+.icon-5 {
   @include icon-background($green);
   width: 292.61px;
   height: 286.7px; 
@@ -189,7 +189,7 @@
     width: 130px;
     height: 130px;        
   }
-.child-5 {
+.image-5 {
   @include icon-body;
   background-image: url('../../images/icon-spock.svg');
   background-size:  110px 110px; 
@@ -204,7 +204,7 @@
 }
 }
 
-      .parent-5.win {
+      .icon-5.win {
         @include winner-shadow;
         }
 
