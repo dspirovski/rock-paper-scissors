@@ -72,7 +72,7 @@
       margin-bottom: 15px;
       
       .parent-paper {
-        @include icon-background($blue);
+        @include icon-background($blue-1);
         width: 145px;
         height: 148px;
         &:hover {

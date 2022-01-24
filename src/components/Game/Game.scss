@@ -90,7 +90,7 @@
 
 //paper icon
 .parent-2 {
-  @include icon-background($blue);
+  @include icon-background($blue-1);
   width: 292.61px;
   height: 286.7px;
   position: absolute;
@@ -267,7 +267,11 @@
       height: 48px;      
       width: 220px;
       margin-top: 20px;
-      text-transform: uppercase;   
+      text-transform: uppercase;  
+      
+      &:hover {
+        cursor: pointer;
+      }
 
       @media only screen and (max-width: 375px) {
         margin: 0;
@@ -278,14 +282,15 @@
 
     .play-again-btn:hover.win {
       cursor: pointer;
-      color: green;
+      color: $blue-2;
     }
 
     .play-again-btn:hover.lose {
       cursor: pointer;
-
-      color: red;
+      color: $red;
     }
+
+    
   }
 }
 

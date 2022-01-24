@@ -83,7 +83,7 @@
 
       //paper icon
       .parent-paper {
-        @include icon-background($blue);
+        @include icon-background($blue-1);
         width: 198px;
         height: 203px; 
         &:hover {
