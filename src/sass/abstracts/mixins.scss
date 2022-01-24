@@ -59,3 +59,8 @@
     0px 0px 0px 65px rgba(#ffffff, .025),;  
   } 
 }
+
+//MOBILE BRAKEPOINT
+@mixin mobile-version {
+  @media (max-width: 375px) {@content};
+}

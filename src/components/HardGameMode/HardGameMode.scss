@@ -7,8 +7,6 @@
     @include perfect-centering; 
     flex-direction: column; 
 
-
-
   .hard-mode-body {
     width: 472px;
     height: 463px; 
@@ -19,12 +17,12 @@
     align-items: center;
     justify-content: center; 
     margin-top: 2rem;
-      
-    @media only screen and (max-width: 375px) {   
+
+    @include mobile-version {
       width: 100%;  
       height: 305px;
       width: 311px; 
-      background-size: 200px;    
+      background-size: 200px;     
     }
 
     .position-top {
@@ -42,11 +40,10 @@
           box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
         } 
 
-        @media only screen and (max-width: 375px) {   
+        @include mobile-version {
           width: 96px;
           height: 97px;    
-          margin-bottom: -25px;
-
+          margin-bottom: -25px;  
         }
 
       .child-scissors {
@@ -55,7 +52,7 @@
         width: 112px;
         height: 111px;
 
-        @media only screen and (max-width: 375px) {   
+        @include mobile-version {
           width: 73px;
           height: 74px;    
           background-size: 40px 40px;  
@@ -79,24 +76,24 @@
           cursor: pointer; 
           box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
         } 
+
+        @include mobile-version {
+          width: 96px;
+          height: 97px;      
+        }
       
-      @media only screen and (max-width: 375px) {   
-        width: 96px;
-        height: 97px;     
-      }
-   
-      .child-paper {
+       .child-paper {
         @include icon-body;
         background-image: url('../../images/icon-paper.svg');
         width: 112px;
         height: 111px;
-        @media only screen and (max-width: 375px) {   
+
+        @include mobile-version {
           width: 73px;
           height: 74px;    
           background-size: 40px 40px;
         }
       }
-
     }
 
     .parent-rock {
@@ -107,20 +104,22 @@
         cursor: pointer; 
         box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
       } 
-      @media only screen and (max-width: 375px) {   
-        width: 96px;
-        height: 97px;     
-      }
 
+      @include mobile-version {
+        width: 96px;
+        height: 97px;      
+      }
+ 
       .child-rock {
         @include icon-body;
         background-image: url('../../images/icon-rock.svg');
         width: 112px;
         height: 111px;
-        @media only screen and (max-width: 375px) {   
+
+        @include mobile-version {
           width: 73px;
           height: 74px;    
-          background-size: 40px 40px;  
+          background-size: 40px 40px;    
         }
       }
     }
@@ -142,21 +141,23 @@
          cursor: pointer; 
          box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
        } 
-       @media only screen and (max-width: 375px) {   
+
+       @include mobile-version {
          width: 96px;
-         height: 97px;     
-       }
-      
+         height: 97px;       
+      }
+       
       .child-lizard {
         @include icon-body;
         background-image: url('../../images/icon-lizard.svg');
         width: 112px;
         height: 111px;
-        @media only screen and (max-width: 375px) {   
+
+        @include mobile-version {
           width: 73px;
           height: 74px;    
-          background-size: 40px 40px; 
-        }
+          background-size: 40px 40px;   
+        }  
       }
     }
 
@@ -168,9 +169,10 @@
         cursor: pointer; 
         box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
       } 
-      @media only screen and (max-width: 375px) {   
+
+      @include mobile-version {
         width: 96px;
-        height: 97px;     
+        height: 97px;      
       }
 
       .child-spock {
@@ -178,11 +180,12 @@
         background-image: url('../../images/icon-spock.svg');
         width: 112px;
         height: 111px;
-        @media only screen and (max-width: 375px) {   
+
+        @include mobile-version {
           width: 73px;
           height: 74px;    
-          background-size: 40px 40px; 
-        }
+          background-size: 40px 40px;   
+        } 
       }
     }      
     }

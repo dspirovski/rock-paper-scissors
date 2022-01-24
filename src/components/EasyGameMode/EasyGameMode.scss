@@ -24,26 +24,26 @@
             background-repeat: no-repeat;
             background-position: center; 
             top: 1rem;
-            
-            @media only screen and (max-width: 375px) {   
+
+            @include mobile-version {
               background-size: 200px 200px;  
               top: -10%; 
               height: 300px;
               width: 282px;
-              margin-top: 1rem;
-            }
-            
+              margin-top: 1rem;  
+            }  
+                
             .top {
               display: flex;
               flex-direction: row;
               justify-content: space-between;
               width: 476px;
-              height: 17rem;             
-            
-            @media only screen and (max-width: 375px) {
-              width: 18rem;      
-            }
-          }   
+              height: 17rem; 
+              
+              @include mobile-version {
+                width: 18rem;      
+              }            
+            }   
 
           .bottom {
             .bottom-center {
@@ -60,12 +60,13 @@
             &:hover {
               cursor: pointer; 
               box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
-            } 
-          
-            @media only screen and (max-width: 375px) {
-              width: 130px;
-              height: 133px;        
             }
+            
+            @include mobile-version {
+              width: 130px;
+              height: 133px;     
+            }          
+
           .child-rock {
             @include icon-body;
             background-image: url('../../images/icon-rock.svg');
@@ -73,12 +74,12 @@
             width: 152px;
             height: 152px;
 
-            @media only screen and (max-width: 375px) {
+            @include mobile-version {
               width: 100px;
               height: 100px;     
               background-size: 50px 50px;   
-            }
-          }
+              }
+           }
         }
 
       //paper icon
@@ -90,11 +91,12 @@
           cursor: pointer; 
           box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
         } 
-        
-        @media only screen and (max-width: 375px) {
+
+        @include mobile-version {
           width: 130px;
-          height: 133px;        
-        }
+          height: 133px;      
+        }        
+  
         .child-paper {
           @include icon-body;
           background-image: url('../../images/icon-paper.svg');
@@ -102,7 +104,7 @@
           width: 152px;
           height: 152px;
 
-          @media only screen and (max-width: 375px) {
+          @include mobile-version {
             width: 100px;
             height: 100px;     
             background-size: 50px 50px;   
@@ -119,11 +121,12 @@
           cursor: pointer; 
           box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
         } 
-        
-        @media only screen and (max-width: 375px) {
+
+        @include mobile-version {
           width: 130px;
-          height: 133px;        
+          height: 133px;   
         }
+          
         .child-scissors {
           @include icon-body;
           background-image: url('../../images/icon-scissors.svg');
@@ -131,11 +134,11 @@
           width: 152px;
           height: 152px;
 
-          @media only screen and (max-width: 375px) {
+          @include mobile-version {
             width: 100px;
             height: 100px;     
             background-size: 50px 50px;   
-          }
+          } 
         }
       }
     }

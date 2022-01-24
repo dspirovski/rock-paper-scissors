@@ -1,24 +1,24 @@
- @import "../../sass/abstracts/mixins.scss";
- @import "../../sass/abstracts/variables.scss"; 
-        
+@import "../../sass/abstracts/mixins.scss";
+@import "../../sass/abstracts/variables.scss"; 
+       
 .game-modes {
-    width: 200px;
-    height: 50px; 
-    @include perfect-centering;
-    justify-content: space-between;
-    top: 23%;
-    position: absolute;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto;
+   width: 200px;
+   height: 50px; 
+   @include perfect-centering;
+   justify-content: space-between;
+   top: 23%;
+   position: absolute;
+   left: 0; 
+   right: 0; 
+   margin-left: auto; 
+   margin-right: auto;
 
-    @media only screen and (max-width: 375px) {   
+   @include mobile-version {
     position: absolute;
-    top: 120px;  
-    }
-
-    .mode-btn {
-    @include button-style;
-    }    
+    top: 120px; 
   }
+
+   .mode-btn {
+   @include button-style;
+   }    
+ }
