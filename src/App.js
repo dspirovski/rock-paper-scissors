@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import Modal from './components/ModalWindow/Modal';
 import EasyGameMode from './components/EasyGameMode/EasyGameMode';
 import HardGameMode from './components/HardGameMode/HardGameMode';
+import GameModes from './components/GameModes/GameModes';
 import './App.scss';
 import { motion } from 'framer-motion';
 
@@ -24,6 +25,7 @@ function App() {
     >
       <Header score={score} gameMode={gameMode} />
       {gameMode === true ? <EasyGameMode setGameMode={setGameMode} score={score} setScore={setScore} gameMode={gameMode} /> : <HardGameMode setGameMode={setGameMode} score={score} setScore={setScore} gameMode={gameMode} />}
+      <GameModes setGameMode={setGameMode} />
       <motion.button
         className="rulles-button"
         onClick={() => setModal(true)}

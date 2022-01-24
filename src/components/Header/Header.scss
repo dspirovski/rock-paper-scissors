@@ -6,26 +6,39 @@
   margin: auto;
   border: 3px solid #FFFFFF4A;
   margin-top: 0.5rem;
-  width: 43.75rem; //=700px
+  width: 700px; //=700px
+  height: 150px;
   padding: 0 1rem;
-
-
-  .logo-img {
-    @media only screen and (max-width: 376px) {
-      width: 100px;
-      height: 70px;
-    }
-  }
 
   @media only screen and (max-width: 376px) {
     margin-top: 0.5rem;
     width: 311px;
+    height: 96px;
   }
- 
+
+  .game-name {
+    .logo-initial {
+      width: 155.48px;
+      height:92.68px;
+      @media only screen and (max-width: 376px) {
+        width: 83px;
+        height: 48px;
+    } 
+  }
+    .logo-bonus {
+      height: 111px;
+      width: 100px;
+      @media only screen and (max-width: 376px) {
+        height: 49px;
+        width: 48px;
+      } 
+    }
+       
+  }
   
     .score-container {
-      width: 9.375rem; //=150px
-      height: 7.125rem; //=114px
+      width: 150px;
+      height: 114px;
       background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
       box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
       border-radius: 8px;
@@ -36,8 +49,8 @@
       margin: 1rem 0;
 
       @media only screen and (max-width: 375px) {
-        width: 100px;
-        height: 70px;
+        width: 80px;
+        height: 72px;
       }
    
         .score {     
@@ -52,13 +65,15 @@
           text-transform: uppercase;  
 
           @media only screen and (max-width: 375px) {
-            font-size: 0.75rem;
+            font-size: 10px;          
+            line-height: 12px;
+            letter-spacing: 1.5625px;
           }
         }
 
         .value {   
           font-family: Barlow Semi Condensed;
-          font-size: 4rem;
+          font-size: 64px;
           font-style: normal;
           font-weight: 700;
           line-height: 4rem;

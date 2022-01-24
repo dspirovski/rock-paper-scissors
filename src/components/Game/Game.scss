@@ -9,7 +9,8 @@
 
   @media only screen and (max-width: 375px) {
     height: 50vh;   
-    width: 100vw;    
+    width: 100vw;  
+    margin-top: -30px;  
   }
  
   .choise { 
@@ -19,7 +20,7 @@
     align-items: center;
     width: 293px;
     height: 395px;
-
+  
     @media only screen and (max-width: 375px) {
       width: 200px;
       height: 200px;
@@ -37,7 +38,7 @@
       text-transform: uppercase;
 
       @media only screen and (max-width: 375px) {
-        font-size: 10px;
+        font-size: 15px;
         letter-spacing: 1.5px;
       }
     }
@@ -241,7 +242,7 @@
 
     @media only screen and (max-width: 375px) {
       position: absolute;
-      top: 70%;
+      top: 68%;
     }
 
     .message-text {
@@ -255,7 +256,7 @@
       width: 320px;
 
       @media only screen and (max-width: 375px) {
-        font-size: 35px;
+        font-size: 56px;
       } 
     }    
 
