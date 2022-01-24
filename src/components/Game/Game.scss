@@ -7,286 +7,280 @@
   display: flex;
   justify-content: space-around;
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and ($mobile-brakepoint) {
     height: 50vh;   
     width: 100vw;    
   }
  
-  .choise { 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 293px;
-    height: 395px;
+      .choise { 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 293px;
+        height: 395px;
 
-    @media only screen and (max-width: 375px) {
-      width: 200px;
-      height: 200px;
-      flex-direction: column-reverse;
-    }
-
-    .choise-text {     
-      font-style: normal;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 32px;    
-      letter-spacing: 3px;
-      color: #FFFFFF;
-      text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
-      text-transform: uppercase;
-
-      @media only screen and (max-width: 375px) {
-        font-size: 10px;
-        letter-spacing: 1.5px;
-      }
-    }
-
-    .choise-picked {
-      width: 292.61px;
-      height: 300px;       
-      display: flex;
-      justify-content: center;
-      align-items: center;  
-      
-      @media only screen and (max-width: 375px) {
-        width: 130px;
-       height: 130px;        
-      }
-
-    
-      //rock icon
-    .parent-3 {
-       @include parent-mixin($red);  
-         width: 292.61px;
-         height: 286.7px;
-         position: absolute;
-
-       @media only screen and (max-width: 375px) {
-         width: 130px;
-        height: 130px;        
-       }
-
-   
-  .child-3 {
-    @include child-mixin;
-    background-image: url('../../images/icon-rock.svg');
-    background-size:  110px 110px;
-    width: 224.63px;
-    height: 224.63px;
-
-    @media only screen and (max-width: 375px) {
-      width: 100px;
-      height: 100px;     
-      background-size: 50px 50px;   
-    }
-  }
-}
-
-.parent-3.win {
-@include winner-shadow;
-}
-
-//paper icon
-.parent-2 {
-  @include parent-mixin($blue);
-  width: 292.61px;
-  height: 286.7px;
-  position: absolute;
-
-  @media only screen and (max-width: 375px) {
-    width: 130px;
-    height: 130px;        
-  }
-  .child-2 {
-    @include child-mixin;
-    background-image: url('../../images/icon-paper.svg');
-    background-size:  110px 110px;
-    width: 224.63px;
-    height: 224.63px;
-
-    @media only screen and (max-width: 375px) {
-      width: 100px;
-      height: 100px;     
-      background-size: 50px 50px;   
-    }
-   }
-}
-
-.parent-2.win {
-  @include winner-shadow;
-  }
-
-//scissors icon
-.parent-1 {
-    @include parent-mixin($yellow);
-    width: 292.61px;
-    height: 286.7px;
-    position: absolute;
-
-    @media only screen and (max-width: 375px) {
-      width: 130px;
-      height: 130px;        
-    }
-  .child-1 {
-    @include child-mixin;
-    background-image: url('../../images/icon-scissors.svg');
-    background-size:  110px 110px;
-    width: 224.63px;
-    height: 224.63px;  
-
-    @media only screen and (max-width: 375px) {
-      width: 100px;
-      height: 100px;     
-      background-size: 50px 50px;   
-    }
-  }
-}
-
-.parent-1.win {
-  @include winner-shadow;
-  }
-
-//lizard icon
-.parent-4 {
-  @include parent-mixin($purple);
-  width: 292.61px;
-  height: 286.7px;
-  position: absolute;
-
-  @media only screen and (max-width: 375px) {
-    width: 130px;
-    height: 130px;        
-  }
-.child-4 {
-  @include child-mixin;
-  background-image: url('../../images/icon-lizard.svg');
-  background-size:  110px 110px;
-  width: 224.63px;
-  height: 224.63px;  
-
-  @media only screen and (max-width: 375px) {
-    width: 100px;
-    height: 100px;     
-    background-size: 50px 50px;   
-  }
-}
-}
-
-.parent-4.win {
-  @include winner-shadow;
-  }
-
-//spock icon
-.parent-5 {
-  @include parent-mixin($green);
-  width: 292.61px;
-  height: 286.7px; 
-  position: absolute; 
-
-  @media only screen and (max-width: 375px) {
-    width: 130px;
-    height: 130px;        
-  }
-.child-5 {
-  @include child-mixin;
-  background-image: url('../../images/icon-spock.svg');
-  background-size:  110px 110px; 
-  width: 224.63px;
-  height: 224.63px;  
-
-  @media only screen and (max-width: 375px) {
-    width: 100px;
-    height: 100px;     
-    background-size: 50px 50px;   
-  }
-}
-}
-
-      .parent-5.win {
-        @include winner-shadow;
+        @media only screen and ($mobile-brakepoint) {
+          width: 200px;
+          height: 200px;
+          flex-direction: column-reverse;
         }
 
-        &:hover {
+            .choise-text {     
+              font-style: normal;
+              font-weight: bold;
+              font-size: 24px;
+              line-height: 32px;    
+              letter-spacing: 3px;
+              color: #FFFFFF;
+              text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+              text-transform: uppercase;
+
+              @media only screen and ($mobile-brakepoint) {
+                font-size: 10px;
+                letter-spacing: 1.5px;
+              }
+            }
+
+                .choise-picked {
+                  width: 292.61px;
+                  height: 300px;       
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;  
+                  
+                  @media only screen and ($mobile-brakepoint) {
+                    width: 130px;
+                  height: 130px;        
+                  }
+
+                
+                  //rock icon
+                .parent-3 {
+                  @include icon-background($red);  
+                    width: 292.61px;
+                    height: 286.7px;
+                    position: absolute;
+
+                    @media only screen and ($mobile-brakepoint) {
+                      width: 130px;
+                      height: 130px;        
+                    }
+
+              
+                   .child-3 {
+                     @include icon-body;
+                     background-image: url('../../images/icon-rock.svg');
+                     background-size:  110px 110px;
+                     width: 224.63px;
+                     height: 224.63px;
+
+                     @media only screen and ($mobile-brakepoint) {
+                       width: 100px;
+                       height: 100px;     
+                       background-size: 50px 50px;   
+                     }
+                   }
+               }
+
+                .parent-3.win {
+                @include winner-shadow;
+                }
+
+                //paper icon
+                .parent-2 {
+                  @include icon-background($blue);
+                  width: 292.61px;
+                  height: 286.7px;
+                  position: absolute;
+
+                    @media only screen and ($mobile-brakepoint) {
+                      width: 130px;
+                      height: 130px;        
+                    }
+
+                    .child-2 {
+                      @include icon-body;
+                      background-image: url('../../images/icon-paper.svg');
+                      background-size:  110px 110px;
+                      width: 224.63px;
+                      height: 224.63px;
+
+                      @media only screen and ($mobile-brakepoint) {
+                        width: 100px;
+                        height: 100px;     
+                        background-size: 50px 50px;   
+                      }
+                    }
+                }
+
+                .parent-2.win {
+                  @include winner-shadow;
+                  }
+
+            //scissors icon
+                .parent-1 {
+                    @include icon-background($yellow);
+                    width: 292.61px;
+                    height: 286.7px;
+                    position: absolute;
+
+                    @media only screen and ($mobile-brakepoint) {
+                      width: 130px;
+                      height: 130px;        
+                    }
+                  .child-1 {
+                    @include icon-body;
+                    background-image: url('../../images/icon-scissors.svg');
+                    background-size:  110px 110px;
+                    width: 224.63px;
+                    height: 224.63px;  
+
+                    @media only screen and ($mobile-brakepoint) {
+                      width: 100px;
+                      height: 100px;     
+                      background-size: 50px 50px;   
+                    }
+                  }
+                }
+
+                .parent-1.win {
+                  @include winner-shadow;
+                  }
+
+                //lizard icon
+                .parent-4 {
+                  @include icon-background($purple);
+                  width: 292.61px;
+                  height: 286.7px;
+                  position: absolute;
+
+                    @media only screen and ($mobile-brakepoint) {
+                      width: 130px;
+                      height: 130px;        
+                    }
+                  .child-4 {
+                    @include icon-body;
+                    background-image: url('../../images/icon-lizard.svg');
+                    background-size:  110px 110px;
+                    width: 224.63px;
+                    height: 224.63px;  
+
+                      @media only screen and ($mobile-brakepoint) {
+                        width: 100px;
+                        height: 100px;     
+                        background-size: 50px 50px;   
+                      }
+                  }
+                }
+
+                 .parent-4.win {
+                  @include winner-shadow;
+                  }
+
+                //spock icon
+                .parent-5 {
+                  @include icon-background($green);
+                  width: 292.61px;
+                  height: 286.7px; 
+                  position: absolute; 
+
+                    @media only screen and ($mobile-brakepoint) {
+                      width: 130px;
+                      height: 130px;        
+                    }
+                    .child-5 {
+                      @include icon-body;
+                      background-image: url('../../images/icon-spock.svg');
+                      background-size:  110px 110px; 
+                      width: 224.63px;
+                      height: 224.63px;  
+
+                      @media only screen and ($mobile-brakepoint) {
+                        width: 100px;
+                        height: 100px;     
+                        background-size: 50px 50px;   
+                      }
+                    }
+                }
+
+                  .parent-5.win {
+                    @include winner-shadow;
+                    }
+
+                    &:hover {
+                      cursor: pointer;
+                    }
+                }
+
+        .house-picked {
+          background: rgba(0, 0, 0, 0.1);
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          color: #fff;
+          font-size: 32px;
+          margin-bottom: 70px;    
+
+            @media only screen and ($mobile-brakepoint) {
+              width: 130px;
+              height: 130px;   
+              margin-bottom: 0px;   
+            } 
+        }        
+      }
+
+      .message {    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+
+          @media only screen and ($mobile-brakepoint) {
+            position: absolute;
+            top: 70%;
+          }
+
+        .message-text {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 56px;
+          line-height: 67px;
+          text-align: center;      
+          color: #FFFFFF;      
+          text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);  
+          width: 320px;
+
+          @media only screen and ($mobile-brakepoint) {
+            font-size: 35px;
+          } 
+        }    
+
+        .play-again-btn {
+          background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
+          border-radius: 8px;
+          height: 48px;      
+          width: 220px;
+          margin-top: 20px;
+          text-transform: uppercase;   
+
+          @media only screen and ($mobile-brakepoint) {
+            margin: 0;
+            height: 38px;
+            width: 175px
+          } 
+        }
+
+        .play-again-btn:hover.win {
           cursor: pointer;
+          color: $blue-secondary;
         }
-    }
 
-    .house-picked {
-      background: rgba(0, 0, 0, 0.1);
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      color: #fff;
-      font-size: 32px;
-      margin-bottom: 70px;    
-
-      @media only screen and (max-width: 375px) {
-        width: 130px;
-        height: 130px;   
-        margin-bottom: 0px;   
-      } 
-
-
-    }
-    
-  }
-
-  .message {    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-
-    @media only screen and (max-width: 375px) {
-      position: absolute;
-      top: 70%;
-    }
-
-    .message-text {
-      font-style: normal;
-      font-weight: bold;
-      font-size: 56px;
-      line-height: 67px;
-      text-align: center;      
-      color: #FFFFFF;      
-      text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);  
-      width: 320px;
-
-      @media only screen and (max-width: 375px) {
-        font-size: 35px;
-      } 
-    }    
-
-    .play-again-btn {
-      background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
-      box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
-      border-radius: 8px;
-      height: 48px;      
-      width: 220px;
-      margin-top: 20px;
-      text-transform: uppercase;   
-
-      @media only screen and (max-width: 375px) {
-        margin: 0;
-        height: 38px;
-        width: 175px
-      } 
-    }
-
-    .play-again-btn.win {
-      color: green;
-    }
-
-    .play-again-btn.lose {
-      color: red;
-    }
-
-    .play-again-btn:hover {
-      cursor: pointer;
-    }
-  }
+        .play-again-btn:hover.lose {
+          cursor: pointer;
+          color: $red;
+        }
+      }
 }
-
-

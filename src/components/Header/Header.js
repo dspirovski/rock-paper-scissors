@@ -3,9 +3,11 @@ import "./Header.scss";
 import logo from '../../images/logo.svg';
 import bonus from '../../images/logo-bonus.svg';
 
+
 function Header({ score, gameMode }) {
   return (
-    <div className="header">
+    <div
+      className="header">
       <div className="game-name">
         {gameMode === true ? <img src={logo} alt="logo" className="logo-img" /> : <img src={bonus} alt="bonus-logo" className="logo-img" />}
       </div>

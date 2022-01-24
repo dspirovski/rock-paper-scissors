@@ -15,7 +15,7 @@
           @include perfect-centering;
           justify-content: space-between;
 
-          @media only screen and (max-width: 375px) {   
+          @media only screen and ($mobile-brakepoint) {   
           position: absolute;
           top: 130px;  
           }
@@ -36,7 +36,7 @@
             background-repeat: no-repeat;
             background-position: center;  
 
-            @media only screen and (max-width: 375px) {   
+            @media only screen and ($mobile-brakepoint) {   
               background-size: 200px 200px;   
             }
     
@@ -47,100 +47,100 @@
             width: 31rem;
             height: 15rem;   
             
-            @media only screen and (max-width: 375px) {
+            @media only screen and ($mobile-brakepoint) {
               width: 18rem;
               height: 10rem;        
             }
           }   
-  } 
+        } 
 
-//rock icon
-.parent-rock {
-  @include parent-mixin($red);
-  width: 198px;
-  height: 203px;
-  &:hover {
-    cursor: pointer; 
-    transform: rotate(-10deg);      
-  } 
-  
-  @media only screen and (max-width: 375px) {
-    width: 130px;
-    height: 130px;        
+          //rock icon
+          .parent-rock {
+            @include icon-background($red);
+            width: 198px;
+            height: 203px;
+            &:hover {
+              cursor: pointer;   
+              box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07); 
+            } 
+            
+            @media only screen and ($mobile-brakepoint) {
+              width: 130px;
+              height: 130px;        
+            }
+            .child-rock {
+              @include icon-body;
+              background-image: url('../../images/icon-rock.svg');
+              background-size:  76px 76px;
+              width: 152px;
+              height: 152px;
+
+              @media only screen and ($mobile-brakepoint) {
+                width: 100px;
+                height: 100px;     
+                background-size: 50px 50px;   
+              }
+            }
+          }
+
+          //paper icon
+          .parent-paper {
+            @include icon-background($blue);
+            width: 198px;
+            height: 203px; 
+            &:hover {
+              cursor: pointer;    
+              box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07); 
+            
+            } 
+            
+            @media only screen and ($mobile-brakepoint) {
+              width: 130px;
+              height: 130px;        
+            }
+            .child-paper {
+              @include icon-body;
+              background-image: url('../../images/icon-paper.svg');
+              background-size:  76px 76px;
+              width: 152px;
+              height: 152px;
+
+              @media only screen and ($mobile-brakepoint) {
+                width: 100px;
+                height: 100px;     
+                background-size: 50px 50px;   
+              }
+            }
+          }
+
+          //scissors icon
+
+          .parent-scissors {   
+            @include icon-background($yellow);
+            width: 198px;
+            height: 203px;
+            &:hover {
+              cursor: pointer;   
+              box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07); 
+            }
+            
+            @media only screen and ($mobile-brakepoint) {
+              width: 130px;
+              height: 130px;        
+            }
+            .child-scissors {
+              @include icon-body;
+              background-image: url('../../images/icon-scissors.svg');
+              background-size:  76px 76px;
+              width: 152px;
+              height: 152px;
+
+              @media only screen and ($mobile-brakepoint) {
+                width: 100px;
+                height: 100px;     
+                background-size: 50px 50px;   
+              }
+            }
+          }
   }
-  .child-rock {
-    @include child-mixin;
-    background-image: url('../../images/icon-rock.svg');
-    background-size:  76px 76px;
-    width: 152px;
-    height: 152px;
-
-    @media only screen and (max-width: 375px) {
-      width: 100px;
-      height: 100px;     
-      background-size: 50px 50px;   
-    }
-  }
-}
-
-//paper icon
-.parent-paper {
-  @include parent-mixin($blue);
-  width: 198px;
-  height: 203px; 
-  &:hover {
-    cursor: pointer;    
-    transform: rotate(-10deg);  
-  } 
-  
-  @media only screen and (max-width: 375px) {
-    width: 130px;
-    height: 130px;        
-  }
-  .child-paper {
-    @include child-mixin;
-    background-image: url('../../images/icon-paper.svg');
-    background-size:  76px 76px;
-    width: 152px;
-    height: 152px;
-
-    @media only screen and (max-width: 375px) {
-      width: 100px;
-      height: 100px;     
-      background-size: 50px 50px;   
-    }
-  }
-}
-
-//scissors icon
-
-.parent-scissors {   
-  @include parent-mixin($yellow);
-  width: 198px;
-  height: 203px;
-  &:hover {
-    cursor: pointer;   
-    transform: rotate(-10deg);   
-  }
-  
-  @media only screen and (max-width: 375px) {
-    width: 130px;
-    height: 130px;        
-  }
-  .child-scissors {
-    @include child-mixin;
-    background-image: url('../../images/icon-scissors.svg');
-    background-size:  76px 76px;
-    width: 152px;
-    height: 152px;
-
-    @media only screen and (max-width: 375px) {
-      width: 100px;
-      height: 100px;     
-      background-size: 50px 50px;   
-    }
-  }
-}
-}
-
 }

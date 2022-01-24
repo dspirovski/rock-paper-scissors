@@ -8,19 +8,18 @@ import { motion } from 'framer-motion';
 
 function App() {
 
+  //gameMode = true >>> easy game mode
+  //gameMode = false >>> hard game mode
   const [modal, setModal] = useState(false);
   const [score, setScore] = useState(0);
   const [gameMode, setGameMode] = useState(true);
-  //gameMode = true >>> easy game mode
-  //gameMode = false >>> hard game mode
 
   return (
 
     <motion.div className="app"
-      initial={{ scale: 1.5 }}
+      initial={{ scale: 0.5 }}
       animate={{ scale: 1 }}
-      // transition={{ delay: 0.5, duration: 2.8 }}
-      transition={{ delay: 0, type: "spring", stiffness: 600 }}
+      transition={{ duration: 3, type: "spring", stiffness: 50 }}
 
     >
       <Header score={score} gameMode={gameMode} />
