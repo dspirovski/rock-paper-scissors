@@ -96,8 +96,8 @@
       }
     }
 
-    .parent-rock {
-      @include icon-background($red);
+    .parent-spock {
+      @include icon-background($green);
       width: 145px;
       height: 148px;
       &:hover {
@@ -110,9 +110,9 @@
         height: 97px;      
       }
  
-      .child-rock {
+      .child-spock {
         @include icon-body;
-        background-image: url('../../images/icon-rock.svg');
+        background-image: url('../../images/icon-spock.svg');
         width: 112px;
         height: 111px;
 
@@ -161,8 +161,8 @@
       }
     }
 
-    .parent-spock {
-      @include icon-background($green);
+    .parent-rock {
+      @include icon-background($red);
       width: 145px;
       height: 148px;
       &:hover {
@@ -175,9 +175,9 @@
         height: 97px;      
       }
 
-      .child-spock {
+      .child-rock {
         @include icon-body;
-        background-image: url('../../images/icon-spock.svg');
+        background-image: url('../../images/icon-rock.svg');
         width: 112px;
         height: 111px;
 

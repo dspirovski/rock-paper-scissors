@@ -28,7 +28,6 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
   }
 
   //Invoke function regarding user choise (easy or hard mode)
-
   useEffect(() => {
     gameMode && randomEasyModeChoise();
     !gameMode && randomHardModeChoise();
@@ -89,12 +88,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
     return () => {
       clearInterval(countDown)
     }
-
   }, [timer]);
-
-  const playAgain = () => {
-    setHumanChoise("");
-  }
 
   return (
     //Display result for human choise
@@ -121,7 +115,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
               :
               'play-again-btn win'
         }
-          onClick={playAgain}>play again</button> : null}
+          onClick={() => { setHumanChoise("") }}>play again</button> : null}
       </div>
 
       {/* display result for house choise */}

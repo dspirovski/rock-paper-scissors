@@ -29,16 +29,18 @@ function HardGameMode({ gameMode, setGameMode, score, setScore }) {
 
             {/* MIDDLE POSITION */}
             <div className='position-middle'>
+
+              <div className="spock-position" onClick={() => { setHumanChoise(5) }}>
+                <div className="parent-spock">
+                  <div className="child child-spock"></div>
+                </div>
+              </div>
               <div className="paper-position" onClick={() => { setHumanChoise(2) }}>
                 <div className="parent-paper">
                   <div className="child child-paper"></div>
                 </div>
               </div>
-              <div className="rock-position" onClick={() => { setHumanChoise(3) }}>
-                <div className="parent-rock">
-                  <div className="child child-rock"></div>
-                </div>
-              </div>
+
             </div>
 
             {/* position bottom */}
@@ -48,9 +50,9 @@ function HardGameMode({ gameMode, setGameMode, score, setScore }) {
                   <div className="child child-lizard"></div>
                 </div>
               </div>
-              <div className="spock-position" onClick={() => { setHumanChoise(5) }}>
-                <div className="parent-spock">
-                  <div className="child child-spock"></div>
+              <div className="rock-position" onClick={() => { setHumanChoise(3) }}>
+                <div className="parent-rock">
+                  <div className="child child-rock"></div>
                 </div>
               </div>
             </div>

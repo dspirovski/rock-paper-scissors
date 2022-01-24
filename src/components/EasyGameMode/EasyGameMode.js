@@ -15,14 +15,6 @@ function EasyGameMode({ gameMode, score, setScore }) {
       className="easy-mode">
       {humanChoise === "" ?
         <div className="easy-mode-container">
-          {/* <motion.div className="game-modes"
-            initial={{ x: '30vw', opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 1, type: "spring", stiffness: 150 }}
-          >
-            <button className='mode-btn' onClick={() => setGameMode(true)}>easy</button>
-            <button className='mode-btn' onClick={() => setGameMode(false)}>hard</button>
-          </motion.div> */}
           <main className="easy-mode-body">
             <div className="top">
               <div className="top-left" onClick={() => { setHumanChoise(2) }}>
