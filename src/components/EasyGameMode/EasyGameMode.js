@@ -9,8 +9,9 @@ function EasyGameMode({ gameMode, setGameMode, score, setScore }) {
 
   return (
     <motion.div
-      initial={{ scale: 1.5 }}
+      initial={{ scale: 0.5 }}
       animate={{ scale: 1 }}
+      transition={{ duration: 0.5 }}
       className="easy-mode">
       {humanChoise === "" ?
         <div className="easy-mode-container">
@@ -24,29 +25,23 @@ function EasyGameMode({ gameMode, setGameMode, score, setScore }) {
           </motion.div>
           <main className="easy-mode-body">
             <div className="top">
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                className="top-left" onClick={() => { setHumanChoise(2) }}>
+              <div className="top-left" onClick={() => { setHumanChoise(2) }}>
                 <div className="parent-paper">
                   <div className="child child-paper"></div>
                 </div>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                className="top-right" onClick={() => { setHumanChoise(1) }}>
+              </div>
+              <div className="top-right" onClick={() => { setHumanChoise(1) }}>
                 <div className="parent-scissors">
                   <div className="child child-scissors"></div>
                 </div>
-              </motion.div>
+              </div>
             </div>
             <div className="bottom">
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                className="bottom-center" onClick={() => { setHumanChoise(3) }}>
+              <div className="bottom-center" onClick={() => { setHumanChoise(3) }}>
                 <div className="parent-rock">
                   <div className="child child-rock"></div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </main>
         </div >

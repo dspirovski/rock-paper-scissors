@@ -19,7 +19,7 @@ function App() {
     <motion.div className="app"
       initial={{ scale: 0.5 }}
       animate={{ scale: 1 }}
-      transition={{ duration: 3, type: "spring", stiffness: 50 }}
+      transition={{ duration: 0.5 }}
 
     >
       <Header score={score} gameMode={gameMode} />

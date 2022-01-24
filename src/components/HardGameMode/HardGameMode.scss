@@ -46,7 +46,7 @@
       display: flex;
       margin-bottom: -30px;
       .parent-scissors {
-        @include parent-mixin($yellow);
+        @include icon-background($yellow);
         width: 145px;
         height: 148px;
         &:hover {
@@ -62,7 +62,7 @@
         }
 
       .child-scissors {
-        @include child-mixin;
+        @include icon-body;
         background-image: url('../../images/icon-scissors.svg');
         width: 112px;
         height: 111px;
@@ -84,7 +84,7 @@
       margin-bottom: 15px;
       
       .parent-paper {
-        @include parent-mixin($blue);
+        @include icon-background($blue);
         width: 145px;
         height: 148px;
         &:hover {
@@ -98,7 +98,7 @@
       }
    
       .child-paper {
-        @include child-mixin;
+        @include icon-body;
         background-image: url('../../images/icon-paper.svg');
         width: 112px;
         height: 111px;
@@ -112,7 +112,7 @@
     }
 
     .parent-rock {
-      @include parent-mixin($red);
+      @include icon-background($red);
       width: 145px;
       height: 148px;
       &:hover {
@@ -125,7 +125,7 @@
       }
 
       .child-rock {
-        @include child-mixin;
+        @include icon-body;
         background-image: url('../../images/icon-rock.svg');
         width: 112px;
         height: 111px;
@@ -147,7 +147,7 @@
 
       
      .parent-lizard {
-      @include parent-mixin($purple);
+      @include icon-background($purple);
        width: 145px;
        height: 148px;
        &:hover {
@@ -160,7 +160,7 @@
        }
       
       .child-lizard {
-        @include child-mixin;
+        @include icon-body;
         background-image: url('../../images/icon-lizard.svg');
         width: 112px;
         height: 111px;
@@ -173,7 +173,7 @@
     }
 
     .parent-spock {
-      @include parent-mixin($green);
+      @include icon-background($green);
       width: 145px;
       height: 148px;
       &:hover {
@@ -186,7 +186,7 @@
       }
 
       .child-spock {
-        @include child-mixin;
+        @include icon-body;
         background-image: url('../../images/icon-spock.svg');
         width: 112px;
         height: 111px;

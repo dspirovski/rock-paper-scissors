@@ -57,7 +57,7 @@
     
       //rock icon
     .parent-3 {
-       @include parent-mixin($red);  
+       @include icon-background($red);  
          width: 292.61px;
          height: 286.7px;
          position: absolute;
@@ -69,7 +69,7 @@
 
    
   .child-3 {
-    @include child-mixin;
+    @include icon-body;
     background-image: url('../../images/icon-rock.svg');
     background-size:  110px 110px;
     width: 224.63px;
@@ -89,7 +89,7 @@
 
 //paper icon
 .parent-2 {
-  @include parent-mixin($blue);
+  @include icon-background($blue);
   width: 292.61px;
   height: 286.7px;
   position: absolute;
@@ -99,7 +99,7 @@
     height: 130px;        
   }
   .child-2 {
-    @include child-mixin;
+    @include icon-body;
     background-image: url('../../images/icon-paper.svg');
     background-size:  110px 110px;
     width: 224.63px;
@@ -119,7 +119,7 @@
 
 //scissors icon
 .parent-1 {
-    @include parent-mixin($yellow);
+    @include icon-background($yellow);
     width: 292.61px;
     height: 286.7px;
     position: absolute;
@@ -129,7 +129,7 @@
       height: 130px;        
     }
   .child-1 {
-    @include child-mixin;
+    @include icon-body;
     background-image: url('../../images/icon-scissors.svg');
     background-size:  110px 110px;
     width: 224.63px;
@@ -149,7 +149,7 @@
 
 //lizard icon
 .parent-4 {
-  @include parent-mixin($purple);
+  @include icon-background($purple);
   width: 292.61px;
   height: 286.7px;
   position: absolute;
@@ -159,7 +159,7 @@
     height: 130px;        
   }
 .child-4 {
-  @include child-mixin;
+  @include icon-body;
   background-image: url('../../images/icon-lizard.svg');
   background-size:  110px 110px;
   width: 224.63px;
@@ -179,7 +179,7 @@
 
 //spock icon
 .parent-5 {
-  @include parent-mixin($green);
+  @include icon-background($green);
   width: 292.61px;
   height: 286.7px; 
   position: absolute; 
@@ -189,7 +189,7 @@
     height: 130px;        
   }
 .child-5 {
-  @include child-mixin;
+  @include icon-body;
   background-image: url('../../images/icon-spock.svg');
   background-size:  110px 110px; 
   width: 224.63px;
