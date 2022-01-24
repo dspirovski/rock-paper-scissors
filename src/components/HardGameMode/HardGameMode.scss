@@ -7,204 +7,197 @@
     @include perfect-centering; 
     flex-direction: column; 
 
-    .game-modes {
-      width: 200px;
-      height: 50px; 
-      @include perfect-centering;
-      justify-content: space-between;
-      .mode-btn {
-        @include button-style;        
+        .game-modes {
+          width: 200px;
+          height: 50px;           
+          @include perfect-centering;
+          justify-content: space-between;
+          .mode-btn {
+            @include button-style;        
+          }
+
+          @media only screen and (max-width: 375px) {   
+            position: absolute;
+            top: 130px;  
+          }
+       }
+
+  .hard-mode-body {
+    width: 472px;
+    height: 463px; 
+    background-image: url("../../images/bg-pentagon.svg");  
+    background-repeat: no-repeat;
+    background-position: center; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    
+    @media only screen and (max-width: 375px) {   
+      width: 100%;  
+      height: 305px;
+      width: 311px; 
+      background-size: 200px;    
     }
-      @media only screen and ($mobile-brakepoint) {   
-        position: absolute;
-        top: 130px;  
+
+    .position-top {
+      width: 100%;
+      height: 33.33%;
+      justify-content: center;
+      display: flex;
+      margin-bottom: -30px;
+      .parent-scissors {
+        @include parent-mixin($yellow);
+        width: 145px;
+        height: 148px;
+        &:hover {
+          cursor: pointer; 
+          box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
+        } 
+
+        @media only screen and (max-width: 375px) {   
+          width: 96px;
+          height: 97px;    
+          margin-bottom: -25px;
+
+        }
+
+      .child-scissors {
+        @include child-mixin;
+        background-image: url('../../images/icon-scissors.svg');
+        width: 112px;
+        height: 111px;
+
+        @media only screen and (max-width: 375px) {   
+          width: 73px;
+          height: 74px;    
+          background-size: 40px 40px;  
+        }
+      }
+     }
+    }    
+
+    .position-middle {
+      width: 100%;
+      height: 33.33%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      
+      .parent-paper {
+        @include parent-mixin($blue);
+        width: 145px;
+        height: 148px;
+        &:hover {
+          cursor: pointer; 
+          box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
+        } 
+      
+      @media only screen and (max-width: 375px) {   
+        width: 96px;
+        height: 97px;     
+      }
+   
+      .child-paper {
+        @include child-mixin;
+        background-image: url('../../images/icon-paper.svg');
+        width: 112px;
+        height: 111px;
+        @media only screen and (max-width: 375px) {   
+          width: 73px;
+          height: 74px;    
+          background-size: 40px 40px;
+        }
+      }
+
+    }
+
+    .parent-rock {
+      @include parent-mixin($red);
+      width: 145px;
+      height: 148px;
+      &:hover {
+        cursor: pointer; 
+        box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
+      } 
+      @media only screen and (max-width: 375px) {   
+        width: 96px;
+        height: 97px;     
+      }
+
+      .child-rock {
+        @include child-mixin;
+        background-image: url('../../images/icon-rock.svg');
+        width: 112px;
+        height: 111px;
+        @media only screen and (max-width: 375px) {   
+          width: 73px;
+          height: 74px;    
+          background-size: 40px 40px;  
+        }
+      }
+    }
+  }
+
+    .position-bottom {
+      width: 100%;
+      height: 33.33%;
+      display: flex;
+      justify-content: space-around;
+      padding: 0 30px;
+
+      
+     .parent-lizard {
+      @include parent-mixin($purple);
+       width: 145px;
+       height: 148px;
+       &:hover {
+         cursor: pointer; 
+         box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
+       } 
+       @media only screen and (max-width: 375px) {   
+         width: 96px;
+         height: 97px;     
+       }
+      
+      .child-lizard {
+        @include child-mixin;
+        background-image: url('../../images/icon-lizard.svg');
+        width: 112px;
+        height: 111px;
+        @media only screen and (max-width: 375px) {   
+          width: 73px;
+          height: 74px;    
+          background-size: 40px 40px; 
+        }
       }
     }
 
-        .hard-mode-body {
-          width: 472px;
-          height: 463px; 
-          background-image: url("../../images/bg-pentagon.svg");  
-          background-repeat: no-repeat;
-          background-position: center; 
-          flex-direction: row;
-          align-items: center;
-          justify-content: center; 
-          
-              @media only screen and ($mobile-brakepoint) {   
-                width: 100%;  
-                height: 305px;
-                width: 311px; 
-                background-size: 200px;    
-              }
+    .parent-spock {
+      @include parent-mixin($green);
+      width: 145px;
+      height: 148px;
+      &:hover {
+        cursor: pointer; 
+        box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
+      } 
+      @media only screen and (max-width: 375px) {   
+        width: 96px;
+        height: 97px;     
+      }
 
-              .position-top {
-                width: 100%;
-                height: 33.33%;
-                justify-content: center;
-                display: flex;
-                margin-bottom: -30px;
-
-                .parent-scissors {
-                  @include icon-background($yellow);
-                  width: 145px;                  
-                  height: 148px;
-
-                    &:hover {
-                      cursor: pointer;    
-                      box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07);                   
-                    }
-
-                    @media only screen and ($mobile-brakepoint) {   
-                      width: 96px;
-                      height: 97px;    
-                      margin-bottom: -25px;
-                    }
-
-                  .child-scissors {
-                    @include icon-body;
-                    background-image: url('../../images/icon-scissors.svg');
-                    width: 112px;
-                    height: 111px;
-
-                    @media only screen and ($mobile-brakepoint) {   
-                      width: 73px;
-                      height: 74px;    
-                      background-size: 40px 40px;  
-                    }
-                  }
-                }
-              }
-
-          
-
-                  .position-middle {
-                    width: 100%;
-                    height: 33.33%;
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 15px;
-
-                      .parent-paper {
-                      @include icon-background($blue);
-                      width: 145px;
-                      height: 148px;
-                      
-                      &:hover {
-                      cursor: pointer;    
-                      box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07); 
-                      } 
-
-                      @media only screen and ($mobile-brakepoint) {   
-                      width: 96px;
-                      height: 97px;     
-                    }                
-
-                    .child-paper {
-                      @include icon-body;
-                      background-image: url('../../images/icon-paper.svg');
-                      width: 112px;
-                      height: 111px;
-                      
-                      @media only screen and ($mobile-brakepoint) {   
-                        width: 73px;
-                        height: 74px;    
-                        background-size: 40px 40px;
-                      }
-                    }            
-                  }
-
-                  .parent-rock {
-                    @include icon-background($red);
-                    width: 145px;
-                    height: 148px;
-                    &:hover {
-                      cursor: pointer;    
-                      box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07);                     
-                    }
-
-                    @media only screen and ($mobile-brakepoint) {   
-                      width: 96px;
-                      height: 97px;     
-                    }
-
-                    .child-rock {
-                      @include icon-body;
-                      background-image: url('../../images/icon-rock.svg');
-                      width: 112px;
-                      height: 111px;
-                      @media only screen and ($mobile-brakepoint) {   
-                        width: 73px;
-                        height: 74px;    
-                        background-size: 40px 40px;  
-                      }
-                     }
-                   }
-                 }
-
-                .position-bottom {
-                  width: 100%;
-                  height: 33.33%;
-                  display: flex;
-                  justify-content: space-around;
-                  padding: 0 30px;
-
-                  
-                .parent-lizard {
-                  @include icon-background($purple);
-                  width: 145px;
-                  height: 148px;
-
-                  &:hover {
-                    cursor: pointer;    
-                    box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07);                   
-                  }
-
-                  @media only screen and ($mobile-brakepoint) {   
-                    width: 96px;
-                    height: 97px;     
-                  }
-                  
-                  .child-lizard {
-                    @include icon-body;
-                    background-image: url('../../images/icon-lizard.svg');
-                    width: 112px;
-                    height: 111px;
-                    @media only screen and ($mobile-brakepoint) {   
-                      width: 73px;
-                      height: 74px;    
-                      background-size: 40px 40px; 
-                    }
-                  }
-                }
-
-                .parent-spock {
-                  @include icon-background($green);
-                  width: 145px;
-                  height: 148px;
-                  &:hover {
-                    cursor: pointer;    
-                    box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07); 
-                  
-                  }
-                  @media only screen and ($mobile-brakepoint) {   
-                    width: 96px;
-                    height: 97px;     
-                  }
-
-                  .child-spock {
-                    @include icon-body;
-                    background-image: url('../../images/icon-spock.svg');
-                    width: 112px;
-                    height: 111px;
-                    @media only screen and ($mobile-brakepoint) {   
-                      width: 73px;
-                      height: 74px;    
-                      background-size: 40px 40px; 
-                    }
-                  }
-                }            
-              }
-  }
+      .child-spock {
+        @include child-mixin;
+        background-image: url('../../images/icon-spock.svg');
+        width: 112px;
+        height: 111px;
+        @media only screen and (max-width: 375px) {   
+          width: 73px;
+          height: 74px;    
+          background-size: 40px 40px; 
+        }
+      }
+    }      
+    }
+   }
  }
 }

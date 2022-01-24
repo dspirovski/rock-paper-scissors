@@ -6,7 +6,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
   const [computerChoise, setComputerChoise] = useState('');
   const [resultMessage, setResultMessage] = useState('');
-  const [timer, setTimer] = useState(3);
+  const [timer, setTimer] = useState(2);
 
   //EASY GAME MODE              //HARD GAME MODE                
   // 1. scissors                  1. scissors
@@ -75,8 +75,10 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
     else if ((humanChoise % 2 !== 0 && computerChoise % 2 === 0) && (humanChoise > computerChoise)) {
       setResultMessage('you lose');
       setScore(score - 1);
-    } else {
+    } else if (humanChoise === computerChoise) {
       setResultMessage('draw');
+    } else {
+      console.log('ERROR');
     }
   };
 
