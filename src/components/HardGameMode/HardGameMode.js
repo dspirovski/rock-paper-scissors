@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Game from '../Game/Game';
 import './HardGameMode.scss';
-import { motion } from 'framer-motion';
-
 
 function HardGameMode({ gameMode, setGameMode, score, setScore }) {
 
