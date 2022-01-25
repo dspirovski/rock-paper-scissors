@@ -90,17 +90,6 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
     }
   }, [timer]);
 
-  const displayResult = () => {
-    humanChoise === +`${humanChoise}` && <div className={timer > 0 ? `icon-${humanChoise}`
-      :
-      (resultMessage === "you win" ? `icon-${humanChoise} win` : `icon-${humanChoise}`)}>
-      <div className={`image-${humanChoise}`}></div>
-    </div>
-  }
-
-
-
-
   return (
     //Display result for human choise
     <div className="game">
