@@ -17,8 +17,9 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
   //Generate random computer choise for easy mode 
   const randomEasyModeChoise = () => {
-    const choises = [1, 2, 3];
-    setComputerChoise(choises[Math.floor(Math.random() * 3)])
+    // const choises = [1, 2, 3];
+    setComputerChoise(1);
+    // setComputerChoise(choises[Math.floor(Math.random() * 3)])
   }
 
   //Generate random computer choise for hard mode 
@@ -32,7 +33,6 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
     gameMode && randomEasyModeChoise();
     !gameMode && randomHardModeChoise();
   }, [humanChoise]);
-
 
   const calculateResult = () => {
     //HUMAN CHOISE IS EVEN, COMPUTER CHOISE IS EVEN
@@ -90,6 +90,17 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
     }
   }, [timer]);
 
+  const displayResult = () => {
+    humanChoise === +`${humanChoise}` && <div className={timer > 0 ? `icon-${humanChoise}`
+      :
+      (resultMessage === "you win" ? `icon-${humanChoise} win` : `icon-${humanChoise}`)}>
+      <div className={`image-${humanChoise}`}></div>
+    </div>
+  }
+
+
+
+
   return (
     //Display result for human choise
     <div className="game">
@@ -98,8 +109,10 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
         <div className="choise-picked">
 
           {/* Create a function */}
-          {humanChoise == `${humanChoise}` && <div className={timer > 0 ? `icon-${humanChoise}` : (resultMessage === "you win" ? `icon-${humanChoise} win` : `icon-${humanChoise}`)}>
-            <div className={`image image-${humanChoise}`}></div>
+          {humanChoise === +`${humanChoise}` && <div className={timer > 0 ? `icon-${humanChoise}`
+            :
+            (resultMessage === "you win" ? `icon-${humanChoise} win` : `icon-${humanChoise}`)}>
+            <div className={`image-${humanChoise}`}></div>
           </div>}
 
         </div>
@@ -125,13 +138,12 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
         <div className="choise-picked house-picked">
           {timer > 0 && timer}
 
-          {timer === 0 && computerChoise == `${computerChoise}` &&
-            <div className={resultMessage === "you lose" ? `icon-${computerChoise} win` : `icon-${computerChoise}`}><div className={`image image-${computerChoise}`}></div>
+          {timer === 0 && computerChoise === +`${computerChoise}` &&
+            <div className={resultMessage === "you lose" ? `icon-${computerChoise} win` : `icon-${computerChoise}`}><div className={` image-${computerChoise}`}></div>
             </div>}
 
         </div>
       </div>
-
     </div>
   )
 }
