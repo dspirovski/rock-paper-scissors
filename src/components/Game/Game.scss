@@ -7,11 +7,11 @@
   display: flex;
   justify-content: space-around;
 
-  @media only screen and (max-width: 375px) {
+  @include mobile-version {
     height: 50vh;   
     width: 100vw;  
     margin-top: -30px;  
-  }
+  } 
  
   .choise { 
     display: flex;
@@ -20,12 +20,12 @@
     align-items: center;
     width: 293px;
     height: 395px;
-  
-    @media only screen and (max-width: 375px) {
+
+    @include mobile-version {
       width: 200px;
       height: 200px;
       flex-direction: column-reverse;
-    }
+    }  
 
     .choise-text {     
       font-style: normal;
@@ -37,25 +37,21 @@
       text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);
       text-transform: uppercase;
 
-      @media only screen and (max-width: 375px) {
+      @include mobile-version {
         font-size: 15px;
         letter-spacing: 1.5px;
-      }
+      } 
     }
 
     .choise-picked {
       width: 292.61px;
       height: 300px;       
-      display: flex;
-      justify-content: center;
-      align-items: center;  
+      @include perfect-centering;
       
-      @media only screen and (max-width: 375px) {
+      @include mobile-version {
         width: 130px;
-       height: 130px;        
-      }
-
-    
+        height: 130px;  
+      }    
       //rock icon
     .icon-3 {
        @include icon-background($red);  
@@ -63,11 +59,10 @@
          height: 286.7px;
          position: absolute;
 
-       @media only screen and (max-width: 375px) {
-         width: 130px;
-        height: 130px;        
-       }
-
+         @include mobile-version {
+           width: 130px;
+           height: 130px;     
+        }
    
   .image-3 {
     @include icon-body;
@@ -76,7 +71,7 @@
     width: 224.63px;
     height: 224.63px;
 
-    @media only screen and (max-width: 375px) {
+    @include mobile-version {
       width: 100px;
       height: 100px;     
       background-size: 50px 50px;   
@@ -95,10 +90,11 @@
   height: 286.7px;
   position: absolute;
 
-  @media only screen and (max-width: 375px) {
+  @include mobile-version {
     width: 130px;
-    height: 130px;        
+    height: 130px;  
   }
+
   .image-2 {
     @include icon-body;
     background-image: url('../../images/icon-paper.svg');
@@ -106,11 +102,11 @@
     width: 224.63px;
     height: 224.63px;
 
-    @media only screen and (max-width: 375px) {
+    @include mobile-version {
       width: 100px;
       height: 100px;     
-      background-size: 50px 50px;   
-    }
+      background-size: 50px 50px;  
+    } 
    }
 }
 
@@ -125,10 +121,11 @@
     height: 286.7px;
     position: absolute;
 
-    @media only screen and (max-width: 375px) {
+    @include mobile-version {
       width: 130px;
-      height: 130px;        
+      height: 130px; 
     }
+
   .image-1 {
     @include icon-body;
     background-image: url('../../images/icon-scissors.svg');
@@ -136,11 +133,11 @@
     width: 224.63px;
     height: 224.63px;  
 
-    @media only screen and (max-width: 375px) {
+    @include mobile-version {
       width: 100px;
       height: 100px;     
       background-size: 50px 50px;   
-    }
+    } 
   }
 }
 
@@ -155,10 +152,11 @@
   height: 286.7px;
   position: absolute;
 
-  @media only screen and (max-width: 375px) {
+  @include mobile-version {
     width: 130px;
-    height: 130px;        
+    height: 130px;   
   }
+
 .image-4 {
   @include icon-body;
   background-image: url('../../images/icon-lizard.svg');
@@ -166,12 +164,12 @@
   width: 224.63px;
   height: 224.63px;  
 
-  @media only screen and (max-width: 375px) {
+  @include mobile-version {
     width: 100px;
     height: 100px;     
     background-size: 50px 50px;   
   }
-}
+ }
 }
 
 .icon-4.win {
@@ -185,23 +183,24 @@
   height: 286.7px; 
   position: absolute; 
 
-  @media only screen and (max-width: 375px) {
+  @include mobile-version {
     width: 130px;
-    height: 130px;        
+    height: 130px;  
   }
+
 .image-5 {
   @include icon-body;
   background-image: url('../../images/icon-spock.svg');
   background-size:  110px 110px; 
   width: 224.63px;
-  height: 224.63px;  
-
-  @media only screen and (max-width: 375px) {
+  height: 224.63px; 
+  
+  @include mobile-version {
     width: 100px;
     height: 100px;     
-    background-size: 50px 50px;   
+    background-size: 50px 50px;  
   }
-}
+ }
 }
 
       .icon-5.win {
@@ -220,17 +219,14 @@
       border-radius: 50%;
       color: #fff;
       font-size: 32px;
-      margin-bottom: 70px;    
-
-      @media only screen and (max-width: 375px) {
+      margin-bottom: 70px; 
+      
+      @include mobile-version {
         width: 130px;
         height: 130px;   
         margin-bottom: 0px;   
-      } 
-
-
+      }
     }
-    
   }
 
   .message {    
@@ -240,7 +236,7 @@
     align-items: center;
     text-transform: uppercase;
 
-    @media only screen and (max-width: 375px) {
+    @include mobile-version {
       position: absolute;
       top: 68%;
     }
@@ -255,9 +251,9 @@
       text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.196706);  
       width: 320px;
 
-      @media only screen and (max-width: 375px) {
+      @include mobile-version {
         font-size: 56px;
-      } 
+      }
     }    
 
     .play-again-btn {
@@ -273,11 +269,11 @@
         cursor: pointer;
       }
 
-      @media only screen and (max-width: 375px) {
+      @include mobile-version {
         margin: 0;
         height: 38px;
-        width: 175px
-      } 
+        width: 175px;
+      }    
     }
 
     .play-again-btn:hover.win {
@@ -288,10 +284,6 @@
     .play-again-btn:hover.lose {
       cursor: pointer;
       color: $red;
-    }
-
-    
+    }    
   }
-}
-
-
+};

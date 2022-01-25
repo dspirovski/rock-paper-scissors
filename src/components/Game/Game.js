@@ -6,7 +6,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
   const [computerChoise, setComputerChoise] = useState('');
   const [resultMessage, setResultMessage] = useState('');
-  const [timer, setTimer] = useState(2);
+  const [timer, setTimer] = useState(3);
 
   //EASY GAME MODE              //HARD GAME MODE                
   // 1. scissors                  1. scissors
@@ -24,7 +24,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
   //Generate random computer choise for hard mode 
   const randomHardModeChoise = () => {
     const choises = [1, 2, 3, 4, 5];
-    setComputerChoise(choises[Math.floor(Math.random() * 5)])
+    setComputerChoise(choises[Math.floor(Math.random() * 5)]);
   }
 
   //Invoke function regarding user choise (easy or hard mode)
@@ -97,6 +97,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
         <h4 className="choise-text">You picked</h4>
         <div className="choise-picked">
 
+          {/* Create a function */}
           {humanChoise == `${humanChoise}` && <div className={timer > 0 ? `icon-${humanChoise}` : (resultMessage === "you win" ? `icon-${humanChoise} win` : `icon-${humanChoise}`)}>
             <div className={`image image-${humanChoise}`}></div>
           </div>}

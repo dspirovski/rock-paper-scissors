@@ -40,7 +40,6 @@ function HardGameMode({ gameMode, setGameMode, score, setScore }) {
                   <div className="image image-paper"></div>
                 </div>
               </div>
-
             </div>
 
             {/* position bottom */}
