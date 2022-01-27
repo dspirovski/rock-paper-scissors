@@ -24,19 +24,21 @@
 }
 
 .normal-mode {
-  width: 29.75rem;
-  height: 26.875rem;
+  width: 476px;
+  height: 476px;
   margin: auto;
   background-image: url("../../images/bg-triangle.svg"); 
   background-repeat: no-repeat;
   background-position: center; 
+  margin-top: 50px;
 
   @include mobile-version {
-    width: 19.5rem;
+    width: 312px;
+    height: 312px;
+    background-size: 166px 188px;
   }
 
-  .normal-top {
-    height: 50%;
+  .normal-top {  
     display: flex;
 
     .top-left {
@@ -111,8 +113,7 @@
     }
   }
 
-  .normal-bottom {
-    height: 50%; 
+  .normal-bottom {    
     @include perfect-centering;
     
     // Display rock icon - normal mode
@@ -148,14 +149,20 @@
 }
 
 .bonus-mode {
-  width: 29.75rem;
-  height: 26.875rem;
+  width: 476px;
+  height: 430px;
   margin: auto;
   display: flex;
   flex-direction: column;
   background-image: url("../../images/bg-pentagon.svg"); 
   background-repeat: no-repeat;
   background-position: center; 
+
+  @include mobile-version {
+    width: 311px;
+    height: 311px;  
+    background-size: 227px 227px;
+  }
 
   .bonus-top {
     height: 33.33%;    
@@ -166,16 +173,16 @@
     // Display scissors icon - bonus mode
     .icon-scissors {   
       @include icon-background($yellow);
-      width: 145px;
-      height: 148px;
+        width: 145px;
+        height: 148px;
       &:hover {
         cursor: pointer; 
         box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
       } 
 
       @include mobile-version {
-        width: 130px;
-        height: 133px;   
+        width: 96px;
+        height: 97px;     
       }
         
       .image-scissors {
@@ -186,9 +193,9 @@
         height: 111px;
 
         @include mobile-version {
-          width: 100px;
-          height: 100px;     
-          background-size: 50px 50px;   
+          width: 73px;
+          height: 74px;    
+          background-size: 40px 40px;   
         } 
       }
     }
@@ -333,4 +340,4 @@
       } 
     }
   }
-}
+};

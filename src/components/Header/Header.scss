@@ -2,16 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 1.05rem;
+  border-radius: 15px;
   margin: auto;
   border: 3px solid #FFFFFF4A;
-  margin-top: 0.5rem;
+  margin-top: 8px;
   width: 700px; //=700px
   height: 150px;
-  padding: 0 1rem;
+  padding: 0 16px;
   
   @media only screen and (max-width: 376px) {
-    margin-top: 0.5rem;
+    margin-top: 8px;
     width: 311px;
     height: 96px;
   }
@@ -46,7 +46,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;  
-      margin: 1rem 0;
+      margin: 16px 0;
 
       @media only screen and (max-width: 375px) {
         width: 80px;
@@ -55,10 +55,10 @@
    
         .score {     
           font-family: Barlow Semi Condensed;
-          font-size: 1rem;
+          font-size: 16px;
           font-style: normal;
           font-weight: 600;
-          line-height: 1.2rem;
+          line-height: 19.2px;
           letter-spacing: 2.5px;
           text-align: left;
           color: #2A45C2;     
@@ -76,14 +76,14 @@
           font-size: 64px;
           font-style: normal;
           font-weight: 700;
-          line-height: 4rem;
+          line-height: 64px;
           letter-spacing: 0px;
           text-align: center;
           color: #565468; 
 
           @media only screen and (max-width: 375px) {
-            font-size: 2.75rem;
-            line-height: 2.75rem;
+            font-size: 44px;
+            line-height: 44px;
           }
        }   
  }
