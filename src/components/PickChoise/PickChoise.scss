@@ -1,0 +1,332 @@
+@import "../../sass/abstracts/mixins.scss";
+@import "../../sass/abstracts/variables.scss";
+
+.game-modes {
+  width: 200px;
+  height: 50px; 
+  @include perfect-centering;
+  justify-content: space-between;
+  top: 23%;
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+
+  @include mobile-version {
+   position: absolute;
+   top: 120px; 
+ }
+
+  .mode-btn {
+  @include button-style;
+  }    
+}
+
+.normal-mode {
+  width: 29.75rem;
+  height: 26.875rem;
+  margin: auto;
+  background-image: url("../../images/bg-triangle.svg"); 
+  background-repeat: no-repeat;
+  background-position: center; 
+
+  .normal-top {
+    height: 50%;
+    display: flex;
+
+    .top-left {
+      width: 50%;
+      @include perfect-centering;
+
+      // Display paper icon - normal mode
+      .icon-paper {
+        @include icon-background($blue-1);
+        width: 198px;
+        height: 203px; 
+        &:hover {
+          cursor: pointer; 
+          box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
+        } 
+
+        @include mobile-version {
+          width: 130px;
+          height: 133px;      
+        }        
+  
+        .image-paper {
+          @include icon-body;
+          background-image: url('../../images/icon-paper.svg');
+          background-size:  76px 76px;
+          width: 152px;
+          height: 152px;
+
+          @include mobile-version {
+            width: 100px;
+            height: 100px;     
+            background-size: 50px 50px;   
+          }
+        }
+      }
+
+    }
+
+    .top-right {
+      width: 50%;
+      @include perfect-centering;
+
+      // Display scissors icon - normal mode
+      .icon-scissors {   
+        @include icon-background($yellow);
+        width: 198px;
+        height: 203px;
+        &:hover {
+          cursor: pointer; 
+          box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
+        } 
+
+        @include mobile-version {
+          width: 130px;
+          height: 133px;   
+        }
+          
+        .image-scissors {
+          @include icon-body;
+          background-image: url('../../images/icon-scissors.svg');
+          background-size:  76px 76px;
+          width: 152px;
+          height: 152px;
+
+          @include mobile-version {
+            width: 100px;
+            height: 100px;     
+            background-size: 50px 50px;   
+          } 
+        }
+      }
+    }
+  }
+
+  .normal-bottom {
+    height: 50%; 
+    @include perfect-centering;
+    
+    // Display rock icon - normal mode
+    .icon-rock {
+      @include icon-background($red);
+      width: 198px;
+      height: 203px;
+        &:hover {
+          cursor: pointer; 
+          box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
+        }
+        
+        @include mobile-version {
+          width: 130px;
+          height: 133px;     
+        }          
+
+      .image-rock {
+        @include icon-body;
+        background-image: url('../../images/icon-rock.svg');
+        background-size:  76px 76px;
+        width: 152px;
+        height: 152px;
+
+        @include mobile-version {
+          width: 100px;
+          height: 100px;     
+          background-size: 50px 50px;   
+          }
+       }
+    }
+  }
+}
+
+.bonus-mode {
+  width: 29.75rem;
+  height: 26.875rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../images/bg-pentagon.svg"); 
+  background-repeat: no-repeat;
+  background-position: center; 
+
+  .bonus-top {
+    height: 33.33%;    
+    display: flex;
+    justify-content: center;
+    @include perfect-centering;
+
+    // Display scissors icon - bonus mode
+    .icon-scissors {   
+      @include icon-background($yellow);
+      width: 145px;
+      height: 148px;
+      &:hover {
+        cursor: pointer; 
+        box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
+      } 
+
+      @include mobile-version {
+        width: 130px;
+        height: 133px;   
+      }
+        
+      .image-scissors {
+        @include icon-body;
+        background-image: url('../../images/icon-scissors.svg');
+        background-size:  50px 50px;
+        width: 112px;
+        height: 111px;
+
+        @include mobile-version {
+          width: 100px;
+          height: 100px;     
+          background-size: 50px 50px;   
+        } 
+      }
+    }
+  }
+
+  .bonus-middle {
+    height: 33.33%;     
+    display: flex;
+    justify-content: space-between;  
+    margin-top: -20px;
+
+    // Display spock icon - bonus mode
+    .left {
+      .icon-spock {
+        @include icon-background($green);
+        width: 145px;
+        height: 148px;
+        &:hover {
+          cursor: pointer; 
+          box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
+        } 
+  
+        @include mobile-version {
+          width: 96px;
+          height: 97px;      
+        }
+   
+        .image-spock {
+          @include icon-body;
+          background-image: url('../../images/icon-spock.svg');
+          width: 112px;
+          height: 111px;
+  
+          @include mobile-version {
+            width: 73px;
+            height: 74px;    
+            background-size: 40px 40px;    
+          }
+        }
+      }
+
+    }
+
+    // Display paper icon - bonus mode
+    .right {
+      .icon-paper {
+        @include icon-background($blue-1);
+        width: 145px;
+        height: 148px;
+        &:hover {
+          cursor: pointer; 
+          box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
+        } 
+
+        @include mobile-version {
+          width: 96px;
+          height: 97px;      
+        }
+      
+       .image-paper {
+        @include icon-body;
+        background-image: url('../../images/icon-paper.svg');
+        width: 112px;
+        height: 111px;
+
+        @include mobile-version {
+          width: 73px;
+          height: 74px;    
+          background-size: 40px 40px;
+        }
+      }
+    }
+    }
+  }
+
+  .bonus-bottom {
+    height: 33.33%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+
+        // Display lizard icon - bonus mode
+    .left {
+      .icon-lizard {
+        @include icon-background($purple);
+         width: 145px;
+         height: 148px;
+         &:hover {
+           cursor: pointer; 
+           box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
+         } 
+  
+         @include mobile-version {
+           width: 96px;
+           height: 97px;       
+        }
+         
+        .image-lizard {
+          @include icon-body;
+          background-image: url('../../images/icon-lizard.svg');
+          width: 112px;
+          height: 111px;
+  
+          @include mobile-version {
+            width: 73px;
+            height: 74px;    
+            background-size: 40px 40px;   
+          }  
+        }
+      }
+    }
+
+    .right {
+
+      // Display rock icon - bonus mode
+      .icon-rock {
+        @include icon-background($red);
+        width: 145px;
+        height: 148px;
+        &:hover {
+          cursor: pointer; 
+          box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    
+        } 
+  
+        @include mobile-version {
+          width: 96px;
+          height: 97px;      
+        }
+  
+        .image-rock {
+          @include icon-body;
+          background-image: url('../../images/icon-rock.svg');
+          width: 112px;
+          height: 111px;
+  
+          @include mobile-version {
+            width: 73px;
+            height: 74px;    
+            background-size: 40px 40px;   
+          } 
+        }
+      } 
+    }
+  }
+}

@@ -230,12 +230,9 @@
   }
 
   .message {    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include perfect-centering;    
+    flex-direction: column;    
     text-transform: uppercase;
-
     @include mobile-version {
       position: absolute;
       top: 68%;

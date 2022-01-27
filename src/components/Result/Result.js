@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
-import './Game.scss';
+import './Result.scss';
 
 const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
@@ -107,7 +106,11 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
         </div>
       </div>
 
-      <div className="message">
+      <div className="message"
+        initial={{ scale: 0.5 }}
+        animate={{ scale: 1 }}
+
+      >
         <p className="message-text">
           {timer === 0 ? resultMessage : null}
         </p>
