@@ -31,6 +31,10 @@
   background-repeat: no-repeat;
   background-position: center; 
 
+  @include mobile-version {
+    width: 19.5rem;
+  }
+
   .normal-top {
     height: 50%;
     display: flex;

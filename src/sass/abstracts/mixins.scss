@@ -62,5 +62,5 @@
 
 //MOBILE BRAKEPOINT
 @mixin mobile-version {
-  @media (max-width: 375px) {@content};
+  @media (max-width: 376px) {@content};
 }

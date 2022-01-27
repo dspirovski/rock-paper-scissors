@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Header from './components/Header/Header';
-import Modal from './components/ModalWindow/Modal';
+import Modal from './components/Modal/Modal';
 import PickChoise from './components/PickChoise/PickChoise';
 import './App.scss';
 import { motion } from 'framer-motion';
 
 function App() {
 
-  //gameMode = true >>> easy game mode
-  //gameMode = false >>> hard game mode
+  //gameMode = true >> normal game mode
+  //gameMode = false >>> bonus game mode
   const [modal, setModal] = useState(false);
   const [score, setScore] = useState(0);
   const [gameMode, setGameMode] = useState(true);

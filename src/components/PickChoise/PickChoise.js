@@ -3,7 +3,7 @@ import Result from '../Result/Result';
 import './PickChoise.scss';
 import { motion } from 'framer-motion';
 
-function EasyGameMode({ gameMode, score, setScore, setGameMode }) {
+function PickChoise({ gameMode, score, setScore, setGameMode }) {
 
   const [humanChoise, setHumanChoise] = useState('');
 
@@ -17,7 +17,7 @@ function EasyGameMode({ gameMode, score, setScore, setGameMode }) {
           <motion.div className="game-modes"
             initial={{ x: '30vw', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 1, type: "spring", stiffness: 150 }}
+            transition={{ delay: 0.5, type: "spring", stiffness: 100 }}
           >
             <button className='mode-btn' onClick={() => setGameMode(true)}>easy</button>
             <button className='mode-btn' onClick={() => setGameMode(false)}>hard</button>
@@ -85,6 +85,6 @@ function EasyGameMode({ gameMode, score, setScore, setGameMode }) {
     </motion.div >
   )
 }
-export default EasyGameMode;
+export default PickChoise;
 
 
