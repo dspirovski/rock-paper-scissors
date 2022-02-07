@@ -1,3 +1,6 @@
+@import "../../sass/abstracts/mixins.scss";
+@import "../../sass/abstracts/variables.scss";
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -9,8 +12,8 @@
   width: 700px; //=700px
   height: 150px;
   padding: 0 16px;
-  
-  @media only screen and (max-width: 376px) {
+
+  @include mobile-version {
     margin-top: 8px;
     width: 311px;
     height: 96px;
@@ -20,18 +23,21 @@
     .logo-initial {
       width: 155.48px;
       height:92.68px;
-      @media only screen and (max-width: 376px) {
+
+      @include mobile-version {
         width: 83px;
         height: 48px;
-    } 
+      }
   }
     .logo-bonus {
       height: 111px;
       width: 100px;
-      @media only screen and (max-width: 376px) {
+
+      @include mobile-version {
         height: 49px;
         width: 48px;
-      } 
+      }
+ 
     }
        
   }
@@ -48,10 +54,10 @@
       justify-content: center;  
       margin: 16px 0;
 
-      @media only screen and (max-width: 375px) {
+      @include mobile-version {
         width: 80px;
         height: 72px;
-      }
+      } 
    
         .score {     
           font-family: Barlow Semi Condensed;
@@ -64,11 +70,11 @@
           color: #2A45C2;     
           text-transform: uppercase;  
 
-          @media only screen and (max-width: 375px) {
+          @include mobile-version {
             font-size: 10px;          
             line-height: 12px;
             letter-spacing: 1.5625px;
-          }
+          }      
         }
 
         .value {   
@@ -81,7 +87,7 @@
           text-align: center;
           color: #565468; 
 
-          @media only screen and (max-width: 375px) {
+          @include mobile-version {
             font-size: 44px;
             line-height: 44px;
           }

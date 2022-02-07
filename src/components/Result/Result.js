@@ -126,7 +126,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
       <div className="choise">
         <h4 className="choise-text">The House picked</h4>
         <div className="choise-picked house-picked">
-          {timer > 0 && timer}
+          {timer > 0 && timer}       
 
           {timer === 0 && computerChoise === +`${computerChoise}` &&
             <div className={resultMessage === "you lose" ? `icon-${computerChoise} win` : `icon-${computerChoise}`}><div className={` image-${computerChoise}`}></div>
