@@ -15,16 +15,21 @@ function App() {
   const [gameMode, setGameMode] = useState(true);
 
   return (
-    <React.Fragment> 
+    <React.Fragment>
       <motion.div className="app"
         initial={{ scale: 0.5 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-
         <Header score={score} gameMode={gameMode} />
         <PickChoise setGameMode={setGameMode} score={score} setScore={setScore} gameMode={gameMode} />
-        <Button setModal={setModal} />
+        <motion.section
+          className="rules-btn"
+          initial={{ x: '-30vw', opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.6 }}>
+          <Button setModal={setModal}>Rules</Button>
+        </motion.section>
         {modal === true ? <Modal setModal={setModal} gameMode={gameMode} /> : null}
       </motion.div>
     </React.Fragment>

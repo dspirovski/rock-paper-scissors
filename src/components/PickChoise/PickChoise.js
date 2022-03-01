@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import Result from '../Result/Result';
 import './PickChoise.scss';
+import Button from "../Button/Button";
 import { motion } from 'framer-motion';
 
 function PickChoise({ gameMode, score, setScore, setGameMode }) {
 
   const [humanChoise, setHumanChoise] = useState('');
+
+  const gameModeHandler = () => {
+    setGameMode(!gameMode)
+  }
+
+  const gameModeText = gameMode ? "Bonus" : "Normal";
+
 
   return (
     <React.Fragment>
@@ -20,8 +28,8 @@ function PickChoise({ gameMode, score, setScore, setGameMode }) {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, type: "spring", stiffness: 100 }}
             >
-              <button className='mode-btn' onClick={() => setGameMode(true)}>easy</button>
-              <button className='mode-btn' onClick={() => setGameMode(false)}>hard</button>
+              <Button className="game-mode-btn" gameMode={gameModeHandler}>{gameModeText} Game mode</Button>
+
             </motion.div>
             {/* // Normal mode */}
             <div className={gameMode === true ? "normal-mode" : "bonus-mode"}>
@@ -84,7 +92,7 @@ function PickChoise({ gameMode, score, setScore, setGameMode }) {
           <Result humanChoise={humanChoise} setHumanChoise={setHumanChoise} gameMode={gameMode} score={score} setScore={setScore} />
         }
       </motion.div >
-    </React.Fragment>
+    </React.Fragment >
   )
 }
 export default PickChoise;

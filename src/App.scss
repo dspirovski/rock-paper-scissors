@@ -5,8 +5,13 @@
   display: grid;
   height: 100vh;
   
-  @media only screen and (max-width: 375px) {
-    height: 80vh;
-  } 
+    @media only screen and (max-width: 375px) {
+      height: 80vh;
+    } 
 
+    .rules-btn {
+      position: absolute;
+      right: 5%;
+      bottom: 5%;
+    }
   }
