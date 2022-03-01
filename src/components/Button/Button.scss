@@ -1,0 +1,19 @@
+@import "../../sass/abstracts/mixins.scss";
+
+.rulles-button {
+  @include button-style;
+  position: absolute;  
+  bottom: 5%;
+  right: 5%;
+  display: flex;
+  
+  @media only screen and (max-width: 375px) {
+    left:0;
+    right:0;    
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: 128px;
+    @include perfect-centering;
+  }      
+}

@@ -30,12 +30,13 @@
   background-image: url("../../images/bg-triangle.svg"); 
   background-repeat: no-repeat;
   background-position: center; 
-  margin-top: 50px;
+  margin-top: 80px;
 
   @include mobile-version {
     width: 312px;
     height: 312px;
     background-size: 166px 188px;
+    margin-top: 120px;
   }
 
   .normal-top {  
@@ -47,9 +48,9 @@
 
       // Display paper icon - normal mode
       .icon-paper {
-        @include icon-background($blue-1);
+        @include icon-background($blue-1);  
         width: 198px;
-        height: 203px; 
+        height: 203px;    
         &:hover {
           cursor: pointer; 
           box-shadow: 0px 0px 0px 25px rgba(#ffffff, .07),    

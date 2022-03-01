@@ -8,9 +8,7 @@
   justify-content: space-around;
 
   @include mobile-version {
-    height: 50vh;   
     width: 100vw;  
-    margin-top: -30px;  
   } 
  
   .choise { 

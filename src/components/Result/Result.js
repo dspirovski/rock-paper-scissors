@@ -30,7 +30,7 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
   useEffect(() => {
     gameMode && randomNormalModeChoise();
     !gameMode && randomBonusModeChoise();
-  }, [humanChoise]);
+  }, [gameMode]);
 
   const calculateResult = () => {
     //HUMAN CHOISE IS EVEN, COMPUTER CHOISE IS EVEN
@@ -90,51 +90,53 @@ const Game = ({ humanChoise, setHumanChoise, score, setScore, gameMode, }) => {
 
   return (
     //Display result for human choise
-    <div className="game">
-      <div className="choise">
-        <h4 className="choise-text">You picked</h4>
-        <div className="choise-picked">
+    <React.Fragment>
+      <div className="game">
+        <div className="choise">
+          <h4 className="choise-text">You picked</h4>
+          <div className="choise-picked">
 
-          {humanChoise === +`${humanChoise}` && <div className={timer > 0 ? `icon-${humanChoise}`
-            :
-            (resultMessage === "you win" ? `icon-${humanChoise} win` : `icon-${humanChoise}`)}>
-            <div className={`image-${humanChoise}`}></div>
-          </div>}
-
-        </div>
-      </div>
-
-      <div className="message"
-        initial={{ scale: 0.5 }}
-        animate={{ scale: 1 }}
-
-      >
-        <p className="message-text">
-          {timer === 0 ? resultMessage : null}
-        </p>
-        {timer === 0 ? <button className={
-          resultMessage === 'draw' ? "play-again-btn"
-            :
-            resultMessage === 'you lose' ? 'play-again-btn lose'
+            {humanChoise === +`${humanChoise}` && <div className={timer > 0 ? `icon-${humanChoise}`
               :
-              'play-again-btn win'
-        }
-          onClick={() => { setHumanChoise("") }}>play again</button> : null}
-      </div>
-
-      {/* Display result for house choise */}
-      <div className="choise">
-        <h4 className="choise-text">The House picked</h4>
-        <div className="choise-picked house-picked">
-          {timer > 0 && timer}       
-
-          {timer === 0 && computerChoise === +`${computerChoise}` &&
-            <div className={resultMessage === "you lose" ? `icon-${computerChoise} win` : `icon-${computerChoise}`}><div className={` image-${computerChoise}`}></div>
+              (resultMessage === "you win" ? `icon-${humanChoise} win` : `icon-${humanChoise}`)}>
+              <div className={`image-${humanChoise}`}></div>
             </div>}
 
+          </div>
+        </div>
+
+        <div className="message"
+          initial={{ scale: 0.5 }}
+          animate={{ scale: 1 }}
+
+        >
+          <p className="message-text">
+            {timer === 0 ? resultMessage : null}
+          </p>
+          {timer === 0 ? <button className={
+            resultMessage === 'draw' ? "play-again-btn"
+              :
+              resultMessage === 'you lose' ? 'play-again-btn lose'
+                :
+                'play-again-btn win'
+          }
+            onClick={() => { setHumanChoise("") }}>play again</button> : null}
+        </div>
+
+        {/* Display result for house choise */}
+        <div className="choise">
+          <h4 className="choise-text">The House picked</h4>
+          <div className="choise-picked house-picked">
+            {timer > 0 && timer}
+
+            {timer === 0 && computerChoise === +`${computerChoise}` &&
+              <div className={resultMessage === "you lose" ? `icon-${computerChoise} win` : `icon-${computerChoise}`}><div className={` image-${computerChoise}`}></div>
+              </div>}
+
+          </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   )
 }
 export default Game;
