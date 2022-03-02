@@ -28,7 +28,7 @@ function App() {
           initial={{ x: '-30vw', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.6 }}>
-          <Button setModal={setModal}>Rules</Button>
+          <Button onClick={() => setModal(true)}>Rules</Button>
         </motion.section>
         {modal === true ? <Modal setModal={setModal} gameMode={gameMode} /> : null}
       </motion.div>

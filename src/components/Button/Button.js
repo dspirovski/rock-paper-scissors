@@ -6,7 +6,7 @@ const Button = props => {
   return (
     <button
       className="button"
-      onClick={props.gameMode}
+      onClick={props.onClick}
     >{props.children}
     </button>
   )

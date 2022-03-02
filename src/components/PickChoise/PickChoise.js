@@ -28,7 +28,7 @@ function PickChoise({ gameMode, score, setScore, setGameMode }) {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, type: "spring", stiffness: 100 }}
             >
-              <Button className="game-mode-btn" gameMode={gameModeHandler}>{gameModeText} Game mode</Button>
+              <Button className="game-mode-btn" onClick={gameModeHandler}>{gameModeText} Game mode</Button>
 
             </motion.div>
             {/* // Normal mode */}
@@ -53,6 +53,7 @@ function PickChoise({ gameMode, score, setScore, setGameMode }) {
                     </div>
                   </div>
                 </div>
+                  //  Bonus mode
                 :
                 <div className='bonus-mode'>
                   <div className="bonus-top">
