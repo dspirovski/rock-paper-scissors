@@ -7,11 +7,3 @@ In this project, you can:
 - Bonus: Play Rock, Paper, Scissors, Lizard, Spock against the computer (optional).
 
 This project is made with HTML5, SCSS, React JS. 
-
-This project is available on: https://dspirovski.github.io/rock-paper-scissors/
-
-
-
-
-
-
