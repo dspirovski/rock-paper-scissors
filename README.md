@@ -6,4 +6,4 @@ In this project, you can:
 - Play Rock, Paper, Scissors against the computer;
 - Bonus: Play Rock, Paper, Scissors, Lizard, Spock against the computer (optional).
 
-This project is made with HTML5, SCSS, React JS. 
+This project was made with HTML5, SCSS, React JS. 
